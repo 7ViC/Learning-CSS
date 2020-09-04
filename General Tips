@@ -1,0 +1,6 @@
+Containing block size? → Use percents.
+Viewport size? → Use viewport units: vw, vh, vmin, vmax
+Font height? → Use em or rem.
+Font pitch? → Use em or ch.
+Content size? → Use auto or min-content/max-content.
+Combination of the above? → Use the appropriate layout formulas: flex, min-width, max-width, etc.
