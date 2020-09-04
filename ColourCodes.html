@@ -1,0 +1,4842 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta name="robots" content="index,follow">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" href="/images/icons/touch-icon-phone.png">
+
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<!--hubspotTracking-->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4760317.js"></script>
+
+	<script>(function(html){html.className=html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+
+	<!-- This site is optimized with the Yoast SEO plugin v14.5 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Python Color Constants Module - Webucator Blog</title>
+	<meta name="description" content="For Pygame and other graphics work, it&#039;s helpful to have color constants that hold the color RGB values. I couldn&#039;t find anything like this, so I created"/>
+	<meta name="robots" content="index, follow"/>
+	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+	<link rel="canonical" href="https://www.webucator.com/blog/2015/03/python-color-constants-module/"/>
+	<meta property="og:locale" content="en_US"/>
+	<meta property="og:type" content="article"/>
+	<meta property="og:title" content="Python Color Constants Module - Webucator Blog"/>
+	<meta property="og:description" content="For Pygame and other graphics work, it&#039;s helpful to have color constants that hold the color RGB values. I couldn&#039;t find anything like this, so I created"/>
+	<meta property="og:url" content="https://www.webucator.com/blog/2015/03/python-color-constants-module/"/>
+	<meta property="og:site_name" content="Webucator Blog"/>
+	<meta property="article:publisher" content="https://www.facebook.com/webucator"/>
+	<meta property="article:published_time" content="2015-03-20T12:52:22+00:00"/>
+	<meta property="og:image" content="https://www.webucator.com/blog/wp-content/uploads/2016/06/webucator.png"/>
+	<meta property="og:image:width" content="579"/>
+	<meta property="og:image:height" content="143"/>
+	<meta name="twitter:card" content="summary"/>
+	<meta name="twitter:creator" content="@webucator"/>
+	<meta name="twitter:site" content="@webucator"/>
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.webucator.com/blog/#organization","name":"Webucator","url":"https://www.webucator.com/blog/","sameAs":["https://www.facebook.com/webucator","https://www.linkedin.com/company/webucator","https://www.youtube.com/c/webucator","https://twitter.com/webucator"],"logo":{"@type":"ImageObject","@id":"https://www.webucator.com/blog/#logo","inLanguage":"en-US","url":"https://www.webucator.com/blog/wp-content/uploads/2016/06/webucator.png","width":579,"height":143,"caption":"Webucator"},"image":{"@id":"https://www.webucator.com/blog/#logo"}},{"@type":"WebSite","@id":"https://www.webucator.com/blog/#website","url":"https://www.webucator.com/blog/","name":"Webucator Blog","description":"Webucator blogs about online learning and training.","publisher":{"@id":"https://www.webucator.com/blog/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://www.webucator.com/blog/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://www.webucator.com/blog/2015/03/python-color-constants-module/#webpage","url":"https://www.webucator.com/blog/2015/03/python-color-constants-module/","name":"Python Color Constants Module - Webucator Blog","isPartOf":{"@id":"https://www.webucator.com/blog/#website"},"datePublished":"2015-03-20T12:52:22+00:00","dateModified":"2015-03-20T12:52:22+00:00","description":"For Pygame and other graphics work, it's helpful to have color constants that hold the color RGB values. I couldn't find anything like this, so I created","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.webucator.com/blog/2015/03/python-color-constants-module/"]}]},{"@type":"Article","@id":"https://www.webucator.com/blog/2015/03/python-color-constants-module/#article","isPartOf":{"@id":"https://www.webucator.com/blog/2015/03/python-color-constants-module/#webpage"},"author":{"@id":"https://www.webucator.com/blog/#/schema/person/99fc7b74606158e5de362523a950428a"},"headline":"Python Color Constants Module","datePublished":"2015-03-20T12:52:22+00:00","dateModified":"2015-03-20T12:52:22+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://www.webucator.com/blog/2015/03/python-color-constants-module/#webpage"},"publisher":{"@id":"https://www.webucator.com/blog/#organization"},"keywords":"pygame","articleSection":"Python","inLanguage":"en-US"},{"@type":["Person"],"@id":"https://www.webucator.com/blog/#/schema/person/99fc7b74606158e5de362523a950428a","name":"Nat Dunn","image":{"@type":"ImageObject","@id":"https://www.webucator.com/blog/#personlogo","inLanguage":"en-US","url":"https://secure.gravatar.com/avatar/d0d38c8c6b912ba9b4ef015ab56cae44?s=96&d=mm&r=g","caption":"Nat Dunn"},"description":"Nat Dunn founded Webucator in 2003 to combine his passion for web development with his business expertise and to help companies benefit from both. Nat began programming games in Basic on a TRS-80 at age 14. He has been developing websites and providing web development training since 1998."}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//js.hs-scripts.com'/>
+<link rel='dns-prefetch' href='//s.w.org'/>
+<link rel="alternate" type="application/rss+xml" title="Webucator Blog &raquo; Feed" href="https://www.webucator.com/blog/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="Webucator Blog &raquo; Comments Feed" href="https://www.webucator.com/blog/comments/feed/"/>
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.11.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">var mi_version='7.11.0';var mi_track_user=true;var mi_no_track_reason='';var disableStr='ga-disable-UA-2769312-1';function __gaTrackerIsOptedOut(){return document.cookie.indexOf(disableStr+'=true')>-1;}if(__gaTrackerIsOptedOut()){window[disableStr]=true;}function __gaTrackerOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';window[disableStr]=true;}if('undefined'===typeof gaOptout){function gaOptout(){__gaTrackerOptout();}}if(mi_track_user){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');__gaTracker('create','UA-2769312-1','auto');__gaTracker('set','forceSSL',true);__gaTracker('send','pageview');}else{console.log("");(function(){var noopfn=function(){return null;};var noopnullfn=function(){return null;};var Tracker=function(){return null;};var p=Tracker.prototype;p.get=noopfn;p.set=noopfn;p.send=noopfn;var __gaTracker=function(){var len=arguments.length;if(len===0){return;}var f=arguments[len-1];if(typeof f!=='object'||f===null||typeof f.hitCallback!=='function'){console.log('Not running function __gaTracker('+arguments[0]+" ....) because you are not being tracked. "+mi_no_track_reason);return;}try{f.hitCallback();}catch(ex){}};__gaTracker.create=function(){return new Tracker();};__gaTracker.getByName=noopnullfn;__gaTracker.getAll=function(){return[];};__gaTracker.remove=noopfn;window['__gaTracker']=__gaTracker;})();}</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">window._wpemojiSettings={"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.webucator.com\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.2"}};!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);</script>
+		<style type="text/css">img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-.1em!important;background:none!important;padding:0!important}</style>
+	<link rel='stylesheet' id='wp-block-library-css' href='https://www.webucator.com/blog/wp-content/plugins/gutenberg/build/block-library/style.css?ver=1594732025' type='text/css' media='all'/>
+<style id='global-styles-inline-css' type='text/css'>:root{--wp--preset--color--black:#000;--wp--preset--color--cyan-bluish-gray:#abb8c3;--wp--preset--color--light-green-cyan:#7bdcb5;--wp--preset--color--luminous-vivid-amber:#fcb900;--wp--preset--color--luminous-vivid-orange:#ff6900;--wp--preset--color--pale-cyan-blue:#8ed1fc;--wp--preset--color--pale-pink:#f78da7;--wp--preset--color--vivid-cyan-blue:#0693e3;--wp--preset--color--vivid-green-cyan:#00d084;--wp--preset--color--vivid-purple:#9b51e0;--wp--preset--color--vivid-red:#cf2e2e;--wp--preset--color--white:#fff;--wp--preset--font-size--small:13;--wp--preset--font-size--normal:16;--wp--preset--font-size--medium:20;--wp--preset--font-size--large:36;--wp--preset--font-size--huge:48;--wp--preset--gradient--blush-bordeaux:linear-gradient(135deg,#fecda5 0%,#fe2d2d 50%,#6b003e 100%);--wp--preset--gradient--blush-light-purple:linear-gradient(135deg,#ffceec 0%,#9896f0 100%);--wp--preset--gradient--cool-to-warm-spectrum:linear-gradient(135deg,#4aeadc 0%,#9778d1 20%,#cf2aba 40%,#ee2c82 60%,#fb6962 80%,#fef84c 100%);--wp--preset--gradient--electric-grass:linear-gradient(135deg,#caf880 0%,#71ce7e 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan:linear-gradient(135deg,#7adcb4 0%,#00d082 100%);--wp--preset--gradient--luminous-dusk:linear-gradient(135deg,#ffcb70 0%,#c751c0 50%,#4158d0 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange:linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red:linear-gradient(135deg,rgba(255,105,0,1) 0%,#cf2e2e 100%);--wp--preset--gradient--midnight:linear-gradient(135deg,#020381 0%,#2874fc 100%);--wp--preset--gradient--pale-ocean:linear-gradient(135deg,#fff5cb 0%,#b6e3d4 50%,#33a7b5 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray:linear-gradient(135deg,#eee 0%,#a9b8c3 100%);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple:linear-gradient(135deg,rgba(6,147,227,1) 0%,#9b51e0 100%)}</style>
+<link rel='stylesheet' id='prism-okaidia-css' href='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/themes/prism-okaidia.css?ver=5.4.2' type='text/css' media='all'/>
+<link rel='stylesheet' id='webucator-style-css' href='https://www.webucator.com/blog/wp-content/themes/webucator/css/release/style.css?ver=5.4.2' type='text/css' media='all'/>
+<link rel='stylesheet' id='prism-line-numbers-css-css' href='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/plugins/line-numbers/prism-line-numbers.css?ver=5.4.2' type='text/css' media='all'/>
+<link rel='stylesheet' id='__EPYT__style-css' href='https://www.webucator.com/blog/wp-content/plugins/youtube-embed-plus/styles/ytprefs.min.css?ver=13.4' type='text/css' media='all'/>
+<style id='__EPYT__style-inline-css' type='text/css'>.epyt-gallery-thumb{width:33.333%}</style>
+<script type='text/javascript'>var monsterinsights_frontend={"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"https:\/\/www.webucator.com\/blog","hash_tracking":"false"};</script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.js?ver=7.11.0'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/prism.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/components/prism-markup-templating.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/components/prism-css.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/components/prism-clike.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/components/prism-javascript.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/components/prism-bash.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/components/prism-c.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/components/prism-csharp.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/components/prism-cpp.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/components/prism-css.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/components/prism-json.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/components/prism-less.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/components/prism-objectivec.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/components/prism-php.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/components/prism-python.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/components/prism-sass.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/components/prism-scss.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/components/prism-sql.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/components/prism-typescript.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/components/prism-plsql.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/plugins/line-numbers/prism-line-numbers.min.js?ver=5.4.2'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/themes/webucator/bower_components/prism/plugins/keep-markup/prism-keep-markup.min.js?ver=5.4.2'></script>
+<script type='text/javascript'>var _EPYT_={"ajaxurl":"https:\/\/www.webucator.com\/blog\/wp-admin\/admin-ajax.php","security":"21f180dfca","gallery_scrolloffset":"20","eppathtoscripts":"https:\/\/www.webucator.com\/blog\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","eppath":"https:\/\/www.webucator.com\/blog\/wp-content\/plugins\/youtube-embed-plus\/","epresponsiveselector":"[\"iframe.__youtube_prefs__\",\"iframe[src*='youtube.com']\",\"iframe[src*='youtube-nocookie.com']\",\"iframe[data-ep-src*='youtube.com']\",\"iframe[data-ep-src*='youtube-nocookie.com']\",\"iframe[data-ep-gallerysrc*='youtube.com']\"]","epdovol":"1","version":"13.4","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","ytapi_load":"light","pause_others":"","stopMobileBuffer":"1","vi_active":"","vi_js_posttypes":[]};</script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js?ver=13.4'></script>
+<link rel='https://api.w.org/' href='https://www.webucator.com/blog/wp-json/'/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.webucator.com/blog/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.webucator.com/blog/wp-includes/wlwmanifest.xml"/> 
+<meta name="generator" content="WordPress 5.4.2"/>
+<link rel='shortlink' href='https://www.webucator.com/blog/?p=1813'/>
+<link rel="alternate" type="application/json+oembed" href="https://www.webucator.com/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.webucator.com%2Fblog%2F2015%2F03%2Fpython-color-constants-module%2F"/>
+<link rel="alternate" type="text/xml+oembed" href="https://www.webucator.com/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.webucator.com%2Fblog%2F2015%2F03%2Fpython-color-constants-module%2F&#038;format=xml"/>
+			<!-- DO NOT COPY THIS SNIPPET! Start of Page Analytics Tracking for HubSpot WordPress plugin v7.36.1-->
+			<script type="text/javascript">var _hsq=_hsq||[];_hsq.push(["setContentType","blog-post"]);</script>
+			<!-- DO NOT COPY THIS SNIPPET! End of Page Analytics Tracking for HubSpot WordPress plugin -->
+						<script>(function(){var formObjects=[];window.hbsptReady=function(formObject){if(!formObject){for(var i in formObjects){hbspt.forms.create(formObjects[i]);};formObjects=[];}else if(window.hbspt&&window.hbspt.forms){hbspt.forms.create(formObject);}else{formObjects.push(formObject);}};})();</script>
+		<style type="text/css">.recentcomments a{display:inline!important;padding:0!important;margin:0!important}</style>
+</head>
+<body class="post-template-default single single-post postid-1813 single-format-standard beforeload" id="page-top" itemscope itemtype="https://schema.org/WebPage">
+  <nav><div class="mb-20 d-block d-xl-none d-lg-none text-center logo_mobile fixed-top height80 bg-light padding_top15 shadow-sm">
+        <a href="/" title="Webucator"><picture><source srcset="https://images.webucator.com/logos/webucator.webp" type="image/webp"><source srcset="https://images.webucator.com/logos/webucator.jpg" type="image/jpeg"> <img src="https://images.webucator.com/logos/webucator.jpg" alt="Webucator Logo" style="height:52px;"></picture></a>
+        <a href="#" class="open_search right bg-light radius_full"><i class="fas fa-search lh-40"></i></a>
+        <a href="#" class="open_menu bg-light radius_full"><i class="fas fa-bars lh-40"></i></a>
+        <div class="navigation_mobile bg-dark type1 text-left">
+          <a href="#" class="close_menu color-white"><i class="fas fa-times"></i></a>
+          <div class="px-40 pt-60 pb-60 inner"><div><a class="f-20 link color-white pb-15" href="/"><i class="fal fa-home-alt mr-10"></i>Home</a></div><div><a class="f-16 link color-white pb-15" href="/course/catalog.cfm"><i class="fal fa-list-alt mr-10"></i>Course Catalog</a></div><div class="f-16 link color-white pb-15" data-toggle="collapse" data-target=".training-collapse"><i class="fal fa-angle-right mr-10"></i>Training Delivery Methods</div><div class="collapse training-collapse ml-30" "><a class="f-16 link color-white pb-15" href="/live-online-training/index.cfm" title="Live Online Classes"><i class="fal fa-chalkboard-teacher mr-10"></i></i>Live Online Classes</a></div><div class="collapse training-collapse ml-30" "><a class="f-16 link color-white pb-15" href="/customized-private-training/index.cfm" title="Private Classes"><i class="fal fa-users-class mr-10"></i>Private Classes</a></div><div class="collapse training-collapse ml-30" "><a class="f-16 link color-white pb-15" href="/self-paced-training/index.cfm" title="Self-Paced Training"><i class="fal fa-desktop mr-10"></i>Self-Paced Training</a></div><div class="collapse training-collapse ml-30" "><a class="f-16 link color-white pb-15" href="/enterprise-training/index.cfm" title="Enterprise Training"><i class="fal fa-user-chart mr-10"></i>Enterprise Training</a></div><div class="collapse training-collapse ml-30" "><a class="f-16 link color-white pb-15" href="/about-us/training-options.cfm" title="All Training Options"><i class="fal fa-archive mr-10"></i>All Training Options</a></div><div><a class="f-16 link color-white pb-15" href="/courseware/index.cfm" title="Purchase Courseware"><i class="fal fa-book mr-10"></i>Purchase Courseware</a></div><div><a class="f-16 link color-white pb-15" href="/about-us/company.cfm" title="About Us"><i class="fal fa-address-card mr-10"></i>About Us</a></div><div class="hr light_gray height1 top10 bottom20"></div><div class="hr light_gray height1 top30 bottom20"></div><div><a class="f-16 link color-white pb-10" href="/contact/index.cfm"><i class="fal fa-envelope mr-10"></i> Contact Us</a></div><div><a class="f-16 link color-white pb-10" href="tel:+1-877-932-8228"><i class="fal fa-phone-square-alt mr-10"></i>&nbsp; 1-877-932-8228</a></div><div class="socials mt-40">
+                    <a href="https://twitter.com/webucator" target="_blank" class="link color-white f-18 mr-20"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/webucator" target="_blank" class="link color-white f-18 mr-20"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/companies/webucator" target="_blank" class="link color-white f-18 mr-20"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:sales@webucator.com" target="_blank" class="link color-white f-18 mr-20"><i class="fa fa-envelope"></i></a>
+                  </div>
+                  <div class="mt-50 f-14 light color-white op-3 copy">&copy; 2020 Webucator, Inc. All Rights Reserved.</div></div></div><div class="mobile-search bg-dark pt-10 pb-10 mt-10 shadow d-none"><form name="search" method="get" id="searchFormMobile" action="https://www.webucator.com/search/search.cfm">
+                <div class="input-group pr-15">
+                <div class="input-group-prepend ">
+                  <a href="#" class="mx-15 top5 link white courses-link-nav-dropdown ">Courses <i class="ml-5 fa fa-chevron-down"></i></a>
+                </div>  
+                <input autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" type="search" name="q" value="" id="nav-search-mobile" placeholder="Search Courses" aria-describedby="search-submit-mobile">
+                  <div class="input-group-append">
+                    <button type="submit" class="btn white" id="search-submit-mobile">
+                    <i class="fa fa-fw fa-search fa-fw"></i><span class="sr-only">Search</span>
+                    </button>
+                  </div>
+                </div>
+             
+              </form></div><div class="pt-15 pb-300 bg-light navigation_popup_mobile shadow">
+              <div class="container text-left">
+                <div class="row d-block">
+                <div class="bold font16 pl-10 pt-20 pb-10 pr-10"><div data-target=".multi-collapse-microsoft-training" data-toggle="collapse">Microsoft Training &nbsp;&nbsp;<i class="fas fa-caret-down"></i></div></div><ul class="list-group list-group-flush collapse multi-collapse-microsoft-training"><li class="list-group-item "><a href="/microsoft-training/aspnet-training.cfm">ASP.NET</a></li><li class="list-group-item "><a href="/microsoft-training/azure-training.cfm">Azure</a></li><li class="list-group-item "><a href="/microsoft-training/azure-devops-services-training.cfm">Azure DevOps Services</a></li><li class="list-group-item "><a href="/microsoft-training/csharp-training.cfm">C#</a></li><li class="list-group-item "><a href="/microsoft-training/microsoft-dynamics-training.cfm">Dynamics</a></li><li class="list-group-item "><a href="/microsoft-training/iis-training.cfm">IIS</a></li><li class="list-group-item "><a href="/microsoft-training/microsoft-365-training.cfm">Microsoft 365</a></li><li class="list-group-item "><a href="/microsoft-training/access-training.cfm">Microsoft Access</a></li><li class="list-group-item "><a href="/microsoft-training/business-intelligence-training.cfm">Microsoft Business Intelligence</a></li><li class="list-group-item "><a href="/microsoft-training/excel-training.cfm">Microsoft Excel</a></li><li class="list-group-item "><a href="/microsoft-training/exchange-training.cfm">Microsoft Exchange</a></li><li class="list-group-item "><a href="/microsoft-training/office-training.cfm">Microsoft Office</a></li><li class="list-group-item "><a href="/microsoft-training/microsoft-outlook-training.cfm">Microsoft Outlook</a></li><li class="list-group-item "><a href="/microsoft-training/microsoft-powerpoint-training.cfm">Microsoft PowerPoint</a></li><li class="list-group-item "><a href="/microsoft-training/project-training.cfm">Microsoft Project</a></li><li class="list-group-item "><a href="/microsoft-training/publisher-training.cfm">Microsoft Publisher</a></li><li class="list-group-item "><a href="/microsoft-training/microsoft-system-center-training.cfm">Microsoft System Center</a></li><li class="list-group-item "><a href="/microsoft-training/microsoft-visio-training.cfm">Microsoft Visio</a></li><li class="list-group-item "><a href="/microsoft-training/microsoft-word-training.cfm">Microsoft Word</a></li><li class="list-group-item "><a href="/microsoft-training/mvc-training.cfm">MVC</a></li><li class="list-group-item "><a href="/microsoft-training/power-business-intelligence-training.cfm">Power Business Intelligence</a></li><li class="list-group-item "><a href="/microsoft-training/powershell-training.cfm">PowerShell</a></li><li class="list-group-item "><a href="/microsoft-training/sharepoint-training.cfm">SharePoint</a></li><li class="list-group-item "><a href="/microsoft-training/sharepoint-end-user-training.cfm">SharePoint End User</a></li><li class="list-group-item "><a href="/microsoft-training/mssql-training.cfm">SQL Server</a></li><li class="list-group-item "><a href="/microsoft-training/microsoft-teams.cfm">Teams</a></li><li class="list-group-item "><a href="/microsoft-training/vba-training.cfm">VBA</a></li><li class="list-group-item "><a href="/microsoft-training/visual-studio-training.cfm">Visual Studio</a></li><li class="list-group-item "><a href="/microsoft-training/windows-training.cfm">Windows</a></li><li class="list-group-item "><a href="/microsoft-training/windows-server-training.cfm">Windows Server</a></li></ul><div class="bold font16 pl-10 pt-20 pb-10 pr-10"><div data-target=".multi-collapse-database-training" data-toggle="collapse">Database Training &nbsp;&nbsp;<i class="fas fa-caret-down"></i></div></div><ul class="list-group list-group-flush collapse multi-collapse-database-training"><li class="list-group-item "><a href="/database-training/amazon-redshift-training.cfm">Amazon Redshift</a></li><li class="list-group-item "><a href="/database-training/apache-cassandra-training.cfm">Apache Cassandra</a></li><li class="list-group-item "><a href="/database-training/businessobjects-training.cfm">Business Objects</a></li><li class="list-group-item "><a href="/database-training/cognos-training.cfm">Cognos</a></li><li class="list-group-item "><a href="/database-training/crystal-training.cfm">Crystal Reports</a></li><li class="list-group-item "><a href="/database-training/gemfire-training.cfm">GemFire</a></li><li class="list-group-item "><a href="/database-training/greenplum-training.cfm">Greenplum</a></li><li class="list-group-item "><a href="/database-training/ibm-netezza-training.cfm">IBM Netezza</a></li><li class="list-group-item "><a href="/database-training/access-training.cfm">Microsoft Access</a></li><li class="list-group-item "><a href="/database-training/mongodb-training.cfm">MongoDB</a></li><li class="list-group-item "><a href="/database-training/mysql-training.cfm">MySQL</a></li><li class="list-group-item "><a href="/database-training/oracle-training.cfm">Oracle</a></li><li class="list-group-item "><a href="/database-training/postgresql-training.cfm">PostgreSQL</a></li><li class="list-group-item "><a href="/database-training/redis-training.cfm">Redis</a></li><li class="list-group-item "><a href="/database-training/sql-training.cfm">SQL</a></li><li class="list-group-item "><a href="/database-training/mssql-training.cfm">SQL Server</a></li><li class="list-group-item "><a href="/database-training/ssas-training.cfm">SSAS</a></li><li class="list-group-item "><a href="/database-training/ssis-training.cfm">SSIS</a></li><li class="list-group-item "><a href="/database-training/ssrs-training.cfm">SSRS</a></li><li class="list-group-item "><a href="/database-training/tableau-training.cfm">Tableau</a></li><li class="list-group-item "><a href="/database-training/teradata-training.cfm">Teradata</a></li><li class="list-group-item "><a href="/database-training/vertica-training.cfm">Vertica</a></li></ul><div class="bold font16 pl-10 pt-20 pb-10 pr-10"><div data-target=".multi-collapse-webdev-training" data-toggle="collapse">Web Development Training &nbsp;&nbsp;<i class="fas fa-caret-down"></i></div></div><ul class="list-group list-group-flush collapse multi-collapse-webdev-training"><li class="list-group-item "><a href="/webdev-training/ajax-training.cfm">Ajax</a></li><li class="list-group-item "><a href="/webdev-training/angular-training.cfm">Angular</a></li><li class="list-group-item "><a href="/webdev-training/apache-training.cfm">Apache Web Server</a></li><li class="list-group-item "><a href="/webdev-training/aspnet-training.cfm">ASP.NET</a></li><li class="list-group-item "><a href="/webdev-training/bootstrap-training.cfm">Bootstrap</a></li><li class="list-group-item "><a href="/webdev-training/coldfusion-training.cfm">ColdFusion</a></li><li class="list-group-item "><a href="/webdev-training/css-training.cfm">CSS</a></li><li class="list-group-item "><a href="/webdev-training/design-training.cfm">Design</a></li><li class="list-group-item "><a href="/webdev-training/dreamweaver-training.cfm">Dreamweaver</a></li><li class="list-group-item "><a href="/webdev-training/google-ads-training.cfm">Google Ads</a></li><li class="list-group-item "><a href="/webdev-training/google-analytics-training.cfm">Google Analytics</a></li><li class="list-group-item "><a href="/webdev-training/grails-training.cfm">Grails</a></li><li class="list-group-item "><a href="/webdev-training/graphql-training.cfm">GraphQL</a></li><li class="list-group-item "><a href="/webdev-training/gwt-training.cfm">GWT</a></li><li class="list-group-item "><a href="/webdev-training/html-training.cfm">HTML</a></li><li class="list-group-item "><a href="/webdev-training/iis-training.cfm">IIS</a></li><li class="list-group-item "><a href="/webdev-training/j2ee-training.cfm">Java EE</a></li><li class="list-group-item "><a href="/webdev-training/javascript-training.cfm">JavaScript</a></li><li class="list-group-item "><a href="/webdev-training/jboss-training.cfm">JBoss/WildFly</a></li><li class="list-group-item "><a href="/webdev-training/jquery-training.cfm">jQuery</a></li><li class="list-group-item "><a href="/webdev-training/perl-training.cfm">Perl</a></li><li class="list-group-item "><a href="/webdev-training/php-training.cfm">PHP</a></li><li class="list-group-item "><a href="/webdev-training/python-training.cfm">Python</a></li><li class="list-group-item "><a href="/webdev-training/react-training.cfm">React</a></li><li class="list-group-item "><a href="/webdev-training/ruby-training.cfm">Ruby on Rails</a></li><li class="list-group-item "><a href="/webdev-training/tomcat-training.cfm">Tomcat</a></li><li class="list-group-item "><a href="/webdev-training/accessibility-training.cfm">Web Accessibility</a></li><li class="list-group-item "><a href="/webdev-training/wordpress-training.cfm">WordPress</a></li></ul><div class="bold font16 pl-10 pt-20 pb-10 pr-10"><div data-target=".multi-collapse-java-training" data-toggle="collapse">Java Training &nbsp;&nbsp;<i class="fas fa-caret-down"></i></div></div><ul class="list-group list-group-flush collapse multi-collapse-java-training"><li class="list-group-item "><a href="/java-training/j2ee-training.cfm">Java EE</a></li><li class="list-group-item "><a href="/java-training/javacore-training.cfm">Java Fundamentals</a></li><li class="list-group-item "><a href="/java-training/java-security-training.cfm">Java Security</a></li><li class="list-group-item "><a href="/java-training/jboss-training.cfm">JBoss/WildFly</a></li><li class="list-group-item "><a href="/java-training/spring-training.cfm">Spring</a></li><li class="list-group-item "><a href="/java-training/tomcat-training.cfm">Tomcat</a></li></ul><div class="bold font16 pl-10 pt-20 pb-10 pr-10"><div data-target=".multi-collapse-adobe-training" data-toggle="collapse">Adobe Training &nbsp;&nbsp;<i class="fas fa-caret-down"></i></div></div><ul class="list-group list-group-flush collapse multi-collapse-adobe-training"><li class="list-group-item "><a href="/adobe-training/acrobat-training.cfm">Acrobat</a></li><li class="list-group-item "><a href="/adobe-training/aftereffects-training.cfm">After Effects</a></li><li class="list-group-item "><a href="/adobe-training/animate-training.cfm">Animate</a></li><li class="list-group-item "><a href="/adobe-training/captivate-training.cfm">Captivate</a></li><li class="list-group-item "><a href="/adobe-training/coldfusion-training.cfm">ColdFusion</a></li><li class="list-group-item "><a href="/adobe-training/dreamweaver-training.cfm">Dreamweaver</a></li><li class="list-group-item "><a href="/adobe-training/framemaker-training.cfm">FrameMaker</a></li><li class="list-group-item "><a href="/adobe-training/illustrator-training.cfm">Illustrator</a></li><li class="list-group-item "><a href="/adobe-training/indesign-training.cfm">InDesign</a></li><li class="list-group-item "><a href="/adobe-training/livecycle-training.cfm">LiveCycle</a></li><li class="list-group-item "><a href="/adobe-training/photoshop-training.cfm">Photoshop</a></li><li class="list-group-item "><a href="/adobe-training/premierepro-training.cfm">Premiere Pro</a></li><li class="list-group-item "><a href="/adobe-training/adobe-presenter-training.cfm">Presenter</a></li><li class="list-group-item "><a href="/adobe-training/robohelp-training.cfm">RoboHelp</a></li></ul><div class="bold font16 pl-10 pt-20 pb-10 pr-10"><div data-target=".multi-collapse-programming-training" data-toggle="collapse">Programming Training &nbsp;&nbsp;<i class="fas fa-caret-down"></i></div></div><ul class="list-group list-group-flush collapse multi-collapse-programming-training"><li class="list-group-item "><a href="/programming-training/agile-training.cfm">Agile</a></li><li class="list-group-item "><a href="/programming-training/apple-swift-training.cfm">Apple Swift</a></li><li class="list-group-item "><a href="/programming-training/azure-devops-services-training.cfm">Azure DevOps Services</a></li><li class="list-group-item "><a href="/programming-training/csharp-training.cfm">C#</a></li><li class="list-group-item "><a href="/programming-training/c-training.cfm">C/C++</a></li><li class="list-group-item "><a href="/programming-training/devops-training.cfm">DevOps</a></li><li class="list-group-item "><a href="/programming-training/git-training.cfm">Git</a></li><li class="list-group-item "><a href="/programming-training/groovy-training.cfm">Groovy</a></li><li class="list-group-item "><a href="/programming-training/gwt-training.cfm">GWT</a></li><li class="list-group-item "><a href="/programming-training/ios-training.cfm">iOS</a></li><li class="list-group-item "><a href="/programming-training/jenkins-training.cfm">Jenkins</a></li><li class="list-group-item "><a href="/programming-training/jira-training.cfm">JIRA</a></li><li class="list-group-item "><a href="/programming-training/kotlin-training.cfm">Kotlin</a></li><li class="list-group-item "><a href="/programming-training/linux-training.cfm">Linux</a></li><li class="list-group-item "><a href="/programming-training/maven-training.cfm">Maven</a></li><li class="list-group-item "><a href="/programming-training/microservices-training.cfm">Microservices</a></li><li class="list-group-item "><a href="/programming-training/objective-c-training.cfm">Objective-C</a></li><li class="list-group-item "><a href="/programming-training/perl-training.cfm">Perl</a></li><li class="list-group-item "><a href="/programming-training/php-training.cfm">PHP</a></li><li class="list-group-item "><a href="/programming-training/python-training.cfm">Python</a></li><li class="list-group-item "><a href="/programming-training/r-programming-training.cfm">R Programming</a></li><li class="list-group-item "><a href="/programming-training/scala-training.cfm">Scala</a></li><li class="list-group-item "><a href="/programming-training/unix-training.cfm">Unix</a></li><li class="list-group-item "><a href="/programming-training/xamarin-training.cfm">Xamarin</a></li><li class="list-group-item "><a href="/programming-training/xml-training.cfm">XML</a></li></ul><div class="bold font16 pl-10 pt-20 pb-10 pr-10"><div data-target=".multi-collapse-big-data-training" data-toggle="collapse">Big Data Training &nbsp;&nbsp;<i class="fas fa-caret-down"></i></div></div><ul class="list-group list-group-flush collapse multi-collapse-big-data-training"><li class="list-group-item "><a href="/big-data-training/cognos-training.cfm">Cognos</a></li><li class="list-group-item "><a href="/big-data-training/hadoop-training.cfm">Hadoop</a></li><li class="list-group-item "><a href="/big-data-training/microsoft-big-data-training.cfm">Microsoft Big Data</a></li><li class="list-group-item "><a href="/big-data-training/spark-training.cfm">Spark</a></li></ul><div class="bold font16 pl-10 pt-20 pb-10 pr-10"><div data-target=".multi-collapse-cloud-training" data-toggle="collapse">Cloud Training &nbsp;&nbsp;<i class="fas fa-caret-down"></i></div></div><ul class="list-group list-group-flush collapse multi-collapse-cloud-training"><li class="list-group-item "><a href="/cloud-training/aws-training.cfm">AWS</a></li><li class="list-group-item "><a href="/cloud-training/azure-training.cfm">Azure</a></li><li class="list-group-item "><a href="/cloud-training/comptiacloud-training.cfm">CompTIA Cloud</a></li><li class="list-group-item "><a href="/cloud-training/microsoft-365-training.cfm">Microsoft 365</a></li><li class="list-group-item "><a href="/cloud-training/microsoft-system-center-training.cfm">Microsoft System Center</a></li></ul><div class="bold font16 pl-10 pt-20 pb-10 pr-10"><div data-target=".multi-collapse-business-skills-training" data-toggle="collapse">Business Skills Training &nbsp;&nbsp;<i class="fas fa-caret-down"></i></div></div><ul class="list-group list-group-flush collapse multi-collapse-business-skills-training"><li class="list-group-item "><a href="/business-skills-training/agile-training.cfm">Agile</a></li><li class="list-group-item "><a href="/business-skills-training/apple-training.cfm">Apple</a></li><li class="list-group-item "><a href="/business-skills-training/articulate-storyline-training.cfm">Articulate Storyline</a></li><li class="list-group-item "><a href="/business-skills-training/business-management-training.cfm">Business Management</a></li><li class="list-group-item "><a href="/business-skills-training/camtasia-training.cfm">Camtasia</a></li><li class="list-group-item "><a href="/business-skills-training/communication-training.cfm">Communication</a></li><li class="list-group-item "><a href="/business-skills-training/comptia-training.cfm">CompTIA</a></li><li class="list-group-item "><a href="/business-skills-training/customer-service-training.cfm">Customer Service</a></li><li class="list-group-item "><a href="/business-skills-training/finance-training.cfm">Finance</a></li><li class="list-group-item "><a href="/business-skills-training/google-apps-training.cfm">Google Apps</a></li><li class="list-group-item "><a href="/business-skills-training/hr-training.cfm">HR</a></li><li class="list-group-item "><a href="/business-skills-training/instructional-design-training.cfm">Instructional Design</a></li><li class="list-group-item "><a href="/business-skills-training/itleadership-training.cfm">IT Leadership</a></li><li class="list-group-item "><a href="/business-skills-training/marketing-training.cfm">Marketing</a></li><li class="list-group-item "><a href="/business-skills-training/project-management-training.cfm">Project Management</a></li><li class="list-group-item "><a href="/business-skills-training/quark-training.cfm">Quark</a></li><li class="list-group-item "><a href="/business-skills-training/quickbooks-training.cfm">QuickBooks</a></li><li class="list-group-item "><a href="/business-skills-training/social-media-training.cfm">Social Media</a></li><li class="list-group-item "><a href="/business-skills-training/writing-training.cfm">Writing</a></li></ul><div class="bold font16 pl-10 pt-20 pb-10 pr-10"><div data-target=".multi-collapse-web-application-servers-training" data-toggle="collapse">Web Application Server Training &nbsp;&nbsp;<i class="fas fa-caret-down"></i></div></div><ul class="list-group list-group-flush collapse multi-collapse-web-application-servers-training"><li class="list-group-item "><a href="/web-application-servers-training/apache-training.cfm">Apache Web Server</a></li><li class="list-group-item "><a href="/web-application-servers-training/iis-training.cfm">IIS</a></li><li class="list-group-item "><a href="/web-application-servers-training/jboss-training.cfm">JBoss/WildFly</a></li><li class="list-group-item "><a href="/web-application-servers-training/tomcat-training.cfm">Tomcat</a></li></ul>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav> 
+    
+    <header>
+    <nav class="shadow-sm bg-light navigation_24 fixed-top height80 d-none d-lg-flex">
+      <div class="container px-xl-0 mt-15">
+        <div class="row align-items-baseline lh-40 justify-content-between text-center">
+          <div class="col-md-3 col-xl-3 col-lg-3 text-lg-left">
+            <a href="/" title="Webucator"><picture><source srcset="https://images.webucator.com/logos/webucator.webp" type="image/webp"><source srcset="https://images.webucator.com/logos/webucator.jpg" type="image/jpeg"> <img src="https://images.webucator.com/logos/webucator.jpg" alt="Webucator Logo" style="height:52px;"></picture></a>
+          </div>
+          
+          <div class="col-md-6 col-xl-6 col-lg-6 text-lg-right js-nav-dropdowns">
+            <form name="search" method="get" id="searchForm" action="https://www.webucator.com/search/search.cfm">
+        
+          <div class="input-group">
+          <div class="input-group-prepend">
+            <a href="#" class="mx-15 link color-heading js-open-nav-dropdown">Browse Courses <i class="ml-5 fa fa-chevron-down"></i></a>
+          </div>  
+          <input autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control height40" type="search" name="q" id="nav-search" placeholder="Search Courses" value="" aria-describedby="search-submit-desktop">
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-outline-secondary" id="search-submit-desktop">
+              <i class="fa fa-fw fa-search fa-fw"></i><span class="sr-only">Search</span>
+              </button>
+            </div>
+          </div>
+       
+        </form>
+          </div>
+          <div class="col-md-3 col-xl-3 col-lg-3 text-lg-right js-nav-dropdowns">
+            <span class="mx-15 link color-heading dropdown"><a class="dropdown-toggle" href="#" id="navbarContactDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-phone"></i><span class="sr-only">Toggle Contact Dropdown</span></a><div class="dropdown-menu dropdown-menu-right shadow " aria-labelledby="navbarContactDropdown"><a class="dropdown-item" href="/contact/index.cfm"><i class="fal fa-envelope mr-10"></i> Contact Us</a><a class="dropdown-item" href="tel:+1-877-932-8228"><i class="fal fa-phone-square-alt mr-10"></i>&nbsp; 1-877-932-8228</a></div></span><span class="mx-15 link color-heading dropdown"><a class="dropdown-toggle" href="#" id="navbarOptionsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i><span class="sr-only">Toggle More Dropdopwn</span></a><div class="dropdown-menu dropdown-menu-right shadow " aria-labelledby="navbarOptionsDropdown"><a class="dropdown-item" href="/"><i class="fal fa-home-alt mr-10"></i>Home</a><a class="dropdown-item" href="/course/catalog.cfm"><i class="fal fa-list-alt mr-10"></i>Course Catalog</a><a class="dropdown-item" href="/live-online-training/index.cfm"><i class="fal fa-chalkboard-teacher mr-10"></i></i>Live Online Classes</a><a class="dropdown-item" href="/customized-private-training/index.cfm"><i class="fal fa-users-class mr-10"></i>Private Classes</a><a class="dropdown-item" href="/self-paced-training/index.cfm"><i class="fal fa-desktop mr-10"></i>Self-Paced Training</a><a class="dropdown-item" href="/enterprise-training/index.cfm"><i class="fal fa-user-chart mr-10"></i>Enterprise Training</a><a class="dropdown-item" href="/about-us/training-options.cfm"><i class="fal fa-archive mr-10"></i>All Training Options</a><div class="dropdown-divider"></div><a class="dropdown-item" href="/courseware/index.cfm" title="Purchase Courseware"><i class="fal fa-book mr-10"></i>Purchase Courseware</a><div class="dropdown-divider"></div><a class="dropdown-item" href="/about-us/company.cfm"><i class="fal fa-address-card mr-10"></i>About Us</a></div></div></span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Navigation popup -->
+      <div class="pt-25 pb-50 pl-20 bg-light navigation_popup shadow">
+        <div class="container px-xl-0">
+          <div class="row align-items-start justify-content-center justify-content-lg-between text-center text-lg-left">
+            <div class="col-lg-4 col-md-9">
+             
+              <div class="row justify-content-center justify-content-sm-between">
+                <ul class="list-group"> <li class="list-group-item list-group-item-action category-group-nav-selector" id="category-group-nav-selector-3" data-categorygroupid="3">
+        
+          <i class="category-group-icon-nav microsoft-training fab fa-microsoft font16"></i>&nbsp;&nbsp; Microsoft Training
+       
+      </li> <li class="list-group-item list-group-item-action category-group-nav-selector" id="category-group-nav-selector-6" data-categorygroupid="6">
+        
+          <i class="category-group-icon-nav database-training fas fa-database font16"></i>&nbsp;&nbsp; Database Training
+       
+      </li> <li class="list-group-item list-group-item-action category-group-nav-selector" id="category-group-nav-selector-8" data-categorygroupid="8">
+        
+          <i class="category-group-icon-nav webdev-training fas fa-code font16"></i>&nbsp;&nbsp; Web Development Training
+       
+      </li> <li class="list-group-item list-group-item-action category-group-nav-selector" id="category-group-nav-selector-2" data-categorygroupid="2">
+        
+          <i class="category-group-icon-nav java-training fab fa-java font16"></i>&nbsp;&nbsp; Java Training
+       
+      </li> <li class="list-group-item list-group-item-action category-group-nav-selector" id="category-group-nav-selector-5" data-categorygroupid="5">
+        
+          <i class="category-group-icon-nav adobe-training fab fa-adobe font16"></i>&nbsp;&nbsp; Adobe Training
+       
+      </li> <li class="list-group-item list-group-item-action category-group-nav-selector" id="category-group-nav-selector-18" data-categorygroupid="18">
+        
+          <i class="category-group-icon-nav programming-training fas fa-terminal font16"></i>&nbsp;&nbsp; Programming Training
+       
+      </li> <li class="list-group-item list-group-item-action category-group-nav-selector" id="category-group-nav-selector-37" data-categorygroupid="37">
+        
+          <i class="category-group-icon-nav big-data-training far fa-server font16"></i>&nbsp;&nbsp; Big Data Training
+       
+      </li> <li class="list-group-item list-group-item-action category-group-nav-selector" id="category-group-nav-selector-35" data-categorygroupid="35">
+        
+          <i class="category-group-icon-nav cloud-training fas fa-cloud font16"></i>&nbsp;&nbsp; Cloud Training
+       
+      </li> <li class="list-group-item list-group-item-action category-group-nav-selector" id="category-group-nav-selector-25" data-categorygroupid="25">
+        
+          <i class="category-group-icon-nav business-skills-training fas fa-chart-pie font16"></i>&nbsp;&nbsp; Business Skills Training
+       
+      </li> <li class="list-group-item list-group-item-action category-group-nav-selector" id="category-group-nav-selector-27" data-categorygroupid="27">
+        
+          <i class="category-group-icon-nav web-application-servers-training fas fa-desktop font16"></i>&nbsp;&nbsp; Web Application Server Training
+       
+      </li></ul>
+              </div>
+            </div>	
+            <div class="col-lg-8">
+               <div class="toggle-content-nav is-visible" id="nav-3"><h2 class="mb-10 f-20">Microsoft Training Categories</h2><div class="row"><div class="col-sm-4"><div><a href="/microsoft-training/aspnet-training.cfm" class="mb-1 py-1 link color-main">ASP.NET</a></div><div><a href="/microsoft-training/azure-training.cfm" class="mb-1 py-1 link color-main">Azure</a></div><div><a href="/microsoft-training/azure-devops-services-training.cfm" class="mb-1 py-1 link color-main">Azure DevOps Services</a></div><div><a href="/microsoft-training/csharp-training.cfm" class="mb-1 py-1 link color-main">C#</a></div><div><a href="/microsoft-training/microsoft-dynamics-training.cfm" class="mb-1 py-1 link color-main">Dynamics</a></div><div><a href="/microsoft-training/iis-training.cfm" class="mb-1 py-1 link color-main">IIS</a></div><div><a href="/microsoft-training/microsoft-365-training.cfm" class="mb-1 py-1 link color-main">Microsoft 365</a></div><div><a href="/microsoft-training/access-training.cfm" class="mb-1 py-1 link color-main">Microsoft Access</a></div><div><a href="/microsoft-training/business-intelligence-training.cfm" class="mb-1 py-1 link color-main">Microsoft Business Intelligence</a></div><div><a href="/microsoft-training/excel-training.cfm" class="mb-1 py-1 link color-main">Microsoft Excel</a></div><div><a href="/microsoft-training/exchange-training.cfm" class="mb-1 py-1 link color-main">Microsoft Exchange</a></div><div><a href="/microsoft-training/office-training.cfm" class="mb-1 py-1 link color-main">Microsoft Office</a></div><div><a href="/microsoft-training/microsoft-outlook-training.cfm" class="mb-1 py-1 link color-main">Microsoft Outlook</a></div></div><div class="col-sm-4"><div><a href="/microsoft-training/microsoft-powerpoint-training.cfm" class="mb-1 py-1 link color-main">Microsoft PowerPoint</a></div><div><a href="/microsoft-training/project-training.cfm" class="mb-1 py-1 link color-main">Microsoft Project</a></div><div><a href="/microsoft-training/publisher-training.cfm" class="mb-1 py-1 link color-main">Microsoft Publisher</a></div><div><a href="/microsoft-training/microsoft-system-center-training.cfm" class="mb-1 py-1 link color-main">Microsoft System Center</a></div><div><a href="/microsoft-training/microsoft-visio-training.cfm" class="mb-1 py-1 link color-main">Microsoft Visio</a></div><div><a href="/microsoft-training/microsoft-word-training.cfm" class="mb-1 py-1 link color-main">Microsoft Word</a></div><div><a href="/microsoft-training/mvc-training.cfm" class="mb-1 py-1 link color-main">MVC</a></div><div><a href="/microsoft-training/power-business-intelligence-training.cfm" class="mb-1 py-1 link color-main">Power Business Intelligence</a></div><div><a href="/microsoft-training/powershell-training.cfm" class="mb-1 py-1 link color-main">PowerShell</a></div><div><a href="/microsoft-training/sharepoint-training.cfm" class="mb-1 py-1 link color-main">SharePoint</a></div><div><a href="/microsoft-training/sharepoint-end-user-training.cfm" class="mb-1 py-1 link color-main">SharePoint End User</a></div><div><a href="/microsoft-training/mssql-training.cfm" class="mb-1 py-1 link color-main">SQL Server</a></div><div><a href="/microsoft-training/microsoft-teams.cfm" class="mb-1 py-1 link color-main">Teams</a></div></div><div class="col-sm-4"><div><a href="/microsoft-training/vba-training.cfm" class="mb-1 py-1 link color-main">VBA</a></div><div><a href="/microsoft-training/visual-studio-training.cfm" class="mb-1 py-1 link color-main">Visual Studio</a></div><div><a href="/microsoft-training/windows-training.cfm" class="mb-1 py-1 link color-main">Windows</a></div><div><a href="/microsoft-training/windows-server-training.cfm" class="mb-1 py-1 link color-main">Windows Server</a></div></div></div></div><div class="toggle-content-nav " id="nav-6"><h2 class="mb-10 f-20">Database Training Categories</h2><div class="row"><div class="col-sm-4"><div><a href="/database-training/amazon-redshift-training.cfm" class="mb-1 py-1 link color-main">Amazon Redshift</a></div><div><a href="/database-training/apache-cassandra-training.cfm" class="mb-1 py-1 link color-main">Apache Cassandra</a></div><div><a href="/database-training/businessobjects-training.cfm" class="mb-1 py-1 link color-main">Business Objects</a></div><div><a href="/database-training/cognos-training.cfm" class="mb-1 py-1 link color-main">Cognos</a></div><div><a href="/database-training/crystal-training.cfm" class="mb-1 py-1 link color-main">Crystal Reports</a></div><div><a href="/database-training/gemfire-training.cfm" class="mb-1 py-1 link color-main">GemFire</a></div><div><a href="/database-training/greenplum-training.cfm" class="mb-1 py-1 link color-main">Greenplum</a></div><div><a href="/database-training/ibm-netezza-training.cfm" class="mb-1 py-1 link color-main">IBM Netezza</a></div><div><a href="/database-training/access-training.cfm" class="mb-1 py-1 link color-main">Microsoft Access</a></div><div><a href="/database-training/mongodb-training.cfm" class="mb-1 py-1 link color-main">MongoDB</a></div><div><a href="/database-training/mysql-training.cfm" class="mb-1 py-1 link color-main">MySQL</a></div><div><a href="/database-training/oracle-training.cfm" class="mb-1 py-1 link color-main">Oracle</a></div><div><a href="/database-training/postgresql-training.cfm" class="mb-1 py-1 link color-main">PostgreSQL</a></div></div><div class="col-sm-4"><div><a href="/database-training/redis-training.cfm" class="mb-1 py-1 link color-main">Redis</a></div><div><a href="/database-training/sql-training.cfm" class="mb-1 py-1 link color-main">SQL</a></div><div><a href="/database-training/mssql-training.cfm" class="mb-1 py-1 link color-main">SQL Server</a></div><div><a href="/database-training/ssas-training.cfm" class="mb-1 py-1 link color-main">SSAS</a></div><div><a href="/database-training/ssis-training.cfm" class="mb-1 py-1 link color-main">SSIS</a></div><div><a href="/database-training/ssrs-training.cfm" class="mb-1 py-1 link color-main">SSRS</a></div><div><a href="/database-training/tableau-training.cfm" class="mb-1 py-1 link color-main">Tableau</a></div><div><a href="/database-training/teradata-training.cfm" class="mb-1 py-1 link color-main">Teradata</a></div><div><a href="/database-training/vertica-training.cfm" class="mb-1 py-1 link color-main">Vertica</a></div></div></div></div><div class="toggle-content-nav " id="nav-8"><h2 class="mb-10 f-20">Web Development Training Categories</h2><div class="row"><div class="col-sm-4"><div><a href="/webdev-training/ajax-training.cfm" class="mb-1 py-1 link color-main">Ajax</a></div><div><a href="/webdev-training/angular-training.cfm" class="mb-1 py-1 link color-main">Angular</a></div><div><a href="/webdev-training/apache-training.cfm" class="mb-1 py-1 link color-main">Apache Web Server</a></div><div><a href="/webdev-training/aspnet-training.cfm" class="mb-1 py-1 link color-main">ASP.NET</a></div><div><a href="/webdev-training/bootstrap-training.cfm" class="mb-1 py-1 link color-main">Bootstrap</a></div><div><a href="/webdev-training/coldfusion-training.cfm" class="mb-1 py-1 link color-main">ColdFusion</a></div><div><a href="/webdev-training/css-training.cfm" class="mb-1 py-1 link color-main">CSS</a></div><div><a href="/webdev-training/design-training.cfm" class="mb-1 py-1 link color-main">Design</a></div><div><a href="/webdev-training/dreamweaver-training.cfm" class="mb-1 py-1 link color-main">Dreamweaver</a></div><div><a href="/webdev-training/google-ads-training.cfm" class="mb-1 py-1 link color-main">Google Ads</a></div><div><a href="/webdev-training/google-analytics-training.cfm" class="mb-1 py-1 link color-main">Google Analytics</a></div><div><a href="/webdev-training/grails-training.cfm" class="mb-1 py-1 link color-main">Grails</a></div><div><a href="/webdev-training/graphql-training.cfm" class="mb-1 py-1 link color-main">GraphQL</a></div></div><div class="col-sm-4"><div><a href="/webdev-training/gwt-training.cfm" class="mb-1 py-1 link color-main">GWT</a></div><div><a href="/webdev-training/html-training.cfm" class="mb-1 py-1 link color-main">HTML</a></div><div><a href="/webdev-training/iis-training.cfm" class="mb-1 py-1 link color-main">IIS</a></div><div><a href="/webdev-training/j2ee-training.cfm" class="mb-1 py-1 link color-main">Java EE</a></div><div><a href="/webdev-training/javascript-training.cfm" class="mb-1 py-1 link color-main">JavaScript</a></div><div><a href="/webdev-training/jboss-training.cfm" class="mb-1 py-1 link color-main">JBoss/WildFly</a></div><div><a href="/webdev-training/jquery-training.cfm" class="mb-1 py-1 link color-main">jQuery</a></div><div><a href="/webdev-training/perl-training.cfm" class="mb-1 py-1 link color-main">Perl</a></div><div><a href="/webdev-training/php-training.cfm" class="mb-1 py-1 link color-main">PHP</a></div><div><a href="/webdev-training/python-training.cfm" class="mb-1 py-1 link color-main">Python</a></div><div><a href="/webdev-training/react-training.cfm" class="mb-1 py-1 link color-main">React</a></div><div><a href="/webdev-training/ruby-training.cfm" class="mb-1 py-1 link color-main">Ruby on Rails</a></div><div><a href="/webdev-training/tomcat-training.cfm" class="mb-1 py-1 link color-main">Tomcat</a></div></div><div class="col-sm-4"><div><a href="/webdev-training/accessibility-training.cfm" class="mb-1 py-1 link color-main">Web Accessibility</a></div><div><a href="/webdev-training/wordpress-training.cfm" class="mb-1 py-1 link color-main">WordPress</a></div></div></div></div><div class="toggle-content-nav " id="nav-2"><h2 class="mb-10 f-20">Java Training Categories</h2><div class="row"><div class="col-sm-4"><div><a href="/java-training/j2ee-training.cfm" class="mb-1 py-1 link color-main">Java EE</a></div><div><a href="/java-training/javacore-training.cfm" class="mb-1 py-1 link color-main">Java Fundamentals</a></div><div><a href="/java-training/java-security-training.cfm" class="mb-1 py-1 link color-main">Java Security</a></div><div><a href="/java-training/jboss-training.cfm" class="mb-1 py-1 link color-main">JBoss/WildFly</a></div><div><a href="/java-training/spring-training.cfm" class="mb-1 py-1 link color-main">Spring</a></div><div><a href="/java-training/tomcat-training.cfm" class="mb-1 py-1 link color-main">Tomcat</a></div></div></div></div><div class="toggle-content-nav " id="nav-5"><h2 class="mb-10 f-20">Adobe Training Categories</h2><div class="row"><div class="col-sm-4"><div><a href="/adobe-training/acrobat-training.cfm" class="mb-1 py-1 link color-main">Acrobat</a></div><div><a href="/adobe-training/aftereffects-training.cfm" class="mb-1 py-1 link color-main">After Effects</a></div><div><a href="/adobe-training/animate-training.cfm" class="mb-1 py-1 link color-main">Animate</a></div><div><a href="/adobe-training/captivate-training.cfm" class="mb-1 py-1 link color-main">Captivate</a></div><div><a href="/adobe-training/coldfusion-training.cfm" class="mb-1 py-1 link color-main">ColdFusion</a></div><div><a href="/adobe-training/dreamweaver-training.cfm" class="mb-1 py-1 link color-main">Dreamweaver</a></div><div><a href="/adobe-training/framemaker-training.cfm" class="mb-1 py-1 link color-main">FrameMaker</a></div><div><a href="/adobe-training/illustrator-training.cfm" class="mb-1 py-1 link color-main">Illustrator</a></div><div><a href="/adobe-training/indesign-training.cfm" class="mb-1 py-1 link color-main">InDesign</a></div><div><a href="/adobe-training/livecycle-training.cfm" class="mb-1 py-1 link color-main">LiveCycle</a></div><div><a href="/adobe-training/photoshop-training.cfm" class="mb-1 py-1 link color-main">Photoshop</a></div><div><a href="/adobe-training/premierepro-training.cfm" class="mb-1 py-1 link color-main">Premiere Pro</a></div><div><a href="/adobe-training/adobe-presenter-training.cfm" class="mb-1 py-1 link color-main">Presenter</a></div></div><div class="col-sm-4"><div><a href="/adobe-training/robohelp-training.cfm" class="mb-1 py-1 link color-main">RoboHelp</a></div></div></div></div><div class="toggle-content-nav " id="nav-18"><h2 class="mb-10 f-20">Programming Training Categories</h2><div class="row"><div class="col-sm-4"><div><a href="/programming-training/agile-training.cfm" class="mb-1 py-1 link color-main">Agile</a></div><div><a href="/programming-training/apple-swift-training.cfm" class="mb-1 py-1 link color-main">Apple Swift</a></div><div><a href="/programming-training/azure-devops-services-training.cfm" class="mb-1 py-1 link color-main">Azure DevOps Services</a></div><div><a href="/programming-training/csharp-training.cfm" class="mb-1 py-1 link color-main">C#</a></div><div><a href="/programming-training/c-training.cfm" class="mb-1 py-1 link color-main">C/C++</a></div><div><a href="/programming-training/devops-training.cfm" class="mb-1 py-1 link color-main">DevOps</a></div><div><a href="/programming-training/git-training.cfm" class="mb-1 py-1 link color-main">Git</a></div><div><a href="/programming-training/groovy-training.cfm" class="mb-1 py-1 link color-main">Groovy</a></div><div><a href="/programming-training/gwt-training.cfm" class="mb-1 py-1 link color-main">GWT</a></div><div><a href="/programming-training/ios-training.cfm" class="mb-1 py-1 link color-main">iOS</a></div><div><a href="/programming-training/jenkins-training.cfm" class="mb-1 py-1 link color-main">Jenkins</a></div><div><a href="/programming-training/jira-training.cfm" class="mb-1 py-1 link color-main">JIRA</a></div><div><a href="/programming-training/kotlin-training.cfm" class="mb-1 py-1 link color-main">Kotlin</a></div></div><div class="col-sm-4"><div><a href="/programming-training/linux-training.cfm" class="mb-1 py-1 link color-main">Linux</a></div><div><a href="/programming-training/maven-training.cfm" class="mb-1 py-1 link color-main">Maven</a></div><div><a href="/programming-training/microservices-training.cfm" class="mb-1 py-1 link color-main">Microservices</a></div><div><a href="/programming-training/objective-c-training.cfm" class="mb-1 py-1 link color-main">Objective-C</a></div><div><a href="/programming-training/perl-training.cfm" class="mb-1 py-1 link color-main">Perl</a></div><div><a href="/programming-training/php-training.cfm" class="mb-1 py-1 link color-main">PHP</a></div><div><a href="/programming-training/python-training.cfm" class="mb-1 py-1 link color-main">Python</a></div><div><a href="/programming-training/r-programming-training.cfm" class="mb-1 py-1 link color-main">R Programming</a></div><div><a href="/programming-training/scala-training.cfm" class="mb-1 py-1 link color-main">Scala</a></div><div><a href="/programming-training/unix-training.cfm" class="mb-1 py-1 link color-main">Unix</a></div><div><a href="/programming-training/xamarin-training.cfm" class="mb-1 py-1 link color-main">Xamarin</a></div><div><a href="/programming-training/xml-training.cfm" class="mb-1 py-1 link color-main">XML</a></div></div></div></div><div class="toggle-content-nav " id="nav-37"><h2 class="mb-10 f-20">Big Data Training Categories</h2><div class="row"><div class="col-sm-4"><div><a href="/big-data-training/cognos-training.cfm" class="mb-1 py-1 link color-main">Cognos</a></div><div><a href="/big-data-training/hadoop-training.cfm" class="mb-1 py-1 link color-main">Hadoop</a></div><div><a href="/big-data-training/microsoft-big-data-training.cfm" class="mb-1 py-1 link color-main">Microsoft Big Data</a></div><div><a href="/big-data-training/spark-training.cfm" class="mb-1 py-1 link color-main">Spark</a></div></div></div></div><div class="toggle-content-nav " id="nav-35"><h2 class="mb-10 f-20">Cloud Training Categories</h2><div class="row"><div class="col-sm-4"><div><a href="/cloud-training/aws-training.cfm" class="mb-1 py-1 link color-main">AWS</a></div><div><a href="/cloud-training/azure-training.cfm" class="mb-1 py-1 link color-main">Azure</a></div><div><a href="/cloud-training/comptiacloud-training.cfm" class="mb-1 py-1 link color-main">CompTIA Cloud</a></div><div><a href="/cloud-training/microsoft-365-training.cfm" class="mb-1 py-1 link color-main">Microsoft 365</a></div><div><a href="/cloud-training/microsoft-system-center-training.cfm" class="mb-1 py-1 link color-main">Microsoft System Center</a></div></div></div></div><div class="toggle-content-nav " id="nav-25"><h2 class="mb-10 f-20">Business Skills Training Categories</h2><div class="row"><div class="col-sm-4"><div><a href="/business-skills-training/agile-training.cfm" class="mb-1 py-1 link color-main">Agile</a></div><div><a href="/business-skills-training/apple-training.cfm" class="mb-1 py-1 link color-main">Apple</a></div><div><a href="/business-skills-training/articulate-storyline-training.cfm" class="mb-1 py-1 link color-main">Articulate Storyline</a></div><div><a href="/business-skills-training/business-management-training.cfm" class="mb-1 py-1 link color-main">Business Management</a></div><div><a href="/business-skills-training/camtasia-training.cfm" class="mb-1 py-1 link color-main">Camtasia</a></div><div><a href="/business-skills-training/communication-training.cfm" class="mb-1 py-1 link color-main">Communication</a></div><div><a href="/business-skills-training/comptia-training.cfm" class="mb-1 py-1 link color-main">CompTIA</a></div><div><a href="/business-skills-training/customer-service-training.cfm" class="mb-1 py-1 link color-main">Customer Service</a></div><div><a href="/business-skills-training/finance-training.cfm" class="mb-1 py-1 link color-main">Finance</a></div><div><a href="/business-skills-training/google-apps-training.cfm" class="mb-1 py-1 link color-main">Google Apps</a></div><div><a href="/business-skills-training/hr-training.cfm" class="mb-1 py-1 link color-main">HR</a></div><div><a href="/business-skills-training/instructional-design-training.cfm" class="mb-1 py-1 link color-main">Instructional Design</a></div><div><a href="/business-skills-training/itleadership-training.cfm" class="mb-1 py-1 link color-main">IT Leadership</a></div></div><div class="col-sm-4"><div><a href="/business-skills-training/marketing-training.cfm" class="mb-1 py-1 link color-main">Marketing</a></div><div><a href="/business-skills-training/project-management-training.cfm" class="mb-1 py-1 link color-main">Project Management</a></div><div><a href="/business-skills-training/quark-training.cfm" class="mb-1 py-1 link color-main">Quark</a></div><div><a href="/business-skills-training/quickbooks-training.cfm" class="mb-1 py-1 link color-main">QuickBooks</a></div><div><a href="/business-skills-training/social-media-training.cfm" class="mb-1 py-1 link color-main">Social Media</a></div><div><a href="/business-skills-training/writing-training.cfm" class="mb-1 py-1 link color-main">Writing</a></div></div></div></div><div class="toggle-content-nav " id="nav-27"><h2 class="mb-10 f-20">Web Application Server Training Categories</h2><div class="row"><div class="col-sm-4"><div><a href="/web-application-servers-training/apache-training.cfm" class="mb-1 py-1 link color-main">Apache Web Server</a></div><div><a href="/web-application-servers-training/iis-training.cfm" class="mb-1 py-1 link color-main">IIS</a></div><div><a href="/web-application-servers-training/jboss-training.cfm" class="mb-1 py-1 link color-main">JBoss/WildFly</a></div><div><a href="/web-application-servers-training/tomcat-training.cfm" class="mb-1 py-1 link color-main">Tomcat</a></div></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+    </nav>
+  </header>
+    <style>.dropdown-menu{display:none}</style> 
+  
+  <main>
+
+
+
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<ol class="breadcrumb uppercase gray f-12 mt-15 pl-0 op-7 sp-20 semibold" itemprop="breadcrumb"><!-- Breadcrumb NavXT 6.5.0 -->
+<li class="home"><a title="Webucator" href="/" class="home">Home</a> / <a title="Webucator Blog" href="/blog/" class="home">Blog</a></li>
+<li class="taxonomy category"><a title="Go to the Python category archives." href="https://www.webucator.com/blog/category/python/" class="taxonomy category">Python</a></li>
+<li class="post post-post current-item">Python Color Constants Module</li>
+</ol>
+</div>
+</div>
+</div>
+
+	<div class="feature_49 bg_white top35 padding_bottom80">
+			<div class="container nopadding dark_gray">
+					<div class="row justify-content-between">
+							<div class="col-lg-9 main">
+
+								<h1 class="f-30 font_second bottom25">Python Color Constants Module</h1><p class="itemdate"><span class="post-date updated">Mar 20, 2015</span></p><p>For Pygame and other graphics work, it&#8217;s helpful to have color constants that hold the color RGB values. I couldn&#8217;t find anything like this, so I created a <span style="text-decoration: underline;">color_constants</span> module that:</p>
+<ol>
+<li>Contains constants for 551 named colors* (e.g,  as named tuples:
+<pre lang="python">Color = namedtuple('RGB','red, green, blue')</pre>
+</li>
+<li>Extends the <code>Color</code> class to include a method for getting the hex formatted color:
+<pre lang="python">class RGB(Color):
+    def hex_format(self):
+        return '#{:02X}{:02X}{:02X}'.format(self.red,self.green,self.blue)</pre>
+</li>
+<li>Stores these constants in an <code>OrderedDict</code>.</li>
+</ol>
+<p>The colors are shown in the table below and the full code is shown below that.<span id="more-1813"></span></p>
+<style>#colortable{width:600px}#colortable th,#colortable td{padding:2px;border:1px solid #000}#colortable th{font-weight:bold;text-align:center}</style>
+<table id="colortable">
+<tr>
+<th>Color Name</th>
+<th>Hex Value</th>
+<th>RGB Value</th>
+<th>Sample</th>
+</tr>
+<tr>
+<td>aliceblue</td>
+<td>#F0F8FF</td>
+<td>RGB(240,248,255)</td>
+<td style="background-color:#F0F8FF">&nbsp;</td>
+</tr>
+<tr>
+<td>antiquewhite</td>
+<td>#FAEBD7</td>
+<td>RGB(250,235,215)</td>
+<td style="background-color:#FAEBD7">&nbsp;</td>
+</tr>
+<tr>
+<td>antiquewhite1</td>
+<td>#FFEFDB</td>
+<td>RGB(255,239,219)</td>
+<td style="background-color:#FFEFDB">&nbsp;</td>
+</tr>
+<tr>
+<td>antiquewhite2</td>
+<td>#EEDFCC</td>
+<td>RGB(238,223,204)</td>
+<td style="background-color:#EEDFCC">&nbsp;</td>
+</tr>
+<tr>
+<td>antiquewhite3</td>
+<td>#CDC0B0</td>
+<td>RGB(205,192,176)</td>
+<td style="background-color:#CDC0B0">&nbsp;</td>
+</tr>
+<tr>
+<td>antiquewhite4</td>
+<td>#8B8378</td>
+<td>RGB(139,131,120)</td>
+<td style="background-color:#8B8378">&nbsp;</td>
+</tr>
+<tr>
+<td>aqua</td>
+<td>#00FFFF</td>
+<td>RGB(0,255,255)</td>
+<td style="background-color:#00FFFF">&nbsp;</td>
+</tr>
+<tr>
+<td>aquamarine1</td>
+<td>#7FFFD4</td>
+<td>RGB(127,255,212)</td>
+<td style="background-color:#7FFFD4">&nbsp;</td>
+</tr>
+<tr>
+<td>aquamarine2</td>
+<td>#76EEC6</td>
+<td>RGB(118,238,198)</td>
+<td style="background-color:#76EEC6">&nbsp;</td>
+</tr>
+<tr>
+<td>aquamarine3</td>
+<td>#66CDAA</td>
+<td>RGB(102,205,170)</td>
+<td style="background-color:#66CDAA">&nbsp;</td>
+</tr>
+<tr>
+<td>aquamarine4</td>
+<td>#458B74</td>
+<td>RGB(69,139,116)</td>
+<td style="background-color:#458B74">&nbsp;</td>
+</tr>
+<tr>
+<td>azure1</td>
+<td>#F0FFFF</td>
+<td>RGB(240,255,255)</td>
+<td style="background-color:#F0FFFF">&nbsp;</td>
+</tr>
+<tr>
+<td>azure2</td>
+<td>#E0EEEE</td>
+<td>RGB(224,238,238)</td>
+<td style="background-color:#E0EEEE">&nbsp;</td>
+</tr>
+<tr>
+<td>azure3</td>
+<td>#C1CDCD</td>
+<td>RGB(193,205,205)</td>
+<td style="background-color:#C1CDCD">&nbsp;</td>
+</tr>
+<tr>
+<td>azure4</td>
+<td>#838B8B</td>
+<td>RGB(131,139,139)</td>
+<td style="background-color:#838B8B">&nbsp;</td>
+</tr>
+<tr>
+<td>banana</td>
+<td>#E3CF57</td>
+<td>RGB(227,207,87)</td>
+<td style="background-color:#E3CF57">&nbsp;</td>
+</tr>
+<tr>
+<td>beige</td>
+<td>#F5F5DC</td>
+<td>RGB(245,245,220)</td>
+<td style="background-color:#F5F5DC">&nbsp;</td>
+</tr>
+<tr>
+<td>bisque1</td>
+<td>#FFE4C4</td>
+<td>RGB(255,228,196)</td>
+<td style="background-color:#FFE4C4">&nbsp;</td>
+</tr>
+<tr>
+<td>bisque2</td>
+<td>#EED5B7</td>
+<td>RGB(238,213,183)</td>
+<td style="background-color:#EED5B7">&nbsp;</td>
+</tr>
+<tr>
+<td>bisque3</td>
+<td>#CDB79E</td>
+<td>RGB(205,183,158)</td>
+<td style="background-color:#CDB79E">&nbsp;</td>
+</tr>
+<tr>
+<td>bisque4</td>
+<td>#8B7D6B</td>
+<td>RGB(139,125,107)</td>
+<td style="background-color:#8B7D6B">&nbsp;</td>
+</tr>
+<tr>
+<td>black</td>
+<td>#000000</td>
+<td>RGB(0,0,0)</td>
+<td style="background-color:#000000">&nbsp;</td>
+</tr>
+<tr>
+<td>blanchedalmond</td>
+<td>#FFEBCD</td>
+<td>RGB(255,235,205)</td>
+<td style="background-color:#FFEBCD">&nbsp;</td>
+</tr>
+<tr>
+<td>blue</td>
+<td>#0000FF</td>
+<td>RGB(0,0,255)</td>
+<td style="background-color:#0000FF">&nbsp;</td>
+</tr>
+<tr>
+<td>blue2</td>
+<td>#0000EE</td>
+<td>RGB(0,0,238)</td>
+<td style="background-color:#0000EE">&nbsp;</td>
+</tr>
+<tr>
+<td>blue3</td>
+<td>#0000CD</td>
+<td>RGB(0,0,205)</td>
+<td style="background-color:#0000CD">&nbsp;</td>
+</tr>
+<tr>
+<td>blue4</td>
+<td>#00008B</td>
+<td>RGB(0,0,139)</td>
+<td style="background-color:#00008B">&nbsp;</td>
+</tr>
+<tr>
+<td>blueviolet</td>
+<td>#8A2BE2</td>
+<td>RGB(138,43,226)</td>
+<td style="background-color:#8A2BE2">&nbsp;</td>
+</tr>
+<tr>
+<td>brick</td>
+<td>#9C661F</td>
+<td>RGB(156,102,31)</td>
+<td style="background-color:#9C661F">&nbsp;</td>
+</tr>
+<tr>
+<td>brown</td>
+<td>#A52A2A</td>
+<td>RGB(165,42,42)</td>
+<td style="background-color:#A52A2A">&nbsp;</td>
+</tr>
+<tr>
+<td>brown1</td>
+<td>#FF4040</td>
+<td>RGB(255,64,64)</td>
+<td style="background-color:#FF4040">&nbsp;</td>
+</tr>
+<tr>
+<td>brown2</td>
+<td>#EE3B3B</td>
+<td>RGB(238,59,59)</td>
+<td style="background-color:#EE3B3B">&nbsp;</td>
+</tr>
+<tr>
+<td>brown3</td>
+<td>#CD3333</td>
+<td>RGB(205,51,51)</td>
+<td style="background-color:#CD3333">&nbsp;</td>
+</tr>
+<tr>
+<td>brown4</td>
+<td>#8B2323</td>
+<td>RGB(139,35,35)</td>
+<td style="background-color:#8B2323">&nbsp;</td>
+</tr>
+<tr>
+<td>burlywood</td>
+<td>#DEB887</td>
+<td>RGB(222,184,135)</td>
+<td style="background-color:#DEB887">&nbsp;</td>
+</tr>
+<tr>
+<td>burlywood1</td>
+<td>#FFD39B</td>
+<td>RGB(255,211,155)</td>
+<td style="background-color:#FFD39B">&nbsp;</td>
+</tr>
+<tr>
+<td>burlywood2</td>
+<td>#EEC591</td>
+<td>RGB(238,197,145)</td>
+<td style="background-color:#EEC591">&nbsp;</td>
+</tr>
+<tr>
+<td>burlywood3</td>
+<td>#CDAA7D</td>
+<td>RGB(205,170,125)</td>
+<td style="background-color:#CDAA7D">&nbsp;</td>
+</tr>
+<tr>
+<td>burlywood4</td>
+<td>#8B7355</td>
+<td>RGB(139,115,85)</td>
+<td style="background-color:#8B7355">&nbsp;</td>
+</tr>
+<tr>
+<td>burntsienna</td>
+<td>#8A360F</td>
+<td>RGB(138,54,15)</td>
+<td style="background-color:#8A360F">&nbsp;</td>
+</tr>
+<tr>
+<td>burntumber</td>
+<td>#8A3324</td>
+<td>RGB(138,51,36)</td>
+<td style="background-color:#8A3324">&nbsp;</td>
+</tr>
+<tr>
+<td>cadetblue</td>
+<td>#5F9EA0</td>
+<td>RGB(95,158,160)</td>
+<td style="background-color:#5F9EA0">&nbsp;</td>
+</tr>
+<tr>
+<td>cadetblue1</td>
+<td>#98F5FF</td>
+<td>RGB(152,245,255)</td>
+<td style="background-color:#98F5FF">&nbsp;</td>
+</tr>
+<tr>
+<td>cadetblue2</td>
+<td>#8EE5EE</td>
+<td>RGB(142,229,238)</td>
+<td style="background-color:#8EE5EE">&nbsp;</td>
+</tr>
+<tr>
+<td>cadetblue3</td>
+<td>#7AC5CD</td>
+<td>RGB(122,197,205)</td>
+<td style="background-color:#7AC5CD">&nbsp;</td>
+</tr>
+<tr>
+<td>cadetblue4</td>
+<td>#53868B</td>
+<td>RGB(83,134,139)</td>
+<td style="background-color:#53868B">&nbsp;</td>
+</tr>
+<tr>
+<td>cadmiumorange</td>
+<td>#FF6103</td>
+<td>RGB(255,97,3)</td>
+<td style="background-color:#FF6103">&nbsp;</td>
+</tr>
+<tr>
+<td>cadmiumyellow</td>
+<td>#FF9912</td>
+<td>RGB(255,153,18)</td>
+<td style="background-color:#FF9912">&nbsp;</td>
+</tr>
+<tr>
+<td>carrot</td>
+<td>#ED9121</td>
+<td>RGB(237,145,33)</td>
+<td style="background-color:#ED9121">&nbsp;</td>
+</tr>
+<tr>
+<td>chartreuse1</td>
+<td>#7FFF00</td>
+<td>RGB(127,255,0)</td>
+<td style="background-color:#7FFF00">&nbsp;</td>
+</tr>
+<tr>
+<td>chartreuse2</td>
+<td>#76EE00</td>
+<td>RGB(118,238,0)</td>
+<td style="background-color:#76EE00">&nbsp;</td>
+</tr>
+<tr>
+<td>chartreuse3</td>
+<td>#66CD00</td>
+<td>RGB(102,205,0)</td>
+<td style="background-color:#66CD00">&nbsp;</td>
+</tr>
+<tr>
+<td>chartreuse4</td>
+<td>#458B00</td>
+<td>RGB(69,139,0)</td>
+<td style="background-color:#458B00">&nbsp;</td>
+</tr>
+<tr>
+<td>chocolate</td>
+<td>#D2691E</td>
+<td>RGB(210,105,30)</td>
+<td style="background-color:#D2691E">&nbsp;</td>
+</tr>
+<tr>
+<td>chocolate1</td>
+<td>#FF7F24</td>
+<td>RGB(255,127,36)</td>
+<td style="background-color:#FF7F24">&nbsp;</td>
+</tr>
+<tr>
+<td>chocolate2</td>
+<td>#EE7621</td>
+<td>RGB(238,118,33)</td>
+<td style="background-color:#EE7621">&nbsp;</td>
+</tr>
+<tr>
+<td>chocolate3</td>
+<td>#CD661D</td>
+<td>RGB(205,102,29)</td>
+<td style="background-color:#CD661D">&nbsp;</td>
+</tr>
+<tr>
+<td>chocolate4</td>
+<td>#8B4513</td>
+<td>RGB(139,69,19)</td>
+<td style="background-color:#8B4513">&nbsp;</td>
+</tr>
+<tr>
+<td>cobalt</td>
+<td>#3D59AB</td>
+<td>RGB(61,89,171)</td>
+<td style="background-color:#3D59AB">&nbsp;</td>
+</tr>
+<tr>
+<td>cobaltgreen</td>
+<td>#3D9140</td>
+<td>RGB(61,145,64)</td>
+<td style="background-color:#3D9140">&nbsp;</td>
+</tr>
+<tr>
+<td>coldgrey</td>
+<td>#808A87</td>
+<td>RGB(128,138,135)</td>
+<td style="background-color:#808A87">&nbsp;</td>
+</tr>
+<tr>
+<td>coral</td>
+<td>#FF7F50</td>
+<td>RGB(255,127,80)</td>
+<td style="background-color:#FF7F50">&nbsp;</td>
+</tr>
+<tr>
+<td>coral1</td>
+<td>#FF7256</td>
+<td>RGB(255,114,86)</td>
+<td style="background-color:#FF7256">&nbsp;</td>
+</tr>
+<tr>
+<td>coral2</td>
+<td>#EE6A50</td>
+<td>RGB(238,106,80)</td>
+<td style="background-color:#EE6A50">&nbsp;</td>
+</tr>
+<tr>
+<td>coral3</td>
+<td>#CD5B45</td>
+<td>RGB(205,91,69)</td>
+<td style="background-color:#CD5B45">&nbsp;</td>
+</tr>
+<tr>
+<td>coral4</td>
+<td>#8B3E2F</td>
+<td>RGB(139,62,47)</td>
+<td style="background-color:#8B3E2F">&nbsp;</td>
+</tr>
+<tr>
+<td>cornflowerblue</td>
+<td>#6495ED</td>
+<td>RGB(100,149,237)</td>
+<td style="background-color:#6495ED">&nbsp;</td>
+</tr>
+<tr>
+<td>cornsilk1</td>
+<td>#FFF8DC</td>
+<td>RGB(255,248,220)</td>
+<td style="background-color:#FFF8DC">&nbsp;</td>
+</tr>
+<tr>
+<td>cornsilk2</td>
+<td>#EEE8CD</td>
+<td>RGB(238,232,205)</td>
+<td style="background-color:#EEE8CD">&nbsp;</td>
+</tr>
+<tr>
+<td>cornsilk3</td>
+<td>#CDC8B1</td>
+<td>RGB(205,200,177)</td>
+<td style="background-color:#CDC8B1">&nbsp;</td>
+</tr>
+<tr>
+<td>cornsilk4</td>
+<td>#8B8878</td>
+<td>RGB(139,136,120)</td>
+<td style="background-color:#8B8878">&nbsp;</td>
+</tr>
+<tr>
+<td>crimson</td>
+<td>#DC143C</td>
+<td>RGB(220,20,60)</td>
+<td style="background-color:#DC143C">&nbsp;</td>
+</tr>
+<tr>
+<td>cyan2</td>
+<td>#00EEEE</td>
+<td>RGB(0,238,238)</td>
+<td style="background-color:#00EEEE">&nbsp;</td>
+</tr>
+<tr>
+<td>cyan3</td>
+<td>#00CDCD</td>
+<td>RGB(0,205,205)</td>
+<td style="background-color:#00CDCD">&nbsp;</td>
+</tr>
+<tr>
+<td>cyan4</td>
+<td>#008B8B</td>
+<td>RGB(0,139,139)</td>
+<td style="background-color:#008B8B">&nbsp;</td>
+</tr>
+<tr>
+<td>darkgoldenrod</td>
+<td>#B8860B</td>
+<td>RGB(184,134,11)</td>
+<td style="background-color:#B8860B">&nbsp;</td>
+</tr>
+<tr>
+<td>darkgoldenrod1</td>
+<td>#FFB90F</td>
+<td>RGB(255,185,15)</td>
+<td style="background-color:#FFB90F">&nbsp;</td>
+</tr>
+<tr>
+<td>darkgoldenrod2</td>
+<td>#EEAD0E</td>
+<td>RGB(238,173,14)</td>
+<td style="background-color:#EEAD0E">&nbsp;</td>
+</tr>
+<tr>
+<td>darkgoldenrod3</td>
+<td>#CD950C</td>
+<td>RGB(205,149,12)</td>
+<td style="background-color:#CD950C">&nbsp;</td>
+</tr>
+<tr>
+<td>darkgoldenrod4</td>
+<td>#8B6508</td>
+<td>RGB(139,101,8)</td>
+<td style="background-color:#8B6508">&nbsp;</td>
+</tr>
+<tr>
+<td>darkgray</td>
+<td>#A9A9A9</td>
+<td>RGB(169,169,169)</td>
+<td style="background-color:#A9A9A9">&nbsp;</td>
+</tr>
+<tr>
+<td>darkgreen</td>
+<td>#006400</td>
+<td>RGB(0,100,0)</td>
+<td style="background-color:#006400">&nbsp;</td>
+</tr>
+<tr>
+<td>darkkhaki</td>
+<td>#BDB76B</td>
+<td>RGB(189,183,107)</td>
+<td style="background-color:#BDB76B">&nbsp;</td>
+</tr>
+<tr>
+<td>darkolivegreen</td>
+<td>#556B2F</td>
+<td>RGB(85,107,47)</td>
+<td style="background-color:#556B2F">&nbsp;</td>
+</tr>
+<tr>
+<td>darkolivegreen1</td>
+<td>#CAFF70</td>
+<td>RGB(202,255,112)</td>
+<td style="background-color:#CAFF70">&nbsp;</td>
+</tr>
+<tr>
+<td>darkolivegreen2</td>
+<td>#BCEE68</td>
+<td>RGB(188,238,104)</td>
+<td style="background-color:#BCEE68">&nbsp;</td>
+</tr>
+<tr>
+<td>darkolivegreen3</td>
+<td>#A2CD5A</td>
+<td>RGB(162,205,90)</td>
+<td style="background-color:#A2CD5A">&nbsp;</td>
+</tr>
+<tr>
+<td>darkolivegreen4</td>
+<td>#6E8B3D</td>
+<td>RGB(110,139,61)</td>
+<td style="background-color:#6E8B3D">&nbsp;</td>
+</tr>
+<tr>
+<td>darkorange</td>
+<td>#FF8C00</td>
+<td>RGB(255,140,0)</td>
+<td style="background-color:#FF8C00">&nbsp;</td>
+</tr>
+<tr>
+<td>darkorange1</td>
+<td>#FF7F00</td>
+<td>RGB(255,127,0)</td>
+<td style="background-color:#FF7F00">&nbsp;</td>
+</tr>
+<tr>
+<td>darkorange2</td>
+<td>#EE7600</td>
+<td>RGB(238,118,0)</td>
+<td style="background-color:#EE7600">&nbsp;</td>
+</tr>
+<tr>
+<td>darkorange3</td>
+<td>#CD6600</td>
+<td>RGB(205,102,0)</td>
+<td style="background-color:#CD6600">&nbsp;</td>
+</tr>
+<tr>
+<td>darkorange4</td>
+<td>#8B4500</td>
+<td>RGB(139,69,0)</td>
+<td style="background-color:#8B4500">&nbsp;</td>
+</tr>
+<tr>
+<td>darkorchid</td>
+<td>#9932CC</td>
+<td>RGB(153,50,204)</td>
+<td style="background-color:#9932CC">&nbsp;</td>
+</tr>
+<tr>
+<td>darkorchid1</td>
+<td>#BF3EFF</td>
+<td>RGB(191,62,255)</td>
+<td style="background-color:#BF3EFF">&nbsp;</td>
+</tr>
+<tr>
+<td>darkorchid2</td>
+<td>#B23AEE</td>
+<td>RGB(178,58,238)</td>
+<td style="background-color:#B23AEE">&nbsp;</td>
+</tr>
+<tr>
+<td>darkorchid3</td>
+<td>#9A32CD</td>
+<td>RGB(154,50,205)</td>
+<td style="background-color:#9A32CD">&nbsp;</td>
+</tr>
+<tr>
+<td>darkorchid4</td>
+<td>#68228B</td>
+<td>RGB(104,34,139)</td>
+<td style="background-color:#68228B">&nbsp;</td>
+</tr>
+<tr>
+<td>darksalmon</td>
+<td>#E9967A</td>
+<td>RGB(233,150,122)</td>
+<td style="background-color:#E9967A">&nbsp;</td>
+</tr>
+<tr>
+<td>darkseagreen</td>
+<td>#8FBC8F</td>
+<td>RGB(143,188,143)</td>
+<td style="background-color:#8FBC8F">&nbsp;</td>
+</tr>
+<tr>
+<td>darkseagreen1</td>
+<td>#C1FFC1</td>
+<td>RGB(193,255,193)</td>
+<td style="background-color:#C1FFC1">&nbsp;</td>
+</tr>
+<tr>
+<td>darkseagreen2</td>
+<td>#B4EEB4</td>
+<td>RGB(180,238,180)</td>
+<td style="background-color:#B4EEB4">&nbsp;</td>
+</tr>
+<tr>
+<td>darkseagreen3</td>
+<td>#9BCD9B</td>
+<td>RGB(155,205,155)</td>
+<td style="background-color:#9BCD9B">&nbsp;</td>
+</tr>
+<tr>
+<td>darkseagreen4</td>
+<td>#698B69</td>
+<td>RGB(105,139,105)</td>
+<td style="background-color:#698B69">&nbsp;</td>
+</tr>
+<tr>
+<td>darkslateblue</td>
+<td>#483D8B</td>
+<td>RGB(72,61,139)</td>
+<td style="background-color:#483D8B">&nbsp;</td>
+</tr>
+<tr>
+<td>darkslategray</td>
+<td>#2F4F4F</td>
+<td>RGB(47,79,79)</td>
+<td style="background-color:#2F4F4F">&nbsp;</td>
+</tr>
+<tr>
+<td>darkslategray1</td>
+<td>#97FFFF</td>
+<td>RGB(151,255,255)</td>
+<td style="background-color:#97FFFF">&nbsp;</td>
+</tr>
+<tr>
+<td>darkslategray2</td>
+<td>#8DEEEE</td>
+<td>RGB(141,238,238)</td>
+<td style="background-color:#8DEEEE">&nbsp;</td>
+</tr>
+<tr>
+<td>darkslategray3</td>
+<td>#79CDCD</td>
+<td>RGB(121,205,205)</td>
+<td style="background-color:#79CDCD">&nbsp;</td>
+</tr>
+<tr>
+<td>darkslategray4</td>
+<td>#528B8B</td>
+<td>RGB(82,139,139)</td>
+<td style="background-color:#528B8B">&nbsp;</td>
+</tr>
+<tr>
+<td>darkturquoise</td>
+<td>#00CED1</td>
+<td>RGB(0,206,209)</td>
+<td style="background-color:#00CED1">&nbsp;</td>
+</tr>
+<tr>
+<td>darkviolet</td>
+<td>#9400D3</td>
+<td>RGB(148,0,211)</td>
+<td style="background-color:#9400D3">&nbsp;</td>
+</tr>
+<tr>
+<td>deeppink1</td>
+<td>#FF1493</td>
+<td>RGB(255,20,147)</td>
+<td style="background-color:#FF1493">&nbsp;</td>
+</tr>
+<tr>
+<td>deeppink2</td>
+<td>#EE1289</td>
+<td>RGB(238,18,137)</td>
+<td style="background-color:#EE1289">&nbsp;</td>
+</tr>
+<tr>
+<td>deeppink3</td>
+<td>#CD1076</td>
+<td>RGB(205,16,118)</td>
+<td style="background-color:#CD1076">&nbsp;</td>
+</tr>
+<tr>
+<td>deeppink4</td>
+<td>#8B0A50</td>
+<td>RGB(139,10,80)</td>
+<td style="background-color:#8B0A50">&nbsp;</td>
+</tr>
+<tr>
+<td>deepskyblue1</td>
+<td>#00BFFF</td>
+<td>RGB(0,191,255)</td>
+<td style="background-color:#00BFFF">&nbsp;</td>
+</tr>
+<tr>
+<td>deepskyblue2</td>
+<td>#00B2EE</td>
+<td>RGB(0,178,238)</td>
+<td style="background-color:#00B2EE">&nbsp;</td>
+</tr>
+<tr>
+<td>deepskyblue3</td>
+<td>#009ACD</td>
+<td>RGB(0,154,205)</td>
+<td style="background-color:#009ACD">&nbsp;</td>
+</tr>
+<tr>
+<td>deepskyblue4</td>
+<td>#00688B</td>
+<td>RGB(0,104,139)</td>
+<td style="background-color:#00688B">&nbsp;</td>
+</tr>
+<tr>
+<td>dimgray</td>
+<td>#696969</td>
+<td>RGB(105,105,105)</td>
+<td style="background-color:#696969">&nbsp;</td>
+</tr>
+<tr>
+<td>dodgerblue1</td>
+<td>#1E90FF</td>
+<td>RGB(30,144,255)</td>
+<td style="background-color:#1E90FF">&nbsp;</td>
+</tr>
+<tr>
+<td>dodgerblue2</td>
+<td>#1C86EE</td>
+<td>RGB(28,134,238)</td>
+<td style="background-color:#1C86EE">&nbsp;</td>
+</tr>
+<tr>
+<td>dodgerblue3</td>
+<td>#1874CD</td>
+<td>RGB(24,116,205)</td>
+<td style="background-color:#1874CD">&nbsp;</td>
+</tr>
+<tr>
+<td>dodgerblue4</td>
+<td>#104E8B</td>
+<td>RGB(16,78,139)</td>
+<td style="background-color:#104E8B">&nbsp;</td>
+</tr>
+<tr>
+<td>eggshell</td>
+<td>#FCE6C9</td>
+<td>RGB(252,230,201)</td>
+<td style="background-color:#FCE6C9">&nbsp;</td>
+</tr>
+<tr>
+<td>emeraldgreen</td>
+<td>#00C957</td>
+<td>RGB(0,201,87)</td>
+<td style="background-color:#00C957">&nbsp;</td>
+</tr>
+<tr>
+<td>firebrick</td>
+<td>#B22222</td>
+<td>RGB(178,34,34)</td>
+<td style="background-color:#B22222">&nbsp;</td>
+</tr>
+<tr>
+<td>firebrick1</td>
+<td>#FF3030</td>
+<td>RGB(255,48,48)</td>
+<td style="background-color:#FF3030">&nbsp;</td>
+</tr>
+<tr>
+<td>firebrick2</td>
+<td>#EE2C2C</td>
+<td>RGB(238,44,44)</td>
+<td style="background-color:#EE2C2C">&nbsp;</td>
+</tr>
+<tr>
+<td>firebrick3</td>
+<td>#CD2626</td>
+<td>RGB(205,38,38)</td>
+<td style="background-color:#CD2626">&nbsp;</td>
+</tr>
+<tr>
+<td>firebrick4</td>
+<td>#8B1A1A</td>
+<td>RGB(139,26,26)</td>
+<td style="background-color:#8B1A1A">&nbsp;</td>
+</tr>
+<tr>
+<td>flesh</td>
+<td>#FF7D40</td>
+<td>RGB(255,125,64)</td>
+<td style="background-color:#FF7D40">&nbsp;</td>
+</tr>
+<tr>
+<td>floralwhite</td>
+<td>#FFFAF0</td>
+<td>RGB(255,250,240)</td>
+<td style="background-color:#FFFAF0">&nbsp;</td>
+</tr>
+<tr>
+<td>forestgreen</td>
+<td>#228B22</td>
+<td>RGB(34,139,34)</td>
+<td style="background-color:#228B22">&nbsp;</td>
+</tr>
+<tr>
+<td>gainsboro</td>
+<td>#DCDCDC</td>
+<td>RGB(220,220,220)</td>
+<td style="background-color:#DCDCDC">&nbsp;</td>
+</tr>
+<tr>
+<td>ghostwhite</td>
+<td>#F8F8FF</td>
+<td>RGB(248,248,255)</td>
+<td style="background-color:#F8F8FF">&nbsp;</td>
+</tr>
+<tr>
+<td>gold1</td>
+<td>#FFD700</td>
+<td>RGB(255,215,0)</td>
+<td style="background-color:#FFD700">&nbsp;</td>
+</tr>
+<tr>
+<td>gold2</td>
+<td>#EEC900</td>
+<td>RGB(238,201,0)</td>
+<td style="background-color:#EEC900">&nbsp;</td>
+</tr>
+<tr>
+<td>gold3</td>
+<td>#CDAD00</td>
+<td>RGB(205,173,0)</td>
+<td style="background-color:#CDAD00">&nbsp;</td>
+</tr>
+<tr>
+<td>gold4</td>
+<td>#8B7500</td>
+<td>RGB(139,117,0)</td>
+<td style="background-color:#8B7500">&nbsp;</td>
+</tr>
+<tr>
+<td>goldenrod</td>
+<td>#DAA520</td>
+<td>RGB(218,165,32)</td>
+<td style="background-color:#DAA520">&nbsp;</td>
+</tr>
+<tr>
+<td>goldenrod1</td>
+<td>#FFC125</td>
+<td>RGB(255,193,37)</td>
+<td style="background-color:#FFC125">&nbsp;</td>
+</tr>
+<tr>
+<td>goldenrod2</td>
+<td>#EEB422</td>
+<td>RGB(238,180,34)</td>
+<td style="background-color:#EEB422">&nbsp;</td>
+</tr>
+<tr>
+<td>goldenrod3</td>
+<td>#CD9B1D</td>
+<td>RGB(205,155,29)</td>
+<td style="background-color:#CD9B1D">&nbsp;</td>
+</tr>
+<tr>
+<td>goldenrod4</td>
+<td>#8B6914</td>
+<td>RGB(139,105,20)</td>
+<td style="background-color:#8B6914">&nbsp;</td>
+</tr>
+<tr>
+<td>gray</td>
+<td>#808080</td>
+<td>RGB(128,128,128)</td>
+<td style="background-color:#808080">&nbsp;</td>
+</tr>
+<tr>
+<td>gray1</td>
+<td>#030303</td>
+<td>RGB(3,3,3)</td>
+<td style="background-color:#030303">&nbsp;</td>
+</tr>
+<tr>
+<td>gray10</td>
+<td>#1A1A1A</td>
+<td>RGB(26,26,26)</td>
+<td style="background-color:#1A1A1A">&nbsp;</td>
+</tr>
+<tr>
+<td>gray11</td>
+<td>#1C1C1C</td>
+<td>RGB(28,28,28)</td>
+<td style="background-color:#1C1C1C">&nbsp;</td>
+</tr>
+<tr>
+<td>gray12</td>
+<td>#1F1F1F</td>
+<td>RGB(31,31,31)</td>
+<td style="background-color:#1F1F1F">&nbsp;</td>
+</tr>
+<tr>
+<td>gray13</td>
+<td>#212121</td>
+<td>RGB(33,33,33)</td>
+<td style="background-color:#212121">&nbsp;</td>
+</tr>
+<tr>
+<td>gray14</td>
+<td>#242424</td>
+<td>RGB(36,36,36)</td>
+<td style="background-color:#242424">&nbsp;</td>
+</tr>
+<tr>
+<td>gray15</td>
+<td>#262626</td>
+<td>RGB(38,38,38)</td>
+<td style="background-color:#262626">&nbsp;</td>
+</tr>
+<tr>
+<td>gray16</td>
+<td>#292929</td>
+<td>RGB(41,41,41)</td>
+<td style="background-color:#292929">&nbsp;</td>
+</tr>
+<tr>
+<td>gray17</td>
+<td>#2B2B2B</td>
+<td>RGB(43,43,43)</td>
+<td style="background-color:#2B2B2B">&nbsp;</td>
+</tr>
+<tr>
+<td>gray18</td>
+<td>#2E2E2E</td>
+<td>RGB(46,46,46)</td>
+<td style="background-color:#2E2E2E">&nbsp;</td>
+</tr>
+<tr>
+<td>gray19</td>
+<td>#303030</td>
+<td>RGB(48,48,48)</td>
+<td style="background-color:#303030">&nbsp;</td>
+</tr>
+<tr>
+<td>gray2</td>
+<td>#050505</td>
+<td>RGB(5,5,5)</td>
+<td style="background-color:#050505">&nbsp;</td>
+</tr>
+<tr>
+<td>gray20</td>
+<td>#333333</td>
+<td>RGB(51,51,51)</td>
+<td style="background-color:#333333">&nbsp;</td>
+</tr>
+<tr>
+<td>gray21</td>
+<td>#363636</td>
+<td>RGB(54,54,54)</td>
+<td style="background-color:#363636">&nbsp;</td>
+</tr>
+<tr>
+<td>gray22</td>
+<td>#383838</td>
+<td>RGB(56,56,56)</td>
+<td style="background-color:#383838">&nbsp;</td>
+</tr>
+<tr>
+<td>gray23</td>
+<td>#3B3B3B</td>
+<td>RGB(59,59,59)</td>
+<td style="background-color:#3B3B3B">&nbsp;</td>
+</tr>
+<tr>
+<td>gray24</td>
+<td>#3D3D3D</td>
+<td>RGB(61,61,61)</td>
+<td style="background-color:#3D3D3D">&nbsp;</td>
+</tr>
+<tr>
+<td>gray25</td>
+<td>#404040</td>
+<td>RGB(64,64,64)</td>
+<td style="background-color:#404040">&nbsp;</td>
+</tr>
+<tr>
+<td>gray26</td>
+<td>#424242</td>
+<td>RGB(66,66,66)</td>
+<td style="background-color:#424242">&nbsp;</td>
+</tr>
+<tr>
+<td>gray27</td>
+<td>#454545</td>
+<td>RGB(69,69,69)</td>
+<td style="background-color:#454545">&nbsp;</td>
+</tr>
+<tr>
+<td>gray28</td>
+<td>#474747</td>
+<td>RGB(71,71,71)</td>
+<td style="background-color:#474747">&nbsp;</td>
+</tr>
+<tr>
+<td>gray29</td>
+<td>#4A4A4A</td>
+<td>RGB(74,74,74)</td>
+<td style="background-color:#4A4A4A">&nbsp;</td>
+</tr>
+<tr>
+<td>gray3</td>
+<td>#080808</td>
+<td>RGB(8,8,8)</td>
+<td style="background-color:#080808">&nbsp;</td>
+</tr>
+<tr>
+<td>gray30</td>
+<td>#4D4D4D</td>
+<td>RGB(77,77,77)</td>
+<td style="background-color:#4D4D4D">&nbsp;</td>
+</tr>
+<tr>
+<td>gray31</td>
+<td>#4F4F4F</td>
+<td>RGB(79,79,79)</td>
+<td style="background-color:#4F4F4F">&nbsp;</td>
+</tr>
+<tr>
+<td>gray32</td>
+<td>#525252</td>
+<td>RGB(82,82,82)</td>
+<td style="background-color:#525252">&nbsp;</td>
+</tr>
+<tr>
+<td>gray33</td>
+<td>#545454</td>
+<td>RGB(84,84,84)</td>
+<td style="background-color:#545454">&nbsp;</td>
+</tr>
+<tr>
+<td>gray34</td>
+<td>#575757</td>
+<td>RGB(87,87,87)</td>
+<td style="background-color:#575757">&nbsp;</td>
+</tr>
+<tr>
+<td>gray35</td>
+<td>#595959</td>
+<td>RGB(89,89,89)</td>
+<td style="background-color:#595959">&nbsp;</td>
+</tr>
+<tr>
+<td>gray36</td>
+<td>#5C5C5C</td>
+<td>RGB(92,92,92)</td>
+<td style="background-color:#5C5C5C">&nbsp;</td>
+</tr>
+<tr>
+<td>gray37</td>
+<td>#5E5E5E</td>
+<td>RGB(94,94,94)</td>
+<td style="background-color:#5E5E5E">&nbsp;</td>
+</tr>
+<tr>
+<td>gray38</td>
+<td>#616161</td>
+<td>RGB(97,97,97)</td>
+<td style="background-color:#616161">&nbsp;</td>
+</tr>
+<tr>
+<td>gray39</td>
+<td>#636363</td>
+<td>RGB(99,99,99)</td>
+<td style="background-color:#636363">&nbsp;</td>
+</tr>
+<tr>
+<td>gray4</td>
+<td>#0A0A0A</td>
+<td>RGB(10,10,10)</td>
+<td style="background-color:#0A0A0A">&nbsp;</td>
+</tr>
+<tr>
+<td>gray40</td>
+<td>#666666</td>
+<td>RGB(102,102,102)</td>
+<td style="background-color:#666666">&nbsp;</td>
+</tr>
+<tr>
+<td>gray42</td>
+<td>#6B6B6B</td>
+<td>RGB(107,107,107)</td>
+<td style="background-color:#6B6B6B">&nbsp;</td>
+</tr>
+<tr>
+<td>gray43</td>
+<td>#6E6E6E</td>
+<td>RGB(110,110,110)</td>
+<td style="background-color:#6E6E6E">&nbsp;</td>
+</tr>
+<tr>
+<td>gray44</td>
+<td>#707070</td>
+<td>RGB(112,112,112)</td>
+<td style="background-color:#707070">&nbsp;</td>
+</tr>
+<tr>
+<td>gray45</td>
+<td>#737373</td>
+<td>RGB(115,115,115)</td>
+<td style="background-color:#737373">&nbsp;</td>
+</tr>
+<tr>
+<td>gray46</td>
+<td>#757575</td>
+<td>RGB(117,117,117)</td>
+<td style="background-color:#757575">&nbsp;</td>
+</tr>
+<tr>
+<td>gray47</td>
+<td>#787878</td>
+<td>RGB(120,120,120)</td>
+<td style="background-color:#787878">&nbsp;</td>
+</tr>
+<tr>
+<td>gray48</td>
+<td>#7A7A7A</td>
+<td>RGB(122,122,122)</td>
+<td style="background-color:#7A7A7A">&nbsp;</td>
+</tr>
+<tr>
+<td>gray49</td>
+<td>#7D7D7D</td>
+<td>RGB(125,125,125)</td>
+<td style="background-color:#7D7D7D">&nbsp;</td>
+</tr>
+<tr>
+<td>gray5</td>
+<td>#0D0D0D</td>
+<td>RGB(13,13,13)</td>
+<td style="background-color:#0D0D0D">&nbsp;</td>
+</tr>
+<tr>
+<td>gray50</td>
+<td>#7F7F7F</td>
+<td>RGB(127,127,127)</td>
+<td style="background-color:#7F7F7F">&nbsp;</td>
+</tr>
+<tr>
+<td>gray51</td>
+<td>#828282</td>
+<td>RGB(130,130,130)</td>
+<td style="background-color:#828282">&nbsp;</td>
+</tr>
+<tr>
+<td>gray52</td>
+<td>#858585</td>
+<td>RGB(133,133,133)</td>
+<td style="background-color:#858585">&nbsp;</td>
+</tr>
+<tr>
+<td>gray53</td>
+<td>#878787</td>
+<td>RGB(135,135,135)</td>
+<td style="background-color:#878787">&nbsp;</td>
+</tr>
+<tr>
+<td>gray54</td>
+<td>#8A8A8A</td>
+<td>RGB(138,138,138)</td>
+<td style="background-color:#8A8A8A">&nbsp;</td>
+</tr>
+<tr>
+<td>gray55</td>
+<td>#8C8C8C</td>
+<td>RGB(140,140,140)</td>
+<td style="background-color:#8C8C8C">&nbsp;</td>
+</tr>
+<tr>
+<td>gray56</td>
+<td>#8F8F8F</td>
+<td>RGB(143,143,143)</td>
+<td style="background-color:#8F8F8F">&nbsp;</td>
+</tr>
+<tr>
+<td>gray57</td>
+<td>#919191</td>
+<td>RGB(145,145,145)</td>
+<td style="background-color:#919191">&nbsp;</td>
+</tr>
+<tr>
+<td>gray58</td>
+<td>#949494</td>
+<td>RGB(148,148,148)</td>
+<td style="background-color:#949494">&nbsp;</td>
+</tr>
+<tr>
+<td>gray59</td>
+<td>#969696</td>
+<td>RGB(150,150,150)</td>
+<td style="background-color:#969696">&nbsp;</td>
+</tr>
+<tr>
+<td>gray6</td>
+<td>#0F0F0F</td>
+<td>RGB(15,15,15)</td>
+<td style="background-color:#0F0F0F">&nbsp;</td>
+</tr>
+<tr>
+<td>gray60</td>
+<td>#999999</td>
+<td>RGB(153,153,153)</td>
+<td style="background-color:#999999">&nbsp;</td>
+</tr>
+<tr>
+<td>gray61</td>
+<td>#9C9C9C</td>
+<td>RGB(156,156,156)</td>
+<td style="background-color:#9C9C9C">&nbsp;</td>
+</tr>
+<tr>
+<td>gray62</td>
+<td>#9E9E9E</td>
+<td>RGB(158,158,158)</td>
+<td style="background-color:#9E9E9E">&nbsp;</td>
+</tr>
+<tr>
+<td>gray63</td>
+<td>#A1A1A1</td>
+<td>RGB(161,161,161)</td>
+<td style="background-color:#A1A1A1">&nbsp;</td>
+</tr>
+<tr>
+<td>gray64</td>
+<td>#A3A3A3</td>
+<td>RGB(163,163,163)</td>
+<td style="background-color:#A3A3A3">&nbsp;</td>
+</tr>
+<tr>
+<td>gray65</td>
+<td>#A6A6A6</td>
+<td>RGB(166,166,166)</td>
+<td style="background-color:#A6A6A6">&nbsp;</td>
+</tr>
+<tr>
+<td>gray66</td>
+<td>#A8A8A8</td>
+<td>RGB(168,168,168)</td>
+<td style="background-color:#A8A8A8">&nbsp;</td>
+</tr>
+<tr>
+<td>gray67</td>
+<td>#ABABAB</td>
+<td>RGB(171,171,171)</td>
+<td style="background-color:#ABABAB">&nbsp;</td>
+</tr>
+<tr>
+<td>gray68</td>
+<td>#ADADAD</td>
+<td>RGB(173,173,173)</td>
+<td style="background-color:#ADADAD">&nbsp;</td>
+</tr>
+<tr>
+<td>gray69</td>
+<td>#B0B0B0</td>
+<td>RGB(176,176,176)</td>
+<td style="background-color:#B0B0B0">&nbsp;</td>
+</tr>
+<tr>
+<td>gray7</td>
+<td>#121212</td>
+<td>RGB(18,18,18)</td>
+<td style="background-color:#121212">&nbsp;</td>
+</tr>
+<tr>
+<td>gray70</td>
+<td>#B3B3B3</td>
+<td>RGB(179,179,179)</td>
+<td style="background-color:#B3B3B3">&nbsp;</td>
+</tr>
+<tr>
+<td>gray71</td>
+<td>#B5B5B5</td>
+<td>RGB(181,181,181)</td>
+<td style="background-color:#B5B5B5">&nbsp;</td>
+</tr>
+<tr>
+<td>gray72</td>
+<td>#B8B8B8</td>
+<td>RGB(184,184,184)</td>
+<td style="background-color:#B8B8B8">&nbsp;</td>
+</tr>
+<tr>
+<td>gray73</td>
+<td>#BABABA</td>
+<td>RGB(186,186,186)</td>
+<td style="background-color:#BABABA">&nbsp;</td>
+</tr>
+<tr>
+<td>gray74</td>
+<td>#BDBDBD</td>
+<td>RGB(189,189,189)</td>
+<td style="background-color:#BDBDBD">&nbsp;</td>
+</tr>
+<tr>
+<td>gray75</td>
+<td>#BFBFBF</td>
+<td>RGB(191,191,191)</td>
+<td style="background-color:#BFBFBF">&nbsp;</td>
+</tr>
+<tr>
+<td>gray76</td>
+<td>#C2C2C2</td>
+<td>RGB(194,194,194)</td>
+<td style="background-color:#C2C2C2">&nbsp;</td>
+</tr>
+<tr>
+<td>gray77</td>
+<td>#C4C4C4</td>
+<td>RGB(196,196,196)</td>
+<td style="background-color:#C4C4C4">&nbsp;</td>
+</tr>
+<tr>
+<td>gray78</td>
+<td>#C7C7C7</td>
+<td>RGB(199,199,199)</td>
+<td style="background-color:#C7C7C7">&nbsp;</td>
+</tr>
+<tr>
+<td>gray79</td>
+<td>#C9C9C9</td>
+<td>RGB(201,201,201)</td>
+<td style="background-color:#C9C9C9">&nbsp;</td>
+</tr>
+<tr>
+<td>gray8</td>
+<td>#141414</td>
+<td>RGB(20,20,20)</td>
+<td style="background-color:#141414">&nbsp;</td>
+</tr>
+<tr>
+<td>gray80</td>
+<td>#CCCCCC</td>
+<td>RGB(204,204,204)</td>
+<td style="background-color:#CCCCCC">&nbsp;</td>
+</tr>
+<tr>
+<td>gray81</td>
+<td>#CFCFCF</td>
+<td>RGB(207,207,207)</td>
+<td style="background-color:#CFCFCF">&nbsp;</td>
+</tr>
+<tr>
+<td>gray82</td>
+<td>#D1D1D1</td>
+<td>RGB(209,209,209)</td>
+<td style="background-color:#D1D1D1">&nbsp;</td>
+</tr>
+<tr>
+<td>gray83</td>
+<td>#D4D4D4</td>
+<td>RGB(212,212,212)</td>
+<td style="background-color:#D4D4D4">&nbsp;</td>
+</tr>
+<tr>
+<td>gray84</td>
+<td>#D6D6D6</td>
+<td>RGB(214,214,214)</td>
+<td style="background-color:#D6D6D6">&nbsp;</td>
+</tr>
+<tr>
+<td>gray85</td>
+<td>#D9D9D9</td>
+<td>RGB(217,217,217)</td>
+<td style="background-color:#D9D9D9">&nbsp;</td>
+</tr>
+<tr>
+<td>gray86</td>
+<td>#DBDBDB</td>
+<td>RGB(219,219,219)</td>
+<td style="background-color:#DBDBDB">&nbsp;</td>
+</tr>
+<tr>
+<td>gray87</td>
+<td>#DEDEDE</td>
+<td>RGB(222,222,222)</td>
+<td style="background-color:#DEDEDE">&nbsp;</td>
+</tr>
+<tr>
+<td>gray88</td>
+<td>#E0E0E0</td>
+<td>RGB(224,224,224)</td>
+<td style="background-color:#E0E0E0">&nbsp;</td>
+</tr>
+<tr>
+<td>gray89</td>
+<td>#E3E3E3</td>
+<td>RGB(227,227,227)</td>
+<td style="background-color:#E3E3E3">&nbsp;</td>
+</tr>
+<tr>
+<td>gray9</td>
+<td>#171717</td>
+<td>RGB(23,23,23)</td>
+<td style="background-color:#171717">&nbsp;</td>
+</tr>
+<tr>
+<td>gray90</td>
+<td>#E5E5E5</td>
+<td>RGB(229,229,229)</td>
+<td style="background-color:#E5E5E5">&nbsp;</td>
+</tr>
+<tr>
+<td>gray91</td>
+<td>#E8E8E8</td>
+<td>RGB(232,232,232)</td>
+<td style="background-color:#E8E8E8">&nbsp;</td>
+</tr>
+<tr>
+<td>gray92</td>
+<td>#EBEBEB</td>
+<td>RGB(235,235,235)</td>
+<td style="background-color:#EBEBEB">&nbsp;</td>
+</tr>
+<tr>
+<td>gray93</td>
+<td>#EDEDED</td>
+<td>RGB(237,237,237)</td>
+<td style="background-color:#EDEDED">&nbsp;</td>
+</tr>
+<tr>
+<td>gray94</td>
+<td>#F0F0F0</td>
+<td>RGB(240,240,240)</td>
+<td style="background-color:#F0F0F0">&nbsp;</td>
+</tr>
+<tr>
+<td>gray95</td>
+<td>#F2F2F2</td>
+<td>RGB(242,242,242)</td>
+<td style="background-color:#F2F2F2">&nbsp;</td>
+</tr>
+<tr>
+<td>gray97</td>
+<td>#F7F7F7</td>
+<td>RGB(247,247,247)</td>
+<td style="background-color:#F7F7F7">&nbsp;</td>
+</tr>
+<tr>
+<td>gray98</td>
+<td>#FAFAFA</td>
+<td>RGB(250,250,250)</td>
+<td style="background-color:#FAFAFA">&nbsp;</td>
+</tr>
+<tr>
+<td>gray99</td>
+<td>#FCFCFC</td>
+<td>RGB(252,252,252)</td>
+<td style="background-color:#FCFCFC">&nbsp;</td>
+</tr>
+<tr>
+<td>green</td>
+<td>#008000</td>
+<td>RGB(0,128,0)</td>
+<td style="background-color:#008000">&nbsp;</td>
+</tr>
+<tr>
+<td>green1</td>
+<td>#00FF00</td>
+<td>RGB(0,255,0)</td>
+<td style="background-color:#00FF00">&nbsp;</td>
+</tr>
+<tr>
+<td>green2</td>
+<td>#00EE00</td>
+<td>RGB(0,238,0)</td>
+<td style="background-color:#00EE00">&nbsp;</td>
+</tr>
+<tr>
+<td>green3</td>
+<td>#00CD00</td>
+<td>RGB(0,205,0)</td>
+<td style="background-color:#00CD00">&nbsp;</td>
+</tr>
+<tr>
+<td>green4</td>
+<td>#008B00</td>
+<td>RGB(0,139,0)</td>
+<td style="background-color:#008B00">&nbsp;</td>
+</tr>
+<tr>
+<td>greenyellow</td>
+<td>#ADFF2F</td>
+<td>RGB(173,255,47)</td>
+<td style="background-color:#ADFF2F">&nbsp;</td>
+</tr>
+<tr>
+<td>honeydew1</td>
+<td>#F0FFF0</td>
+<td>RGB(240,255,240)</td>
+<td style="background-color:#F0FFF0">&nbsp;</td>
+</tr>
+<tr>
+<td>honeydew2</td>
+<td>#E0EEE0</td>
+<td>RGB(224,238,224)</td>
+<td style="background-color:#E0EEE0">&nbsp;</td>
+</tr>
+<tr>
+<td>honeydew3</td>
+<td>#C1CDC1</td>
+<td>RGB(193,205,193)</td>
+<td style="background-color:#C1CDC1">&nbsp;</td>
+</tr>
+<tr>
+<td>honeydew4</td>
+<td>#838B83</td>
+<td>RGB(131,139,131)</td>
+<td style="background-color:#838B83">&nbsp;</td>
+</tr>
+<tr>
+<td>hotpink</td>
+<td>#FF69B4</td>
+<td>RGB(255,105,180)</td>
+<td style="background-color:#FF69B4">&nbsp;</td>
+</tr>
+<tr>
+<td>hotpink1</td>
+<td>#FF6EB4</td>
+<td>RGB(255,110,180)</td>
+<td style="background-color:#FF6EB4">&nbsp;</td>
+</tr>
+<tr>
+<td>hotpink2</td>
+<td>#EE6AA7</td>
+<td>RGB(238,106,167)</td>
+<td style="background-color:#EE6AA7">&nbsp;</td>
+</tr>
+<tr>
+<td>hotpink3</td>
+<td>#CD6090</td>
+<td>RGB(205,96,144)</td>
+<td style="background-color:#CD6090">&nbsp;</td>
+</tr>
+<tr>
+<td>hotpink4</td>
+<td>#8B3A62</td>
+<td>RGB(139,58,98)</td>
+<td style="background-color:#8B3A62">&nbsp;</td>
+</tr>
+<tr>
+<td>indianred</td>
+<td>#CD5C5C</td>
+<td>RGB(205,92,92)</td>
+<td style="background-color:#CD5C5C">&nbsp;</td>
+</tr>
+<tr>
+<td>indianred1</td>
+<td>#FF6A6A</td>
+<td>RGB(255,106,106)</td>
+<td style="background-color:#FF6A6A">&nbsp;</td>
+</tr>
+<tr>
+<td>indianred2</td>
+<td>#EE6363</td>
+<td>RGB(238,99,99)</td>
+<td style="background-color:#EE6363">&nbsp;</td>
+</tr>
+<tr>
+<td>indianred3</td>
+<td>#CD5555</td>
+<td>RGB(205,85,85)</td>
+<td style="background-color:#CD5555">&nbsp;</td>
+</tr>
+<tr>
+<td>indianred4</td>
+<td>#8B3A3A</td>
+<td>RGB(139,58,58)</td>
+<td style="background-color:#8B3A3A">&nbsp;</td>
+</tr>
+<tr>
+<td>indigo</td>
+<td>#4B0082</td>
+<td>RGB(75,0,130)</td>
+<td style="background-color:#4B0082">&nbsp;</td>
+</tr>
+<tr>
+<td>ivory1</td>
+<td>#FFFFF0</td>
+<td>RGB(255,255,240)</td>
+<td style="background-color:#FFFFF0">&nbsp;</td>
+</tr>
+<tr>
+<td>ivory2</td>
+<td>#EEEEE0</td>
+<td>RGB(238,238,224)</td>
+<td style="background-color:#EEEEE0">&nbsp;</td>
+</tr>
+<tr>
+<td>ivory3</td>
+<td>#CDCDC1</td>
+<td>RGB(205,205,193)</td>
+<td style="background-color:#CDCDC1">&nbsp;</td>
+</tr>
+<tr>
+<td>ivory4</td>
+<td>#8B8B83</td>
+<td>RGB(139,139,131)</td>
+<td style="background-color:#8B8B83">&nbsp;</td>
+</tr>
+<tr>
+<td>ivoryblack</td>
+<td>#292421</td>
+<td>RGB(41,36,33)</td>
+<td style="background-color:#292421">&nbsp;</td>
+</tr>
+<tr>
+<td>khaki</td>
+<td>#F0E68C</td>
+<td>RGB(240,230,140)</td>
+<td style="background-color:#F0E68C">&nbsp;</td>
+</tr>
+<tr>
+<td>khaki1</td>
+<td>#FFF68F</td>
+<td>RGB(255,246,143)</td>
+<td style="background-color:#FFF68F">&nbsp;</td>
+</tr>
+<tr>
+<td>khaki2</td>
+<td>#EEE685</td>
+<td>RGB(238,230,133)</td>
+<td style="background-color:#EEE685">&nbsp;</td>
+</tr>
+<tr>
+<td>khaki3</td>
+<td>#CDC673</td>
+<td>RGB(205,198,115)</td>
+<td style="background-color:#CDC673">&nbsp;</td>
+</tr>
+<tr>
+<td>khaki4</td>
+<td>#8B864E</td>
+<td>RGB(139,134,78)</td>
+<td style="background-color:#8B864E">&nbsp;</td>
+</tr>
+<tr>
+<td>lavender</td>
+<td>#E6E6FA</td>
+<td>RGB(230,230,250)</td>
+<td style="background-color:#E6E6FA">&nbsp;</td>
+</tr>
+<tr>
+<td>lavenderblush1</td>
+<td>#FFF0F5</td>
+<td>RGB(255,240,245)</td>
+<td style="background-color:#FFF0F5">&nbsp;</td>
+</tr>
+<tr>
+<td>lavenderblush2</td>
+<td>#EEE0E5</td>
+<td>RGB(238,224,229)</td>
+<td style="background-color:#EEE0E5">&nbsp;</td>
+</tr>
+<tr>
+<td>lavenderblush3</td>
+<td>#CDC1C5</td>
+<td>RGB(205,193,197)</td>
+<td style="background-color:#CDC1C5">&nbsp;</td>
+</tr>
+<tr>
+<td>lavenderblush4</td>
+<td>#8B8386</td>
+<td>RGB(139,131,134)</td>
+<td style="background-color:#8B8386">&nbsp;</td>
+</tr>
+<tr>
+<td>lawngreen</td>
+<td>#7CFC00</td>
+<td>RGB(124,252,0)</td>
+<td style="background-color:#7CFC00">&nbsp;</td>
+</tr>
+<tr>
+<td>lemonchiffon1</td>
+<td>#FFFACD</td>
+<td>RGB(255,250,205)</td>
+<td style="background-color:#FFFACD">&nbsp;</td>
+</tr>
+<tr>
+<td>lemonchiffon2</td>
+<td>#EEE9BF</td>
+<td>RGB(238,233,191)</td>
+<td style="background-color:#EEE9BF">&nbsp;</td>
+</tr>
+<tr>
+<td>lemonchiffon3</td>
+<td>#CDC9A5</td>
+<td>RGB(205,201,165)</td>
+<td style="background-color:#CDC9A5">&nbsp;</td>
+</tr>
+<tr>
+<td>lemonchiffon4</td>
+<td>#8B8970</td>
+<td>RGB(139,137,112)</td>
+<td style="background-color:#8B8970">&nbsp;</td>
+</tr>
+<tr>
+<td>lightblue</td>
+<td>#ADD8E6</td>
+<td>RGB(173,216,230)</td>
+<td style="background-color:#ADD8E6">&nbsp;</td>
+</tr>
+<tr>
+<td>lightblue1</td>
+<td>#BFEFFF</td>
+<td>RGB(191,239,255)</td>
+<td style="background-color:#BFEFFF">&nbsp;</td>
+</tr>
+<tr>
+<td>lightblue2</td>
+<td>#B2DFEE</td>
+<td>RGB(178,223,238)</td>
+<td style="background-color:#B2DFEE">&nbsp;</td>
+</tr>
+<tr>
+<td>lightblue3</td>
+<td>#9AC0CD</td>
+<td>RGB(154,192,205)</td>
+<td style="background-color:#9AC0CD">&nbsp;</td>
+</tr>
+<tr>
+<td>lightblue4</td>
+<td>#68838B</td>
+<td>RGB(104,131,139)</td>
+<td style="background-color:#68838B">&nbsp;</td>
+</tr>
+<tr>
+<td>lightcoral</td>
+<td>#F08080</td>
+<td>RGB(240,128,128)</td>
+<td style="background-color:#F08080">&nbsp;</td>
+</tr>
+<tr>
+<td>lightcyan1</td>
+<td>#E0FFFF</td>
+<td>RGB(224,255,255)</td>
+<td style="background-color:#E0FFFF">&nbsp;</td>
+</tr>
+<tr>
+<td>lightcyan2</td>
+<td>#D1EEEE</td>
+<td>RGB(209,238,238)</td>
+<td style="background-color:#D1EEEE">&nbsp;</td>
+</tr>
+<tr>
+<td>lightcyan3</td>
+<td>#B4CDCD</td>
+<td>RGB(180,205,205)</td>
+<td style="background-color:#B4CDCD">&nbsp;</td>
+</tr>
+<tr>
+<td>lightcyan4</td>
+<td>#7A8B8B</td>
+<td>RGB(122,139,139)</td>
+<td style="background-color:#7A8B8B">&nbsp;</td>
+</tr>
+<tr>
+<td>lightgoldenrod1</td>
+<td>#FFEC8B</td>
+<td>RGB(255,236,139)</td>
+<td style="background-color:#FFEC8B">&nbsp;</td>
+</tr>
+<tr>
+<td>lightgoldenrod2</td>
+<td>#EEDC82</td>
+<td>RGB(238,220,130)</td>
+<td style="background-color:#EEDC82">&nbsp;</td>
+</tr>
+<tr>
+<td>lightgoldenrod3</td>
+<td>#CDBE70</td>
+<td>RGB(205,190,112)</td>
+<td style="background-color:#CDBE70">&nbsp;</td>
+</tr>
+<tr>
+<td>lightgoldenrod4</td>
+<td>#8B814C</td>
+<td>RGB(139,129,76)</td>
+<td style="background-color:#8B814C">&nbsp;</td>
+</tr>
+<tr>
+<td>lightgoldenrodyellow</td>
+<td>#FAFAD2</td>
+<td>RGB(250,250,210)</td>
+<td style="background-color:#FAFAD2">&nbsp;</td>
+</tr>
+<tr>
+<td>lightgrey</td>
+<td>#D3D3D3</td>
+<td>RGB(211,211,211)</td>
+<td style="background-color:#D3D3D3">&nbsp;</td>
+</tr>
+<tr>
+<td>lightpink</td>
+<td>#FFB6C1</td>
+<td>RGB(255,182,193)</td>
+<td style="background-color:#FFB6C1">&nbsp;</td>
+</tr>
+<tr>
+<td>lightpink1</td>
+<td>#FFAEB9</td>
+<td>RGB(255,174,185)</td>
+<td style="background-color:#FFAEB9">&nbsp;</td>
+</tr>
+<tr>
+<td>lightpink2</td>
+<td>#EEA2AD</td>
+<td>RGB(238,162,173)</td>
+<td style="background-color:#EEA2AD">&nbsp;</td>
+</tr>
+<tr>
+<td>lightpink3</td>
+<td>#CD8C95</td>
+<td>RGB(205,140,149)</td>
+<td style="background-color:#CD8C95">&nbsp;</td>
+</tr>
+<tr>
+<td>lightpink4</td>
+<td>#8B5F65</td>
+<td>RGB(139,95,101)</td>
+<td style="background-color:#8B5F65">&nbsp;</td>
+</tr>
+<tr>
+<td>lightsalmon1</td>
+<td>#FFA07A</td>
+<td>RGB(255,160,122)</td>
+<td style="background-color:#FFA07A">&nbsp;</td>
+</tr>
+<tr>
+<td>lightsalmon2</td>
+<td>#EE9572</td>
+<td>RGB(238,149,114)</td>
+<td style="background-color:#EE9572">&nbsp;</td>
+</tr>
+<tr>
+<td>lightsalmon3</td>
+<td>#CD8162</td>
+<td>RGB(205,129,98)</td>
+<td style="background-color:#CD8162">&nbsp;</td>
+</tr>
+<tr>
+<td>lightsalmon4</td>
+<td>#8B5742</td>
+<td>RGB(139,87,66)</td>
+<td style="background-color:#8B5742">&nbsp;</td>
+</tr>
+<tr>
+<td>lightseagreen</td>
+<td>#20B2AA</td>
+<td>RGB(32,178,170)</td>
+<td style="background-color:#20B2AA">&nbsp;</td>
+</tr>
+<tr>
+<td>lightskyblue</td>
+<td>#87CEFA</td>
+<td>RGB(135,206,250)</td>
+<td style="background-color:#87CEFA">&nbsp;</td>
+</tr>
+<tr>
+<td>lightskyblue1</td>
+<td>#B0E2FF</td>
+<td>RGB(176,226,255)</td>
+<td style="background-color:#B0E2FF">&nbsp;</td>
+</tr>
+<tr>
+<td>lightskyblue2</td>
+<td>#A4D3EE</td>
+<td>RGB(164,211,238)</td>
+<td style="background-color:#A4D3EE">&nbsp;</td>
+</tr>
+<tr>
+<td>lightskyblue3</td>
+<td>#8DB6CD</td>
+<td>RGB(141,182,205)</td>
+<td style="background-color:#8DB6CD">&nbsp;</td>
+</tr>
+<tr>
+<td>lightskyblue4</td>
+<td>#607B8B</td>
+<td>RGB(96,123,139)</td>
+<td style="background-color:#607B8B">&nbsp;</td>
+</tr>
+<tr>
+<td>lightslateblue</td>
+<td>#8470FF</td>
+<td>RGB(132,112,255)</td>
+<td style="background-color:#8470FF">&nbsp;</td>
+</tr>
+<tr>
+<td>lightslategray</td>
+<td>#778899</td>
+<td>RGB(119,136,153)</td>
+<td style="background-color:#778899">&nbsp;</td>
+</tr>
+<tr>
+<td>lightsteelblue</td>
+<td>#B0C4DE</td>
+<td>RGB(176,196,222)</td>
+<td style="background-color:#B0C4DE">&nbsp;</td>
+</tr>
+<tr>
+<td>lightsteelblue1</td>
+<td>#CAE1FF</td>
+<td>RGB(202,225,255)</td>
+<td style="background-color:#CAE1FF">&nbsp;</td>
+</tr>
+<tr>
+<td>lightsteelblue2</td>
+<td>#BCD2EE</td>
+<td>RGB(188,210,238)</td>
+<td style="background-color:#BCD2EE">&nbsp;</td>
+</tr>
+<tr>
+<td>lightsteelblue3</td>
+<td>#A2B5CD</td>
+<td>RGB(162,181,205)</td>
+<td style="background-color:#A2B5CD">&nbsp;</td>
+</tr>
+<tr>
+<td>lightsteelblue4</td>
+<td>#6E7B8B</td>
+<td>RGB(110,123,139)</td>
+<td style="background-color:#6E7B8B">&nbsp;</td>
+</tr>
+<tr>
+<td>lightyellow1</td>
+<td>#FFFFE0</td>
+<td>RGB(255,255,224)</td>
+<td style="background-color:#FFFFE0">&nbsp;</td>
+</tr>
+<tr>
+<td>lightyellow2</td>
+<td>#EEEED1</td>
+<td>RGB(238,238,209)</td>
+<td style="background-color:#EEEED1">&nbsp;</td>
+</tr>
+<tr>
+<td>lightyellow3</td>
+<td>#CDCDB4</td>
+<td>RGB(205,205,180)</td>
+<td style="background-color:#CDCDB4">&nbsp;</td>
+</tr>
+<tr>
+<td>lightyellow4</td>
+<td>#8B8B7A</td>
+<td>RGB(139,139,122)</td>
+<td style="background-color:#8B8B7A">&nbsp;</td>
+</tr>
+<tr>
+<td>limegreen</td>
+<td>#32CD32</td>
+<td>RGB(50,205,50)</td>
+<td style="background-color:#32CD32">&nbsp;</td>
+</tr>
+<tr>
+<td>linen</td>
+<td>#FAF0E6</td>
+<td>RGB(250,240,230)</td>
+<td style="background-color:#FAF0E6">&nbsp;</td>
+</tr>
+<tr>
+<td>magenta</td>
+<td>#FF00FF</td>
+<td>RGB(255,0,255)</td>
+<td style="background-color:#FF00FF">&nbsp;</td>
+</tr>
+<tr>
+<td>magenta2</td>
+<td>#EE00EE</td>
+<td>RGB(238,0,238)</td>
+<td style="background-color:#EE00EE">&nbsp;</td>
+</tr>
+<tr>
+<td>magenta3</td>
+<td>#CD00CD</td>
+<td>RGB(205,0,205)</td>
+<td style="background-color:#CD00CD">&nbsp;</td>
+</tr>
+<tr>
+<td>magenta4</td>
+<td>#8B008B</td>
+<td>RGB(139,0,139)</td>
+<td style="background-color:#8B008B">&nbsp;</td>
+</tr>
+<tr>
+<td>manganeseblue</td>
+<td>#03A89E</td>
+<td>RGB(3,168,158)</td>
+<td style="background-color:#03A89E">&nbsp;</td>
+</tr>
+<tr>
+<td>maroon</td>
+<td>#800000</td>
+<td>RGB(128,0,0)</td>
+<td style="background-color:#800000">&nbsp;</td>
+</tr>
+<tr>
+<td>maroon1</td>
+<td>#FF34B3</td>
+<td>RGB(255,52,179)</td>
+<td style="background-color:#FF34B3">&nbsp;</td>
+</tr>
+<tr>
+<td>maroon2</td>
+<td>#EE30A7</td>
+<td>RGB(238,48,167)</td>
+<td style="background-color:#EE30A7">&nbsp;</td>
+</tr>
+<tr>
+<td>maroon3</td>
+<td>#CD2990</td>
+<td>RGB(205,41,144)</td>
+<td style="background-color:#CD2990">&nbsp;</td>
+</tr>
+<tr>
+<td>maroon4</td>
+<td>#8B1C62</td>
+<td>RGB(139,28,98)</td>
+<td style="background-color:#8B1C62">&nbsp;</td>
+</tr>
+<tr>
+<td>mediumorchid</td>
+<td>#BA55D3</td>
+<td>RGB(186,85,211)</td>
+<td style="background-color:#BA55D3">&nbsp;</td>
+</tr>
+<tr>
+<td>mediumorchid1</td>
+<td>#E066FF</td>
+<td>RGB(224,102,255)</td>
+<td style="background-color:#E066FF">&nbsp;</td>
+</tr>
+<tr>
+<td>mediumorchid2</td>
+<td>#D15FEE</td>
+<td>RGB(209,95,238)</td>
+<td style="background-color:#D15FEE">&nbsp;</td>
+</tr>
+<tr>
+<td>mediumorchid3</td>
+<td>#B452CD</td>
+<td>RGB(180,82,205)</td>
+<td style="background-color:#B452CD">&nbsp;</td>
+</tr>
+<tr>
+<td>mediumorchid4</td>
+<td>#7A378B</td>
+<td>RGB(122,55,139)</td>
+<td style="background-color:#7A378B">&nbsp;</td>
+</tr>
+<tr>
+<td>mediumpurple</td>
+<td>#9370DB</td>
+<td>RGB(147,112,219)</td>
+<td style="background-color:#9370DB">&nbsp;</td>
+</tr>
+<tr>
+<td>mediumpurple1</td>
+<td>#AB82FF</td>
+<td>RGB(171,130,255)</td>
+<td style="background-color:#AB82FF">&nbsp;</td>
+</tr>
+<tr>
+<td>mediumpurple2</td>
+<td>#9F79EE</td>
+<td>RGB(159,121,238)</td>
+<td style="background-color:#9F79EE">&nbsp;</td>
+</tr>
+<tr>
+<td>mediumpurple3</td>
+<td>#8968CD</td>
+<td>RGB(137,104,205)</td>
+<td style="background-color:#8968CD">&nbsp;</td>
+</tr>
+<tr>
+<td>mediumpurple4</td>
+<td>#5D478B</td>
+<td>RGB(93,71,139)</td>
+<td style="background-color:#5D478B">&nbsp;</td>
+</tr>
+<tr>
+<td>mediumseagreen</td>
+<td>#3CB371</td>
+<td>RGB(60,179,113)</td>
+<td style="background-color:#3CB371">&nbsp;</td>
+</tr>
+<tr>
+<td>mediumslateblue</td>
+<td>#7B68EE</td>
+<td>RGB(123,104,238)</td>
+<td style="background-color:#7B68EE">&nbsp;</td>
+</tr>
+<tr>
+<td>mediumspringgreen</td>
+<td>#00FA9A</td>
+<td>RGB(0,250,154)</td>
+<td style="background-color:#00FA9A">&nbsp;</td>
+</tr>
+<tr>
+<td>mediumturquoise</td>
+<td>#48D1CC</td>
+<td>RGB(72,209,204)</td>
+<td style="background-color:#48D1CC">&nbsp;</td>
+</tr>
+<tr>
+<td>mediumvioletred</td>
+<td>#C71585</td>
+<td>RGB(199,21,133)</td>
+<td style="background-color:#C71585">&nbsp;</td>
+</tr>
+<tr>
+<td>melon</td>
+<td>#E3A869</td>
+<td>RGB(227,168,105)</td>
+<td style="background-color:#E3A869">&nbsp;</td>
+</tr>
+<tr>
+<td>midnightblue</td>
+<td>#191970</td>
+<td>RGB(25,25,112)</td>
+<td style="background-color:#191970">&nbsp;</td>
+</tr>
+<tr>
+<td>mint</td>
+<td>#BDFCC9</td>
+<td>RGB(189,252,201)</td>
+<td style="background-color:#BDFCC9">&nbsp;</td>
+</tr>
+<tr>
+<td>mintcream</td>
+<td>#F5FFFA</td>
+<td>RGB(245,255,250)</td>
+<td style="background-color:#F5FFFA">&nbsp;</td>
+</tr>
+<tr>
+<td>mistyrose1</td>
+<td>#FFE4E1</td>
+<td>RGB(255,228,225)</td>
+<td style="background-color:#FFE4E1">&nbsp;</td>
+</tr>
+<tr>
+<td>mistyrose2</td>
+<td>#EED5D2</td>
+<td>RGB(238,213,210)</td>
+<td style="background-color:#EED5D2">&nbsp;</td>
+</tr>
+<tr>
+<td>mistyrose3</td>
+<td>#CDB7B5</td>
+<td>RGB(205,183,181)</td>
+<td style="background-color:#CDB7B5">&nbsp;</td>
+</tr>
+<tr>
+<td>mistyrose4</td>
+<td>#8B7D7B</td>
+<td>RGB(139,125,123)</td>
+<td style="background-color:#8B7D7B">&nbsp;</td>
+</tr>
+<tr>
+<td>moccasin</td>
+<td>#FFE4B5</td>
+<td>RGB(255,228,181)</td>
+<td style="background-color:#FFE4B5">&nbsp;</td>
+</tr>
+<tr>
+<td>navajowhite1</td>
+<td>#FFDEAD</td>
+<td>RGB(255,222,173)</td>
+<td style="background-color:#FFDEAD">&nbsp;</td>
+</tr>
+<tr>
+<td>navajowhite2</td>
+<td>#EECFA1</td>
+<td>RGB(238,207,161)</td>
+<td style="background-color:#EECFA1">&nbsp;</td>
+</tr>
+<tr>
+<td>navajowhite3</td>
+<td>#CDB38B</td>
+<td>RGB(205,179,139)</td>
+<td style="background-color:#CDB38B">&nbsp;</td>
+</tr>
+<tr>
+<td>navajowhite4</td>
+<td>#8B795E</td>
+<td>RGB(139,121,94)</td>
+<td style="background-color:#8B795E">&nbsp;</td>
+</tr>
+<tr>
+<td>navy</td>
+<td>#000080</td>
+<td>RGB(0,0,128)</td>
+<td style="background-color:#000080">&nbsp;</td>
+</tr>
+<tr>
+<td>oldlace</td>
+<td>#FDF5E6</td>
+<td>RGB(253,245,230)</td>
+<td style="background-color:#FDF5E6">&nbsp;</td>
+</tr>
+<tr>
+<td>olive</td>
+<td>#808000</td>
+<td>RGB(128,128,0)</td>
+<td style="background-color:#808000">&nbsp;</td>
+</tr>
+<tr>
+<td>olivedrab</td>
+<td>#6B8E23</td>
+<td>RGB(107,142,35)</td>
+<td style="background-color:#6B8E23">&nbsp;</td>
+</tr>
+<tr>
+<td>olivedrab1</td>
+<td>#C0FF3E</td>
+<td>RGB(192,255,62)</td>
+<td style="background-color:#C0FF3E">&nbsp;</td>
+</tr>
+<tr>
+<td>olivedrab2</td>
+<td>#B3EE3A</td>
+<td>RGB(179,238,58)</td>
+<td style="background-color:#B3EE3A">&nbsp;</td>
+</tr>
+<tr>
+<td>olivedrab3</td>
+<td>#9ACD32</td>
+<td>RGB(154,205,50)</td>
+<td style="background-color:#9ACD32">&nbsp;</td>
+</tr>
+<tr>
+<td>olivedrab4</td>
+<td>#698B22</td>
+<td>RGB(105,139,34)</td>
+<td style="background-color:#698B22">&nbsp;</td>
+</tr>
+<tr>
+<td>orange</td>
+<td>#FF8000</td>
+<td>RGB(255,128,0)</td>
+<td style="background-color:#FF8000">&nbsp;</td>
+</tr>
+<tr>
+<td>orange1</td>
+<td>#FFA500</td>
+<td>RGB(255,165,0)</td>
+<td style="background-color:#FFA500">&nbsp;</td>
+</tr>
+<tr>
+<td>orange2</td>
+<td>#EE9A00</td>
+<td>RGB(238,154,0)</td>
+<td style="background-color:#EE9A00">&nbsp;</td>
+</tr>
+<tr>
+<td>orange3</td>
+<td>#CD8500</td>
+<td>RGB(205,133,0)</td>
+<td style="background-color:#CD8500">&nbsp;</td>
+</tr>
+<tr>
+<td>orange4</td>
+<td>#8B5A00</td>
+<td>RGB(139,90,0)</td>
+<td style="background-color:#8B5A00">&nbsp;</td>
+</tr>
+<tr>
+<td>orangered1</td>
+<td>#FF4500</td>
+<td>RGB(255,69,0)</td>
+<td style="background-color:#FF4500">&nbsp;</td>
+</tr>
+<tr>
+<td>orangered2</td>
+<td>#EE4000</td>
+<td>RGB(238,64,0)</td>
+<td style="background-color:#EE4000">&nbsp;</td>
+</tr>
+<tr>
+<td>orangered3</td>
+<td>#CD3700</td>
+<td>RGB(205,55,0)</td>
+<td style="background-color:#CD3700">&nbsp;</td>
+</tr>
+<tr>
+<td>orangered4</td>
+<td>#8B2500</td>
+<td>RGB(139,37,0)</td>
+<td style="background-color:#8B2500">&nbsp;</td>
+</tr>
+<tr>
+<td>orchid</td>
+<td>#DA70D6</td>
+<td>RGB(218,112,214)</td>
+<td style="background-color:#DA70D6">&nbsp;</td>
+</tr>
+<tr>
+<td>orchid1</td>
+<td>#FF83FA</td>
+<td>RGB(255,131,250)</td>
+<td style="background-color:#FF83FA">&nbsp;</td>
+</tr>
+<tr>
+<td>orchid2</td>
+<td>#EE7AE9</td>
+<td>RGB(238,122,233)</td>
+<td style="background-color:#EE7AE9">&nbsp;</td>
+</tr>
+<tr>
+<td>orchid3</td>
+<td>#CD69C9</td>
+<td>RGB(205,105,201)</td>
+<td style="background-color:#CD69C9">&nbsp;</td>
+</tr>
+<tr>
+<td>orchid4</td>
+<td>#8B4789</td>
+<td>RGB(139,71,137)</td>
+<td style="background-color:#8B4789">&nbsp;</td>
+</tr>
+<tr>
+<td>palegoldenrod</td>
+<td>#EEE8AA</td>
+<td>RGB(238,232,170)</td>
+<td style="background-color:#EEE8AA">&nbsp;</td>
+</tr>
+<tr>
+<td>palegreen</td>
+<td>#98FB98</td>
+<td>RGB(152,251,152)</td>
+<td style="background-color:#98FB98">&nbsp;</td>
+</tr>
+<tr>
+<td>palegreen1</td>
+<td>#9AFF9A</td>
+<td>RGB(154,255,154)</td>
+<td style="background-color:#9AFF9A">&nbsp;</td>
+</tr>
+<tr>
+<td>palegreen2</td>
+<td>#90EE90</td>
+<td>RGB(144,238,144)</td>
+<td style="background-color:#90EE90">&nbsp;</td>
+</tr>
+<tr>
+<td>palegreen3</td>
+<td>#7CCD7C</td>
+<td>RGB(124,205,124)</td>
+<td style="background-color:#7CCD7C">&nbsp;</td>
+</tr>
+<tr>
+<td>palegreen4</td>
+<td>#548B54</td>
+<td>RGB(84,139,84)</td>
+<td style="background-color:#548B54">&nbsp;</td>
+</tr>
+<tr>
+<td>paleturquoise1</td>
+<td>#BBFFFF</td>
+<td>RGB(187,255,255)</td>
+<td style="background-color:#BBFFFF">&nbsp;</td>
+</tr>
+<tr>
+<td>paleturquoise2</td>
+<td>#AEEEEE</td>
+<td>RGB(174,238,238)</td>
+<td style="background-color:#AEEEEE">&nbsp;</td>
+</tr>
+<tr>
+<td>paleturquoise3</td>
+<td>#96CDCD</td>
+<td>RGB(150,205,205)</td>
+<td style="background-color:#96CDCD">&nbsp;</td>
+</tr>
+<tr>
+<td>paleturquoise4</td>
+<td>#668B8B</td>
+<td>RGB(102,139,139)</td>
+<td style="background-color:#668B8B">&nbsp;</td>
+</tr>
+<tr>
+<td>palevioletred</td>
+<td>#DB7093</td>
+<td>RGB(219,112,147)</td>
+<td style="background-color:#DB7093">&nbsp;</td>
+</tr>
+<tr>
+<td>palevioletred1</td>
+<td>#FF82AB</td>
+<td>RGB(255,130,171)</td>
+<td style="background-color:#FF82AB">&nbsp;</td>
+</tr>
+<tr>
+<td>palevioletred2</td>
+<td>#EE799F</td>
+<td>RGB(238,121,159)</td>
+<td style="background-color:#EE799F">&nbsp;</td>
+</tr>
+<tr>
+<td>palevioletred3</td>
+<td>#CD6889</td>
+<td>RGB(205,104,137)</td>
+<td style="background-color:#CD6889">&nbsp;</td>
+</tr>
+<tr>
+<td>palevioletred4</td>
+<td>#8B475D</td>
+<td>RGB(139,71,93)</td>
+<td style="background-color:#8B475D">&nbsp;</td>
+</tr>
+<tr>
+<td>papayawhip</td>
+<td>#FFEFD5</td>
+<td>RGB(255,239,213)</td>
+<td style="background-color:#FFEFD5">&nbsp;</td>
+</tr>
+<tr>
+<td>peachpuff1</td>
+<td>#FFDAB9</td>
+<td>RGB(255,218,185)</td>
+<td style="background-color:#FFDAB9">&nbsp;</td>
+</tr>
+<tr>
+<td>peachpuff2</td>
+<td>#EECBAD</td>
+<td>RGB(238,203,173)</td>
+<td style="background-color:#EECBAD">&nbsp;</td>
+</tr>
+<tr>
+<td>peachpuff3</td>
+<td>#CDAF95</td>
+<td>RGB(205,175,149)</td>
+<td style="background-color:#CDAF95">&nbsp;</td>
+</tr>
+<tr>
+<td>peachpuff4</td>
+<td>#8B7765</td>
+<td>RGB(139,119,101)</td>
+<td style="background-color:#8B7765">&nbsp;</td>
+</tr>
+<tr>
+<td>peacock</td>
+<td>#33A1C9</td>
+<td>RGB(51,161,201)</td>
+<td style="background-color:#33A1C9">&nbsp;</td>
+</tr>
+<tr>
+<td>pink</td>
+<td>#FFC0CB</td>
+<td>RGB(255,192,203)</td>
+<td style="background-color:#FFC0CB">&nbsp;</td>
+</tr>
+<tr>
+<td>pink1</td>
+<td>#FFB5C5</td>
+<td>RGB(255,181,197)</td>
+<td style="background-color:#FFB5C5">&nbsp;</td>
+</tr>
+<tr>
+<td>pink2</td>
+<td>#EEA9B8</td>
+<td>RGB(238,169,184)</td>
+<td style="background-color:#EEA9B8">&nbsp;</td>
+</tr>
+<tr>
+<td>pink3</td>
+<td>#CD919E</td>
+<td>RGB(205,145,158)</td>
+<td style="background-color:#CD919E">&nbsp;</td>
+</tr>
+<tr>
+<td>pink4</td>
+<td>#8B636C</td>
+<td>RGB(139,99,108)</td>
+<td style="background-color:#8B636C">&nbsp;</td>
+</tr>
+<tr>
+<td>plum</td>
+<td>#DDA0DD</td>
+<td>RGB(221,160,221)</td>
+<td style="background-color:#DDA0DD">&nbsp;</td>
+</tr>
+<tr>
+<td>plum1</td>
+<td>#FFBBFF</td>
+<td>RGB(255,187,255)</td>
+<td style="background-color:#FFBBFF">&nbsp;</td>
+</tr>
+<tr>
+<td>plum2</td>
+<td>#EEAEEE</td>
+<td>RGB(238,174,238)</td>
+<td style="background-color:#EEAEEE">&nbsp;</td>
+</tr>
+<tr>
+<td>plum3</td>
+<td>#CD96CD</td>
+<td>RGB(205,150,205)</td>
+<td style="background-color:#CD96CD">&nbsp;</td>
+</tr>
+<tr>
+<td>plum4</td>
+<td>#8B668B</td>
+<td>RGB(139,102,139)</td>
+<td style="background-color:#8B668B">&nbsp;</td>
+</tr>
+<tr>
+<td>powderblue</td>
+<td>#B0E0E6</td>
+<td>RGB(176,224,230)</td>
+<td style="background-color:#B0E0E6">&nbsp;</td>
+</tr>
+<tr>
+<td>purple</td>
+<td>#800080</td>
+<td>RGB(128,0,128)</td>
+<td style="background-color:#800080">&nbsp;</td>
+</tr>
+<tr>
+<td>purple1</td>
+<td>#9B30FF</td>
+<td>RGB(155,48,255)</td>
+<td style="background-color:#9B30FF">&nbsp;</td>
+</tr>
+<tr>
+<td>purple2</td>
+<td>#912CEE</td>
+<td>RGB(145,44,238)</td>
+<td style="background-color:#912CEE">&nbsp;</td>
+</tr>
+<tr>
+<td>purple3</td>
+<td>#7D26CD</td>
+<td>RGB(125,38,205)</td>
+<td style="background-color:#7D26CD">&nbsp;</td>
+</tr>
+<tr>
+<td>purple4</td>
+<td>#551A8B</td>
+<td>RGB(85,26,139)</td>
+<td style="background-color:#551A8B">&nbsp;</td>
+</tr>
+<tr>
+<td>raspberry</td>
+<td>#872657</td>
+<td>RGB(135,38,87)</td>
+<td style="background-color:#872657">&nbsp;</td>
+</tr>
+<tr>
+<td>rawsienna</td>
+<td>#C76114</td>
+<td>RGB(199,97,20)</td>
+<td style="background-color:#C76114">&nbsp;</td>
+</tr>
+<tr>
+<td>red1</td>
+<td>#FF0000</td>
+<td>RGB(255,0,0)</td>
+<td style="background-color:#FF0000">&nbsp;</td>
+</tr>
+<tr>
+<td>red2</td>
+<td>#EE0000</td>
+<td>RGB(238,0,0)</td>
+<td style="background-color:#EE0000">&nbsp;</td>
+</tr>
+<tr>
+<td>red3</td>
+<td>#CD0000</td>
+<td>RGB(205,0,0)</td>
+<td style="background-color:#CD0000">&nbsp;</td>
+</tr>
+<tr>
+<td>red4</td>
+<td>#8B0000</td>
+<td>RGB(139,0,0)</td>
+<td style="background-color:#8B0000">&nbsp;</td>
+</tr>
+<tr>
+<td>rosybrown</td>
+<td>#BC8F8F</td>
+<td>RGB(188,143,143)</td>
+<td style="background-color:#BC8F8F">&nbsp;</td>
+</tr>
+<tr>
+<td>rosybrown1</td>
+<td>#FFC1C1</td>
+<td>RGB(255,193,193)</td>
+<td style="background-color:#FFC1C1">&nbsp;</td>
+</tr>
+<tr>
+<td>rosybrown2</td>
+<td>#EEB4B4</td>
+<td>RGB(238,180,180)</td>
+<td style="background-color:#EEB4B4">&nbsp;</td>
+</tr>
+<tr>
+<td>rosybrown3</td>
+<td>#CD9B9B</td>
+<td>RGB(205,155,155)</td>
+<td style="background-color:#CD9B9B">&nbsp;</td>
+</tr>
+<tr>
+<td>rosybrown4</td>
+<td>#8B6969</td>
+<td>RGB(139,105,105)</td>
+<td style="background-color:#8B6969">&nbsp;</td>
+</tr>
+<tr>
+<td>royalblue</td>
+<td>#4169E1</td>
+<td>RGB(65,105,225)</td>
+<td style="background-color:#4169E1">&nbsp;</td>
+</tr>
+<tr>
+<td>royalblue1</td>
+<td>#4876FF</td>
+<td>RGB(72,118,255)</td>
+<td style="background-color:#4876FF">&nbsp;</td>
+</tr>
+<tr>
+<td>royalblue2</td>
+<td>#436EEE</td>
+<td>RGB(67,110,238)</td>
+<td style="background-color:#436EEE">&nbsp;</td>
+</tr>
+<tr>
+<td>royalblue3</td>
+<td>#3A5FCD</td>
+<td>RGB(58,95,205)</td>
+<td style="background-color:#3A5FCD">&nbsp;</td>
+</tr>
+<tr>
+<td>royalblue4</td>
+<td>#27408B</td>
+<td>RGB(39,64,139)</td>
+<td style="background-color:#27408B">&nbsp;</td>
+</tr>
+<tr>
+<td>salmon</td>
+<td>#FA8072</td>
+<td>RGB(250,128,114)</td>
+<td style="background-color:#FA8072">&nbsp;</td>
+</tr>
+<tr>
+<td>salmon1</td>
+<td>#FF8C69</td>
+<td>RGB(255,140,105)</td>
+<td style="background-color:#FF8C69">&nbsp;</td>
+</tr>
+<tr>
+<td>salmon2</td>
+<td>#EE8262</td>
+<td>RGB(238,130,98)</td>
+<td style="background-color:#EE8262">&nbsp;</td>
+</tr>
+<tr>
+<td>salmon3</td>
+<td>#CD7054</td>
+<td>RGB(205,112,84)</td>
+<td style="background-color:#CD7054">&nbsp;</td>
+</tr>
+<tr>
+<td>salmon4</td>
+<td>#8B4C39</td>
+<td>RGB(139,76,57)</td>
+<td style="background-color:#8B4C39">&nbsp;</td>
+</tr>
+<tr>
+<td>sandybrown</td>
+<td>#F4A460</td>
+<td>RGB(244,164,96)</td>
+<td style="background-color:#F4A460">&nbsp;</td>
+</tr>
+<tr>
+<td>sapgreen</td>
+<td>#308014</td>
+<td>RGB(48,128,20)</td>
+<td style="background-color:#308014">&nbsp;</td>
+</tr>
+<tr>
+<td>seagreen1</td>
+<td>#54FF9F</td>
+<td>RGB(84,255,159)</td>
+<td style="background-color:#54FF9F">&nbsp;</td>
+</tr>
+<tr>
+<td>seagreen2</td>
+<td>#4EEE94</td>
+<td>RGB(78,238,148)</td>
+<td style="background-color:#4EEE94">&nbsp;</td>
+</tr>
+<tr>
+<td>seagreen3</td>
+<td>#43CD80</td>
+<td>RGB(67,205,128)</td>
+<td style="background-color:#43CD80">&nbsp;</td>
+</tr>
+<tr>
+<td>seagreen4</td>
+<td>#2E8B57</td>
+<td>RGB(46,139,87)</td>
+<td style="background-color:#2E8B57">&nbsp;</td>
+</tr>
+<tr>
+<td>seashell1</td>
+<td>#FFF5EE</td>
+<td>RGB(255,245,238)</td>
+<td style="background-color:#FFF5EE">&nbsp;</td>
+</tr>
+<tr>
+<td>seashell2</td>
+<td>#EEE5DE</td>
+<td>RGB(238,229,222)</td>
+<td style="background-color:#EEE5DE">&nbsp;</td>
+</tr>
+<tr>
+<td>seashell3</td>
+<td>#CDC5BF</td>
+<td>RGB(205,197,191)</td>
+<td style="background-color:#CDC5BF">&nbsp;</td>
+</tr>
+<tr>
+<td>seashell4</td>
+<td>#8B8682</td>
+<td>RGB(139,134,130)</td>
+<td style="background-color:#8B8682">&nbsp;</td>
+</tr>
+<tr>
+<td>sepia</td>
+<td>#5E2612</td>
+<td>RGB(94,38,18)</td>
+<td style="background-color:#5E2612">&nbsp;</td>
+</tr>
+<tr>
+<td>sgibeet</td>
+<td>#8E388E</td>
+<td>RGB(142,56,142)</td>
+<td style="background-color:#8E388E">&nbsp;</td>
+</tr>
+<tr>
+<td>sgibrightgray</td>
+<td>#C5C1AA</td>
+<td>RGB(197,193,170)</td>
+<td style="background-color:#C5C1AA">&nbsp;</td>
+</tr>
+<tr>
+<td>sgichartreuse</td>
+<td>#71C671</td>
+<td>RGB(113,198,113)</td>
+<td style="background-color:#71C671">&nbsp;</td>
+</tr>
+<tr>
+<td>sgidarkgray</td>
+<td>#555555</td>
+<td>RGB(85,85,85)</td>
+<td style="background-color:#555555">&nbsp;</td>
+</tr>
+<tr>
+<td>sgigray12</td>
+<td>#1E1E1E</td>
+<td>RGB(30,30,30)</td>
+<td style="background-color:#1E1E1E">&nbsp;</td>
+</tr>
+<tr>
+<td>sgigray16</td>
+<td>#282828</td>
+<td>RGB(40,40,40)</td>
+<td style="background-color:#282828">&nbsp;</td>
+</tr>
+<tr>
+<td>sgigray32</td>
+<td>#515151</td>
+<td>RGB(81,81,81)</td>
+<td style="background-color:#515151">&nbsp;</td>
+</tr>
+<tr>
+<td>sgigray36</td>
+<td>#5B5B5B</td>
+<td>RGB(91,91,91)</td>
+<td style="background-color:#5B5B5B">&nbsp;</td>
+</tr>
+<tr>
+<td>sgigray52</td>
+<td>#848484</td>
+<td>RGB(132,132,132)</td>
+<td style="background-color:#848484">&nbsp;</td>
+</tr>
+<tr>
+<td>sgigray56</td>
+<td>#8E8E8E</td>
+<td>RGB(142,142,142)</td>
+<td style="background-color:#8E8E8E">&nbsp;</td>
+</tr>
+<tr>
+<td>sgigray72</td>
+<td>#B7B7B7</td>
+<td>RGB(183,183,183)</td>
+<td style="background-color:#B7B7B7">&nbsp;</td>
+</tr>
+<tr>
+<td>sgigray76</td>
+<td>#C1C1C1</td>
+<td>RGB(193,193,193)</td>
+<td style="background-color:#C1C1C1">&nbsp;</td>
+</tr>
+<tr>
+<td>sgigray92</td>
+<td>#EAEAEA</td>
+<td>RGB(234,234,234)</td>
+<td style="background-color:#EAEAEA">&nbsp;</td>
+</tr>
+<tr>
+<td>sgigray96</td>
+<td>#F4F4F4</td>
+<td>RGB(244,244,244)</td>
+<td style="background-color:#F4F4F4">&nbsp;</td>
+</tr>
+<tr>
+<td>sgilightblue</td>
+<td>#7D9EC0</td>
+<td>RGB(125,158,192)</td>
+<td style="background-color:#7D9EC0">&nbsp;</td>
+</tr>
+<tr>
+<td>sgilightgray</td>
+<td>#AAAAAA</td>
+<td>RGB(170,170,170)</td>
+<td style="background-color:#AAAAAA">&nbsp;</td>
+</tr>
+<tr>
+<td>sgiolivedrab</td>
+<td>#8E8E38</td>
+<td>RGB(142,142,56)</td>
+<td style="background-color:#8E8E38">&nbsp;</td>
+</tr>
+<tr>
+<td>sgisalmon</td>
+<td>#C67171</td>
+<td>RGB(198,113,113)</td>
+<td style="background-color:#C67171">&nbsp;</td>
+</tr>
+<tr>
+<td>sgislateblue</td>
+<td>#7171C6</td>
+<td>RGB(113,113,198)</td>
+<td style="background-color:#7171C6">&nbsp;</td>
+</tr>
+<tr>
+<td>sgiteal</td>
+<td>#388E8E</td>
+<td>RGB(56,142,142)</td>
+<td style="background-color:#388E8E">&nbsp;</td>
+</tr>
+<tr>
+<td>sienna</td>
+<td>#A0522D</td>
+<td>RGB(160,82,45)</td>
+<td style="background-color:#A0522D">&nbsp;</td>
+</tr>
+<tr>
+<td>sienna1</td>
+<td>#FF8247</td>
+<td>RGB(255,130,71)</td>
+<td style="background-color:#FF8247">&nbsp;</td>
+</tr>
+<tr>
+<td>sienna2</td>
+<td>#EE7942</td>
+<td>RGB(238,121,66)</td>
+<td style="background-color:#EE7942">&nbsp;</td>
+</tr>
+<tr>
+<td>sienna3</td>
+<td>#CD6839</td>
+<td>RGB(205,104,57)</td>
+<td style="background-color:#CD6839">&nbsp;</td>
+</tr>
+<tr>
+<td>sienna4</td>
+<td>#8B4726</td>
+<td>RGB(139,71,38)</td>
+<td style="background-color:#8B4726">&nbsp;</td>
+</tr>
+<tr>
+<td>silver</td>
+<td>#C0C0C0</td>
+<td>RGB(192,192,192)</td>
+<td style="background-color:#C0C0C0">&nbsp;</td>
+</tr>
+<tr>
+<td>skyblue</td>
+<td>#87CEEB</td>
+<td>RGB(135,206,235)</td>
+<td style="background-color:#87CEEB">&nbsp;</td>
+</tr>
+<tr>
+<td>skyblue1</td>
+<td>#87CEFF</td>
+<td>RGB(135,206,255)</td>
+<td style="background-color:#87CEFF">&nbsp;</td>
+</tr>
+<tr>
+<td>skyblue2</td>
+<td>#7EC0EE</td>
+<td>RGB(126,192,238)</td>
+<td style="background-color:#7EC0EE">&nbsp;</td>
+</tr>
+<tr>
+<td>skyblue3</td>
+<td>#6CA6CD</td>
+<td>RGB(108,166,205)</td>
+<td style="background-color:#6CA6CD">&nbsp;</td>
+</tr>
+<tr>
+<td>skyblue4</td>
+<td>#4A708B</td>
+<td>RGB(74,112,139)</td>
+<td style="background-color:#4A708B">&nbsp;</td>
+</tr>
+<tr>
+<td>slateblue</td>
+<td>#6A5ACD</td>
+<td>RGB(106,90,205)</td>
+<td style="background-color:#6A5ACD">&nbsp;</td>
+</tr>
+<tr>
+<td>slateblue1</td>
+<td>#836FFF</td>
+<td>RGB(131,111,255)</td>
+<td style="background-color:#836FFF">&nbsp;</td>
+</tr>
+<tr>
+<td>slateblue2</td>
+<td>#7A67EE</td>
+<td>RGB(122,103,238)</td>
+<td style="background-color:#7A67EE">&nbsp;</td>
+</tr>
+<tr>
+<td>slateblue3</td>
+<td>#6959CD</td>
+<td>RGB(105,89,205)</td>
+<td style="background-color:#6959CD">&nbsp;</td>
+</tr>
+<tr>
+<td>slateblue4</td>
+<td>#473C8B</td>
+<td>RGB(71,60,139)</td>
+<td style="background-color:#473C8B">&nbsp;</td>
+</tr>
+<tr>
+<td>slategray</td>
+<td>#708090</td>
+<td>RGB(112,128,144)</td>
+<td style="background-color:#708090">&nbsp;</td>
+</tr>
+<tr>
+<td>slategray1</td>
+<td>#C6E2FF</td>
+<td>RGB(198,226,255)</td>
+<td style="background-color:#C6E2FF">&nbsp;</td>
+</tr>
+<tr>
+<td>slategray2</td>
+<td>#B9D3EE</td>
+<td>RGB(185,211,238)</td>
+<td style="background-color:#B9D3EE">&nbsp;</td>
+</tr>
+<tr>
+<td>slategray3</td>
+<td>#9FB6CD</td>
+<td>RGB(159,182,205)</td>
+<td style="background-color:#9FB6CD">&nbsp;</td>
+</tr>
+<tr>
+<td>slategray4</td>
+<td>#6C7B8B</td>
+<td>RGB(108,123,139)</td>
+<td style="background-color:#6C7B8B">&nbsp;</td>
+</tr>
+<tr>
+<td>snow1</td>
+<td>#FFFAFA</td>
+<td>RGB(255,250,250)</td>
+<td style="background-color:#FFFAFA">&nbsp;</td>
+</tr>
+<tr>
+<td>snow2</td>
+<td>#EEE9E9</td>
+<td>RGB(238,233,233)</td>
+<td style="background-color:#EEE9E9">&nbsp;</td>
+</tr>
+<tr>
+<td>snow3</td>
+<td>#CDC9C9</td>
+<td>RGB(205,201,201)</td>
+<td style="background-color:#CDC9C9">&nbsp;</td>
+</tr>
+<tr>
+<td>snow4</td>
+<td>#8B8989</td>
+<td>RGB(139,137,137)</td>
+<td style="background-color:#8B8989">&nbsp;</td>
+</tr>
+<tr>
+<td>springgreen</td>
+<td>#00FF7F</td>
+<td>RGB(0,255,127)</td>
+<td style="background-color:#00FF7F">&nbsp;</td>
+</tr>
+<tr>
+<td>springgreen1</td>
+<td>#00EE76</td>
+<td>RGB(0,238,118)</td>
+<td style="background-color:#00EE76">&nbsp;</td>
+</tr>
+<tr>
+<td>springgreen2</td>
+<td>#00CD66</td>
+<td>RGB(0,205,102)</td>
+<td style="background-color:#00CD66">&nbsp;</td>
+</tr>
+<tr>
+<td>springgreen3</td>
+<td>#008B45</td>
+<td>RGB(0,139,69)</td>
+<td style="background-color:#008B45">&nbsp;</td>
+</tr>
+<tr>
+<td>steelblue</td>
+<td>#4682B4</td>
+<td>RGB(70,130,180)</td>
+<td style="background-color:#4682B4">&nbsp;</td>
+</tr>
+<tr>
+<td>steelblue1</td>
+<td>#63B8FF</td>
+<td>RGB(99,184,255)</td>
+<td style="background-color:#63B8FF">&nbsp;</td>
+</tr>
+<tr>
+<td>steelblue2</td>
+<td>#5CACEE</td>
+<td>RGB(92,172,238)</td>
+<td style="background-color:#5CACEE">&nbsp;</td>
+</tr>
+<tr>
+<td>steelblue3</td>
+<td>#4F94CD</td>
+<td>RGB(79,148,205)</td>
+<td style="background-color:#4F94CD">&nbsp;</td>
+</tr>
+<tr>
+<td>steelblue4</td>
+<td>#36648B</td>
+<td>RGB(54,100,139)</td>
+<td style="background-color:#36648B">&nbsp;</td>
+</tr>
+<tr>
+<td>tan</td>
+<td>#D2B48C</td>
+<td>RGB(210,180,140)</td>
+<td style="background-color:#D2B48C">&nbsp;</td>
+</tr>
+<tr>
+<td>tan1</td>
+<td>#FFA54F</td>
+<td>RGB(255,165,79)</td>
+<td style="background-color:#FFA54F">&nbsp;</td>
+</tr>
+<tr>
+<td>tan2</td>
+<td>#EE9A49</td>
+<td>RGB(238,154,73)</td>
+<td style="background-color:#EE9A49">&nbsp;</td>
+</tr>
+<tr>
+<td>tan3</td>
+<td>#CD853F</td>
+<td>RGB(205,133,63)</td>
+<td style="background-color:#CD853F">&nbsp;</td>
+</tr>
+<tr>
+<td>tan4</td>
+<td>#8B5A2B</td>
+<td>RGB(139,90,43)</td>
+<td style="background-color:#8B5A2B">&nbsp;</td>
+</tr>
+<tr>
+<td>teal</td>
+<td>#008080</td>
+<td>RGB(0,128,128)</td>
+<td style="background-color:#008080">&nbsp;</td>
+</tr>
+<tr>
+<td>thistle</td>
+<td>#D8BFD8</td>
+<td>RGB(216,191,216)</td>
+<td style="background-color:#D8BFD8">&nbsp;</td>
+</tr>
+<tr>
+<td>thistle1</td>
+<td>#FFE1FF</td>
+<td>RGB(255,225,255)</td>
+<td style="background-color:#FFE1FF">&nbsp;</td>
+</tr>
+<tr>
+<td>thistle2</td>
+<td>#EED2EE</td>
+<td>RGB(238,210,238)</td>
+<td style="background-color:#EED2EE">&nbsp;</td>
+</tr>
+<tr>
+<td>thistle3</td>
+<td>#CDB5CD</td>
+<td>RGB(205,181,205)</td>
+<td style="background-color:#CDB5CD">&nbsp;</td>
+</tr>
+<tr>
+<td>thistle4</td>
+<td>#8B7B8B</td>
+<td>RGB(139,123,139)</td>
+<td style="background-color:#8B7B8B">&nbsp;</td>
+</tr>
+<tr>
+<td>tomato1</td>
+<td>#FF6347</td>
+<td>RGB(255,99,71)</td>
+<td style="background-color:#FF6347">&nbsp;</td>
+</tr>
+<tr>
+<td>tomato2</td>
+<td>#EE5C42</td>
+<td>RGB(238,92,66)</td>
+<td style="background-color:#EE5C42">&nbsp;</td>
+</tr>
+<tr>
+<td>tomato3</td>
+<td>#CD4F39</td>
+<td>RGB(205,79,57)</td>
+<td style="background-color:#CD4F39">&nbsp;</td>
+</tr>
+<tr>
+<td>tomato4</td>
+<td>#8B3626</td>
+<td>RGB(139,54,38)</td>
+<td style="background-color:#8B3626">&nbsp;</td>
+</tr>
+<tr>
+<td>turquoise</td>
+<td>#40E0D0</td>
+<td>RGB(64,224,208)</td>
+<td style="background-color:#40E0D0">&nbsp;</td>
+</tr>
+<tr>
+<td>turquoise1</td>
+<td>#00F5FF</td>
+<td>RGB(0,245,255)</td>
+<td style="background-color:#00F5FF">&nbsp;</td>
+</tr>
+<tr>
+<td>turquoise2</td>
+<td>#00E5EE</td>
+<td>RGB(0,229,238)</td>
+<td style="background-color:#00E5EE">&nbsp;</td>
+</tr>
+<tr>
+<td>turquoise3</td>
+<td>#00C5CD</td>
+<td>RGB(0,197,205)</td>
+<td style="background-color:#00C5CD">&nbsp;</td>
+</tr>
+<tr>
+<td>turquoise4</td>
+<td>#00868B</td>
+<td>RGB(0,134,139)</td>
+<td style="background-color:#00868B">&nbsp;</td>
+</tr>
+<tr>
+<td>turquoiseblue</td>
+<td>#00C78C</td>
+<td>RGB(0,199,140)</td>
+<td style="background-color:#00C78C">&nbsp;</td>
+</tr>
+<tr>
+<td>violet</td>
+<td>#EE82EE</td>
+<td>RGB(238,130,238)</td>
+<td style="background-color:#EE82EE">&nbsp;</td>
+</tr>
+<tr>
+<td>violetred</td>
+<td>#D02090</td>
+<td>RGB(208,32,144)</td>
+<td style="background-color:#D02090">&nbsp;</td>
+</tr>
+<tr>
+<td>violetred1</td>
+<td>#FF3E96</td>
+<td>RGB(255,62,150)</td>
+<td style="background-color:#FF3E96">&nbsp;</td>
+</tr>
+<tr>
+<td>violetred2</td>
+<td>#EE3A8C</td>
+<td>RGB(238,58,140)</td>
+<td style="background-color:#EE3A8C">&nbsp;</td>
+</tr>
+<tr>
+<td>violetred3</td>
+<td>#CD3278</td>
+<td>RGB(205,50,120)</td>
+<td style="background-color:#CD3278">&nbsp;</td>
+</tr>
+<tr>
+<td>violetred4</td>
+<td>#8B2252</td>
+<td>RGB(139,34,82)</td>
+<td style="background-color:#8B2252">&nbsp;</td>
+</tr>
+<tr>
+<td>warmgrey</td>
+<td>#808069</td>
+<td>RGB(128,128,105)</td>
+<td style="background-color:#808069">&nbsp;</td>
+</tr>
+<tr>
+<td>wheat</td>
+<td>#F5DEB3</td>
+<td>RGB(245,222,179)</td>
+<td style="background-color:#F5DEB3">&nbsp;</td>
+</tr>
+<tr>
+<td>wheat1</td>
+<td>#FFE7BA</td>
+<td>RGB(255,231,186)</td>
+<td style="background-color:#FFE7BA">&nbsp;</td>
+</tr>
+<tr>
+<td>wheat2</td>
+<td>#EED8AE</td>
+<td>RGB(238,216,174)</td>
+<td style="background-color:#EED8AE">&nbsp;</td>
+</tr>
+<tr>
+<td>wheat3</td>
+<td>#CDBA96</td>
+<td>RGB(205,186,150)</td>
+<td style="background-color:#CDBA96">&nbsp;</td>
+</tr>
+<tr>
+<td>wheat4</td>
+<td>#8B7E66</td>
+<td>RGB(139,126,102)</td>
+<td style="background-color:#8B7E66">&nbsp;</td>
+</tr>
+<tr>
+<td>white</td>
+<td>#FFFFFF</td>
+<td>RGB(255,255,255)</td>
+<td style="background-color:#FFFFFF">&nbsp;</td>
+</tr>
+<tr>
+<td>whitesmoke</td>
+<td>#F5F5F5</td>
+<td>RGB(245,245,245)</td>
+<td style="background-color:#F5F5F5">&nbsp;</td>
+</tr>
+<tr>
+<td>yellow1</td>
+<td>#FFFF00</td>
+<td>RGB(255,255,0)</td>
+<td style="background-color:#FFFF00">&nbsp;</td>
+</tr>
+<tr>
+<td>yellow2</td>
+<td>#EEEE00</td>
+<td>RGB(238,238,0)</td>
+<td style="background-color:#EEEE00">&nbsp;</td>
+</tr>
+<tr>
+<td>yellow3</td>
+<td>#CDCD00</td>
+<td>RGB(205,205,0)</td>
+<td style="background-color:#CDCD00">&nbsp;</td>
+</tr>
+<tr>
+<td>yellow4</td>
+<td>#8B8B00</td>
+<td>RGB(139,139,0)</td>
+<td style="background-color:#8B8B00">&nbsp;</td>
+</tr>
+</table>
+<h3>color_constants.py</h3>
+<pre lang="python" line="1">	"""Provide RGB color constants and a colors dictionary with
+	elements formatted: colors[colorname] = CONSTANT"""
+
+	from collections import namedtuple, OrderedDict
+
+	Color = namedtuple('RGB','red, green, blue')
+	colors = {} #dict of colors
+
+	class RGB(Color):
+	    def hex_format(self):
+		'''Returns color in hex format'''
+		return '#{:02X}{:02X}{:02X}'.format(self.red,self.green,self.blue)
+
+	#Color Contants
+	ALICEBLUE = RGB(240, 248, 255)
+	ANTIQUEWHITE = RGB(250, 235, 215)
+	ANTIQUEWHITE1 = RGB(255, 239, 219)
+	ANTIQUEWHITE2 = RGB(238, 223, 204)
+	ANTIQUEWHITE3 = RGB(205, 192, 176)
+	ANTIQUEWHITE4 = RGB(139, 131, 120)
+	AQUA = RGB(0, 255, 255)
+	AQUAMARINE1 = RGB(127, 255, 212)
+	AQUAMARINE2 = RGB(118, 238, 198)
+	AQUAMARINE3 = RGB(102, 205, 170)
+	AQUAMARINE4 = RGB(69, 139, 116)
+	AZURE1 = RGB(240, 255, 255)
+	AZURE2 = RGB(224, 238, 238)
+	AZURE3 = RGB(193, 205, 205)
+	AZURE4 = RGB(131, 139, 139)
+	BANANA = RGB(227, 207, 87)
+	BEIGE = RGB(245, 245, 220)
+	BISQUE1 = RGB(255, 228, 196)
+	BISQUE2 = RGB(238, 213, 183)
+	BISQUE3 = RGB(205, 183, 158)
+	BISQUE4 = RGB(139, 125, 107)
+	BLACK = RGB(0, 0, 0)
+	BLANCHEDALMOND = RGB(255, 235, 205)
+	BLUE = RGB(0, 0, 255)
+	BLUE2 = RGB(0, 0, 238)
+	BLUE3 = RGB(0, 0, 205)
+	BLUE4 = RGB(0, 0, 139)
+	BLUEVIOLET = RGB(138, 43, 226)
+	BRICK = RGB(156, 102, 31)
+	BROWN = RGB(165, 42, 42)
+	BROWN1 = RGB(255, 64, 64)
+	BROWN2 = RGB(238, 59, 59)
+	BROWN3 = RGB(205, 51, 51)
+	BROWN4 = RGB(139, 35, 35)
+	BURLYWOOD = RGB(222, 184, 135)
+	BURLYWOOD1 = RGB(255, 211, 155)
+	BURLYWOOD2 = RGB(238, 197, 145)
+	BURLYWOOD3 = RGB(205, 170, 125)
+	BURLYWOOD4 = RGB(139, 115, 85)
+	BURNTSIENNA = RGB(138, 54, 15)
+	BURNTUMBER = RGB(138, 51, 36)
+	CADETBLUE = RGB(95, 158, 160)
+	CADETBLUE1 = RGB(152, 245, 255)
+	CADETBLUE2 = RGB(142, 229, 238)
+	CADETBLUE3 = RGB(122, 197, 205)
+	CADETBLUE4 = RGB(83, 134, 139)
+	CADMIUMORANGE = RGB(255, 97, 3)
+	CADMIUMYELLOW = RGB(255, 153, 18)
+	CARROT = RGB(237, 145, 33)
+	CHARTREUSE1 = RGB(127, 255, 0)
+	CHARTREUSE2 = RGB(118, 238, 0)
+	CHARTREUSE3 = RGB(102, 205, 0)
+	CHARTREUSE4 = RGB(69, 139, 0)
+	CHOCOLATE = RGB(210, 105, 30)
+	CHOCOLATE1 = RGB(255, 127, 36)
+	CHOCOLATE2 = RGB(238, 118, 33)
+	CHOCOLATE3 = RGB(205, 102, 29)
+	CHOCOLATE4 = RGB(139, 69, 19)
+	COBALT = RGB(61, 89, 171)
+	COBALTGREEN = RGB(61, 145, 64)
+	COLDGREY = RGB(128, 138, 135)
+	CORAL = RGB(255, 127, 80)
+	CORAL1 = RGB(255, 114, 86)
+	CORAL2 = RGB(238, 106, 80)
+	CORAL3 = RGB(205, 91, 69)
+	CORAL4 = RGB(139, 62, 47)
+	CORNFLOWERBLUE = RGB(100, 149, 237)
+	CORNSILK1 = RGB(255, 248, 220)
+	CORNSILK2 = RGB(238, 232, 205)
+	CORNSILK3 = RGB(205, 200, 177)
+	CORNSILK4 = RGB(139, 136, 120)
+	CRIMSON = RGB(220, 20, 60)
+	CYAN2 = RGB(0, 238, 238)
+	CYAN3 = RGB(0, 205, 205)
+	CYAN4 = RGB(0, 139, 139)
+	DARKGOLDENROD = RGB(184, 134, 11)
+	DARKGOLDENROD1 = RGB(255, 185, 15)
+	DARKGOLDENROD2 = RGB(238, 173, 14)
+	DARKGOLDENROD3 = RGB(205, 149, 12)
+	DARKGOLDENROD4 = RGB(139, 101, 8)
+	DARKGRAY = RGB(169, 169, 169)
+	DARKGREEN = RGB(0, 100, 0)
+	DARKKHAKI = RGB(189, 183, 107)
+	DARKOLIVEGREEN = RGB(85, 107, 47)
+	DARKOLIVEGREEN1 = RGB(202, 255, 112)
+	DARKOLIVEGREEN2 = RGB(188, 238, 104)
+	DARKOLIVEGREEN3 = RGB(162, 205, 90)
+	DARKOLIVEGREEN4 = RGB(110, 139, 61)
+	DARKORANGE = RGB(255, 140, 0)
+	DARKORANGE1 = RGB(255, 127, 0)
+	DARKORANGE2 = RGB(238, 118, 0)
+	DARKORANGE3 = RGB(205, 102, 0)
+	DARKORANGE4 = RGB(139, 69, 0)
+	DARKORCHID = RGB(153, 50, 204)
+	DARKORCHID1 = RGB(191, 62, 255)
+	DARKORCHID2 = RGB(178, 58, 238)
+	DARKORCHID3 = RGB(154, 50, 205)
+	DARKORCHID4 = RGB(104, 34, 139)
+	DARKSALMON = RGB(233, 150, 122)
+	DARKSEAGREEN = RGB(143, 188, 143)
+	DARKSEAGREEN1 = RGB(193, 255, 193)
+	DARKSEAGREEN2 = RGB(180, 238, 180)
+	DARKSEAGREEN3 = RGB(155, 205, 155)
+	DARKSEAGREEN4 = RGB(105, 139, 105)
+	DARKSLATEBLUE = RGB(72, 61, 139)
+	DARKSLATEGRAY = RGB(47, 79, 79)
+	DARKSLATEGRAY1 = RGB(151, 255, 255)
+	DARKSLATEGRAY2 = RGB(141, 238, 238)
+	DARKSLATEGRAY3 = RGB(121, 205, 205)
+	DARKSLATEGRAY4 = RGB(82, 139, 139)
+	DARKTURQUOISE = RGB(0, 206, 209)
+	DARKVIOLET = RGB(148, 0, 211)
+	DEEPPINK1 = RGB(255, 20, 147)
+	DEEPPINK2 = RGB(238, 18, 137)
+	DEEPPINK3 = RGB(205, 16, 118)
+	DEEPPINK4 = RGB(139, 10, 80)
+	DEEPSKYBLUE1 = RGB(0, 191, 255)
+	DEEPSKYBLUE2 = RGB(0, 178, 238)
+	DEEPSKYBLUE3 = RGB(0, 154, 205)
+	DEEPSKYBLUE4 = RGB(0, 104, 139)
+	DIMGRAY = RGB(105, 105, 105)
+	DIMGRAY = RGB(105, 105, 105)
+	DODGERBLUE1 = RGB(30, 144, 255)
+	DODGERBLUE2 = RGB(28, 134, 238)
+	DODGERBLUE3 = RGB(24, 116, 205)
+	DODGERBLUE4 = RGB(16, 78, 139)
+	EGGSHELL = RGB(252, 230, 201)
+	EMERALDGREEN = RGB(0, 201, 87)
+	FIREBRICK = RGB(178, 34, 34)
+	FIREBRICK1 = RGB(255, 48, 48)
+	FIREBRICK2 = RGB(238, 44, 44)
+	FIREBRICK3 = RGB(205, 38, 38)
+	FIREBRICK4 = RGB(139, 26, 26)
+	FLESH = RGB(255, 125, 64)
+	FLORALWHITE = RGB(255, 250, 240)
+	FORESTGREEN = RGB(34, 139, 34)
+	GAINSBORO = RGB(220, 220, 220)
+	GHOSTWHITE = RGB(248, 248, 255)
+	GOLD1 = RGB(255, 215, 0)
+	GOLD2 = RGB(238, 201, 0)
+	GOLD3 = RGB(205, 173, 0)
+	GOLD4 = RGB(139, 117, 0)
+	GOLDENROD = RGB(218, 165, 32)
+	GOLDENROD1 = RGB(255, 193, 37)
+	GOLDENROD2 = RGB(238, 180, 34)
+	GOLDENROD3 = RGB(205, 155, 29)
+	GOLDENROD4 = RGB(139, 105, 20)
+	GRAY = RGB(128, 128, 128)
+	GRAY1 = RGB(3, 3, 3)
+	GRAY10 = RGB(26, 26, 26)
+	GRAY11 = RGB(28, 28, 28)
+	GRAY12 = RGB(31, 31, 31)
+	GRAY13 = RGB(33, 33, 33)
+	GRAY14 = RGB(36, 36, 36)
+	GRAY15 = RGB(38, 38, 38)
+	GRAY16 = RGB(41, 41, 41)
+	GRAY17 = RGB(43, 43, 43)
+	GRAY18 = RGB(46, 46, 46)
+	GRAY19 = RGB(48, 48, 48)
+	GRAY2 = RGB(5, 5, 5)
+	GRAY20 = RGB(51, 51, 51)
+	GRAY21 = RGB(54, 54, 54)
+	GRAY22 = RGB(56, 56, 56)
+	GRAY23 = RGB(59, 59, 59)
+	GRAY24 = RGB(61, 61, 61)
+	GRAY25 = RGB(64, 64, 64)
+	GRAY26 = RGB(66, 66, 66)
+	GRAY27 = RGB(69, 69, 69)
+	GRAY28 = RGB(71, 71, 71)
+	GRAY29 = RGB(74, 74, 74)
+	GRAY3 = RGB(8, 8, 8)
+	GRAY30 = RGB(77, 77, 77)
+	GRAY31 = RGB(79, 79, 79)
+	GRAY32 = RGB(82, 82, 82)
+	GRAY33 = RGB(84, 84, 84)
+	GRAY34 = RGB(87, 87, 87)
+	GRAY35 = RGB(89, 89, 89)
+	GRAY36 = RGB(92, 92, 92)
+	GRAY37 = RGB(94, 94, 94)
+	GRAY38 = RGB(97, 97, 97)
+	GRAY39 = RGB(99, 99, 99)
+	GRAY4 = RGB(10, 10, 10)
+	GRAY40 = RGB(102, 102, 102)
+	GRAY42 = RGB(107, 107, 107)
+	GRAY43 = RGB(110, 110, 110)
+	GRAY44 = RGB(112, 112, 112)
+	GRAY45 = RGB(115, 115, 115)
+	GRAY46 = RGB(117, 117, 117)
+	GRAY47 = RGB(120, 120, 120)
+	GRAY48 = RGB(122, 122, 122)
+	GRAY49 = RGB(125, 125, 125)
+	GRAY5 = RGB(13, 13, 13)
+	GRAY50 = RGB(127, 127, 127)
+	GRAY51 = RGB(130, 130, 130)
+	GRAY52 = RGB(133, 133, 133)
+	GRAY53 = RGB(135, 135, 135)
+	GRAY54 = RGB(138, 138, 138)
+	GRAY55 = RGB(140, 140, 140)
+	GRAY56 = RGB(143, 143, 143)
+	GRAY57 = RGB(145, 145, 145)
+	GRAY58 = RGB(148, 148, 148)
+	GRAY59 = RGB(150, 150, 150)
+	GRAY6 = RGB(15, 15, 15)
+	GRAY60 = RGB(153, 153, 153)
+	GRAY61 = RGB(156, 156, 156)
+	GRAY62 = RGB(158, 158, 158)
+	GRAY63 = RGB(161, 161, 161)
+	GRAY64 = RGB(163, 163, 163)
+	GRAY65 = RGB(166, 166, 166)
+	GRAY66 = RGB(168, 168, 168)
+	GRAY67 = RGB(171, 171, 171)
+	GRAY68 = RGB(173, 173, 173)
+	GRAY69 = RGB(176, 176, 176)
+	GRAY7 = RGB(18, 18, 18)
+	GRAY70 = RGB(179, 179, 179)
+	GRAY71 = RGB(181, 181, 181)
+	GRAY72 = RGB(184, 184, 184)
+	GRAY73 = RGB(186, 186, 186)
+	GRAY74 = RGB(189, 189, 189)
+	GRAY75 = RGB(191, 191, 191)
+	GRAY76 = RGB(194, 194, 194)
+	GRAY77 = RGB(196, 196, 196)
+	GRAY78 = RGB(199, 199, 199)
+	GRAY79 = RGB(201, 201, 201)
+	GRAY8 = RGB(20, 20, 20)
+	GRAY80 = RGB(204, 204, 204)
+	GRAY81 = RGB(207, 207, 207)
+	GRAY82 = RGB(209, 209, 209)
+	GRAY83 = RGB(212, 212, 212)
+	GRAY84 = RGB(214, 214, 214)
+	GRAY85 = RGB(217, 217, 217)
+	GRAY86 = RGB(219, 219, 219)
+	GRAY87 = RGB(222, 222, 222)
+	GRAY88 = RGB(224, 224, 224)
+	GRAY89 = RGB(227, 227, 227)
+	GRAY9 = RGB(23, 23, 23)
+	GRAY90 = RGB(229, 229, 229)
+	GRAY91 = RGB(232, 232, 232)
+	GRAY92 = RGB(235, 235, 235)
+	GRAY93 = RGB(237, 237, 237)
+	GRAY94 = RGB(240, 240, 240)
+	GRAY95 = RGB(242, 242, 242)
+	GRAY97 = RGB(247, 247, 247)
+	GRAY98 = RGB(250, 250, 250)
+	GRAY99 = RGB(252, 252, 252)
+	GREEN = RGB(0, 128, 0)
+	GREEN1 = RGB(0, 255, 0)
+	GREEN2 = RGB(0, 238, 0)
+	GREEN3 = RGB(0, 205, 0)
+	GREEN4 = RGB(0, 139, 0)
+	GREENYELLOW = RGB(173, 255, 47)
+	HONEYDEW1 = RGB(240, 255, 240)
+	HONEYDEW2 = RGB(224, 238, 224)
+	HONEYDEW3 = RGB(193, 205, 193)
+	HONEYDEW4 = RGB(131, 139, 131)
+	HOTPINK = RGB(255, 105, 180)
+	HOTPINK1 = RGB(255, 110, 180)
+	HOTPINK2 = RGB(238, 106, 167)
+	HOTPINK3 = RGB(205, 96, 144)
+	HOTPINK4 = RGB(139, 58, 98)
+	INDIANRED = RGB(176, 23, 31)
+	INDIANRED = RGB(205, 92, 92)
+	INDIANRED1 = RGB(255, 106, 106)
+	INDIANRED2 = RGB(238, 99, 99)
+	INDIANRED3 = RGB(205, 85, 85)
+	INDIANRED4 = RGB(139, 58, 58)
+	INDIGO = RGB(75, 0, 130)
+	IVORY1 = RGB(255, 255, 240)
+	IVORY2 = RGB(238, 238, 224)
+	IVORY3 = RGB(205, 205, 193)
+	IVORY4 = RGB(139, 139, 131)
+	IVORYBLACK = RGB(41, 36, 33)
+	KHAKI = RGB(240, 230, 140)
+	KHAKI1 = RGB(255, 246, 143)
+	KHAKI2 = RGB(238, 230, 133)
+	KHAKI3 = RGB(205, 198, 115)
+	KHAKI4 = RGB(139, 134, 78)
+	LAVENDER = RGB(230, 230, 250)
+	LAVENDERBLUSH1 = RGB(255, 240, 245)
+	LAVENDERBLUSH2 = RGB(238, 224, 229)
+	LAVENDERBLUSH3 = RGB(205, 193, 197)
+	LAVENDERBLUSH4 = RGB(139, 131, 134)
+	LAWNGREEN = RGB(124, 252, 0)
+	LEMONCHIFFON1 = RGB(255, 250, 205)
+	LEMONCHIFFON2 = RGB(238, 233, 191)
+	LEMONCHIFFON3 = RGB(205, 201, 165)
+	LEMONCHIFFON4 = RGB(139, 137, 112)
+	LIGHTBLUE = RGB(173, 216, 230)
+	LIGHTBLUE1 = RGB(191, 239, 255)
+	LIGHTBLUE2 = RGB(178, 223, 238)
+	LIGHTBLUE3 = RGB(154, 192, 205)
+	LIGHTBLUE4 = RGB(104, 131, 139)
+	LIGHTCORAL = RGB(240, 128, 128)
+	LIGHTCYAN1 = RGB(224, 255, 255)
+	LIGHTCYAN2 = RGB(209, 238, 238)
+	LIGHTCYAN3 = RGB(180, 205, 205)
+	LIGHTCYAN4 = RGB(122, 139, 139)
+	LIGHTGOLDENROD1 = RGB(255, 236, 139)
+	LIGHTGOLDENROD2 = RGB(238, 220, 130)
+	LIGHTGOLDENROD3 = RGB(205, 190, 112)
+	LIGHTGOLDENROD4 = RGB(139, 129, 76)
+	LIGHTGOLDENRODYELLOW = RGB(250, 250, 210)
+	LIGHTGREY = RGB(211, 211, 211)
+	LIGHTPINK = RGB(255, 182, 193)
+	LIGHTPINK1 = RGB(255, 174, 185)
+	LIGHTPINK2 = RGB(238, 162, 173)
+	LIGHTPINK3 = RGB(205, 140, 149)
+	LIGHTPINK4 = RGB(139, 95, 101)
+	LIGHTSALMON1 = RGB(255, 160, 122)
+	LIGHTSALMON2 = RGB(238, 149, 114)
+	LIGHTSALMON3 = RGB(205, 129, 98)
+	LIGHTSALMON4 = RGB(139, 87, 66)
+	LIGHTSEAGREEN = RGB(32, 178, 170)
+	LIGHTSKYBLUE = RGB(135, 206, 250)
+	LIGHTSKYBLUE1 = RGB(176, 226, 255)
+	LIGHTSKYBLUE2 = RGB(164, 211, 238)
+	LIGHTSKYBLUE3 = RGB(141, 182, 205)
+	LIGHTSKYBLUE4 = RGB(96, 123, 139)
+	LIGHTSLATEBLUE = RGB(132, 112, 255)
+	LIGHTSLATEGRAY = RGB(119, 136, 153)
+	LIGHTSTEELBLUE = RGB(176, 196, 222)
+	LIGHTSTEELBLUE1 = RGB(202, 225, 255)
+	LIGHTSTEELBLUE2 = RGB(188, 210, 238)
+	LIGHTSTEELBLUE3 = RGB(162, 181, 205)
+	LIGHTSTEELBLUE4 = RGB(110, 123, 139)
+	LIGHTYELLOW1 = RGB(255, 255, 224)
+	LIGHTYELLOW2 = RGB(238, 238, 209)
+	LIGHTYELLOW3 = RGB(205, 205, 180)
+	LIGHTYELLOW4 = RGB(139, 139, 122)
+	LIMEGREEN = RGB(50, 205, 50)
+	LINEN = RGB(250, 240, 230)
+	MAGENTA = RGB(255, 0, 255)
+	MAGENTA2 = RGB(238, 0, 238)
+	MAGENTA3 = RGB(205, 0, 205)
+	MAGENTA4 = RGB(139, 0, 139)
+	MANGANESEBLUE = RGB(3, 168, 158)
+	MAROON = RGB(128, 0, 0)
+	MAROON1 = RGB(255, 52, 179)
+	MAROON2 = RGB(238, 48, 167)
+	MAROON3 = RGB(205, 41, 144)
+	MAROON4 = RGB(139, 28, 98)
+	MEDIUMORCHID = RGB(186, 85, 211)
+	MEDIUMORCHID1 = RGB(224, 102, 255)
+	MEDIUMORCHID2 = RGB(209, 95, 238)
+	MEDIUMORCHID3 = RGB(180, 82, 205)
+	MEDIUMORCHID4 = RGB(122, 55, 139)
+	MEDIUMPURPLE = RGB(147, 112, 219)
+	MEDIUMPURPLE1 = RGB(171, 130, 255)
+	MEDIUMPURPLE2 = RGB(159, 121, 238)
+	MEDIUMPURPLE3 = RGB(137, 104, 205)
+	MEDIUMPURPLE4 = RGB(93, 71, 139)
+	MEDIUMSEAGREEN = RGB(60, 179, 113)
+	MEDIUMSLATEBLUE = RGB(123, 104, 238)
+	MEDIUMSPRINGGREEN = RGB(0, 250, 154)
+	MEDIUMTURQUOISE = RGB(72, 209, 204)
+	MEDIUMVIOLETRED = RGB(199, 21, 133)
+	MELON = RGB(227, 168, 105)
+	MIDNIGHTBLUE = RGB(25, 25, 112)
+	MINT = RGB(189, 252, 201)
+	MINTCREAM = RGB(245, 255, 250)
+	MISTYROSE1 = RGB(255, 228, 225)
+	MISTYROSE2 = RGB(238, 213, 210)
+	MISTYROSE3 = RGB(205, 183, 181)
+	MISTYROSE4 = RGB(139, 125, 123)
+	MOCCASIN = RGB(255, 228, 181)
+	NAVAJOWHITE1 = RGB(255, 222, 173)
+	NAVAJOWHITE2 = RGB(238, 207, 161)
+	NAVAJOWHITE3 = RGB(205, 179, 139)
+	NAVAJOWHITE4 = RGB(139, 121, 94)
+	NAVY = RGB(0, 0, 128)
+	OLDLACE = RGB(253, 245, 230)
+	OLIVE = RGB(128, 128, 0)
+	OLIVEDRAB = RGB(107, 142, 35)
+	OLIVEDRAB1 = RGB(192, 255, 62)
+	OLIVEDRAB2 = RGB(179, 238, 58)
+	OLIVEDRAB3 = RGB(154, 205, 50)
+	OLIVEDRAB4 = RGB(105, 139, 34)
+	ORANGE = RGB(255, 128, 0)
+	ORANGE1 = RGB(255, 165, 0)
+	ORANGE2 = RGB(238, 154, 0)
+	ORANGE3 = RGB(205, 133, 0)
+	ORANGE4 = RGB(139, 90, 0)
+	ORANGERED1 = RGB(255, 69, 0)
+	ORANGERED2 = RGB(238, 64, 0)
+	ORANGERED3 = RGB(205, 55, 0)
+	ORANGERED4 = RGB(139, 37, 0)
+	ORCHID = RGB(218, 112, 214)
+	ORCHID1 = RGB(255, 131, 250)
+	ORCHID2 = RGB(238, 122, 233)
+	ORCHID3 = RGB(205, 105, 201)
+	ORCHID4 = RGB(139, 71, 137)
+	PALEGOLDENROD = RGB(238, 232, 170)
+	PALEGREEN = RGB(152, 251, 152)
+	PALEGREEN1 = RGB(154, 255, 154)
+	PALEGREEN2 = RGB(144, 238, 144)
+	PALEGREEN3 = RGB(124, 205, 124)
+	PALEGREEN4 = RGB(84, 139, 84)
+	PALETURQUOISE1 = RGB(187, 255, 255)
+	PALETURQUOISE2 = RGB(174, 238, 238)
+	PALETURQUOISE3 = RGB(150, 205, 205)
+	PALETURQUOISE4 = RGB(102, 139, 139)
+	PALEVIOLETRED = RGB(219, 112, 147)
+	PALEVIOLETRED1 = RGB(255, 130, 171)
+	PALEVIOLETRED2 = RGB(238, 121, 159)
+	PALEVIOLETRED3 = RGB(205, 104, 137)
+	PALEVIOLETRED4 = RGB(139, 71, 93)
+	PAPAYAWHIP = RGB(255, 239, 213)
+	PEACHPUFF1 = RGB(255, 218, 185)
+	PEACHPUFF2 = RGB(238, 203, 173)
+	PEACHPUFF3 = RGB(205, 175, 149)
+	PEACHPUFF4 = RGB(139, 119, 101)
+	PEACOCK = RGB(51, 161, 201)
+	PINK = RGB(255, 192, 203)
+	PINK1 = RGB(255, 181, 197)
+	PINK2 = RGB(238, 169, 184)
+	PINK3 = RGB(205, 145, 158)
+	PINK4 = RGB(139, 99, 108)
+	PLUM = RGB(221, 160, 221)
+	PLUM1 = RGB(255, 187, 255)
+	PLUM2 = RGB(238, 174, 238)
+	PLUM3 = RGB(205, 150, 205)
+	PLUM4 = RGB(139, 102, 139)
+	POWDERBLUE = RGB(176, 224, 230)
+	PURPLE = RGB(128, 0, 128)
+	PURPLE1 = RGB(155, 48, 255)
+	PURPLE2 = RGB(145, 44, 238)
+	PURPLE3 = RGB(125, 38, 205)
+	PURPLE4 = RGB(85, 26, 139)
+	RASPBERRY = RGB(135, 38, 87)
+	RAWSIENNA = RGB(199, 97, 20)
+	RED1 = RGB(255, 0, 0)
+	RED2 = RGB(238, 0, 0)
+	RED3 = RGB(205, 0, 0)
+	RED4 = RGB(139, 0, 0)
+	ROSYBROWN = RGB(188, 143, 143)
+	ROSYBROWN1 = RGB(255, 193, 193)
+	ROSYBROWN2 = RGB(238, 180, 180)
+	ROSYBROWN3 = RGB(205, 155, 155)
+	ROSYBROWN4 = RGB(139, 105, 105)
+	ROYALBLUE = RGB(65, 105, 225)
+	ROYALBLUE1 = RGB(72, 118, 255)
+	ROYALBLUE2 = RGB(67, 110, 238)
+	ROYALBLUE3 = RGB(58, 95, 205)
+	ROYALBLUE4 = RGB(39, 64, 139)
+	SALMON = RGB(250, 128, 114)
+	SALMON1 = RGB(255, 140, 105)
+	SALMON2 = RGB(238, 130, 98)
+	SALMON3 = RGB(205, 112, 84)
+	SALMON4 = RGB(139, 76, 57)
+	SANDYBROWN = RGB(244, 164, 96)
+	SAPGREEN = RGB(48, 128, 20)
+	SEAGREEN1 = RGB(84, 255, 159)
+	SEAGREEN2 = RGB(78, 238, 148)
+	SEAGREEN3 = RGB(67, 205, 128)
+	SEAGREEN4 = RGB(46, 139, 87)
+	SEASHELL1 = RGB(255, 245, 238)
+	SEASHELL2 = RGB(238, 229, 222)
+	SEASHELL3 = RGB(205, 197, 191)
+	SEASHELL4 = RGB(139, 134, 130)
+	SEPIA = RGB(94, 38, 18)
+	SGIBEET = RGB(142, 56, 142)
+	SGIBRIGHTGRAY = RGB(197, 193, 170)
+	SGICHARTREUSE = RGB(113, 198, 113)
+	SGIDARKGRAY = RGB(85, 85, 85)
+	SGIGRAY12 = RGB(30, 30, 30)
+	SGIGRAY16 = RGB(40, 40, 40)
+	SGIGRAY32 = RGB(81, 81, 81)
+	SGIGRAY36 = RGB(91, 91, 91)
+	SGIGRAY52 = RGB(132, 132, 132)
+	SGIGRAY56 = RGB(142, 142, 142)
+	SGIGRAY72 = RGB(183, 183, 183)
+	SGIGRAY76 = RGB(193, 193, 193)
+	SGIGRAY92 = RGB(234, 234, 234)
+	SGIGRAY96 = RGB(244, 244, 244)
+	SGILIGHTBLUE = RGB(125, 158, 192)
+	SGILIGHTGRAY = RGB(170, 170, 170)
+	SGIOLIVEDRAB = RGB(142, 142, 56)
+	SGISALMON = RGB(198, 113, 113)
+	SGISLATEBLUE = RGB(113, 113, 198)
+	SGITEAL = RGB(56, 142, 142)
+	SIENNA = RGB(160, 82, 45)
+	SIENNA1 = RGB(255, 130, 71)
+	SIENNA2 = RGB(238, 121, 66)
+	SIENNA3 = RGB(205, 104, 57)
+	SIENNA4 = RGB(139, 71, 38)
+	SILVER = RGB(192, 192, 192)
+	SKYBLUE = RGB(135, 206, 235)
+	SKYBLUE1 = RGB(135, 206, 255)
+	SKYBLUE2 = RGB(126, 192, 238)
+	SKYBLUE3 = RGB(108, 166, 205)
+	SKYBLUE4 = RGB(74, 112, 139)
+	SLATEBLUE = RGB(106, 90, 205)
+	SLATEBLUE1 = RGB(131, 111, 255)
+	SLATEBLUE2 = RGB(122, 103, 238)
+	SLATEBLUE3 = RGB(105, 89, 205)
+	SLATEBLUE4 = RGB(71, 60, 139)
+	SLATEGRAY = RGB(112, 128, 144)
+	SLATEGRAY1 = RGB(198, 226, 255)
+	SLATEGRAY2 = RGB(185, 211, 238)
+	SLATEGRAY3 = RGB(159, 182, 205)
+	SLATEGRAY4 = RGB(108, 123, 139)
+	SNOW1 = RGB(255, 250, 250)
+	SNOW2 = RGB(238, 233, 233)
+	SNOW3 = RGB(205, 201, 201)
+	SNOW4 = RGB(139, 137, 137)
+	SPRINGGREEN = RGB(0, 255, 127)
+	SPRINGGREEN1 = RGB(0, 238, 118)
+	SPRINGGREEN2 = RGB(0, 205, 102)
+	SPRINGGREEN3 = RGB(0, 139, 69)
+	STEELBLUE = RGB(70, 130, 180)
+	STEELBLUE1 = RGB(99, 184, 255)
+	STEELBLUE2 = RGB(92, 172, 238)
+	STEELBLUE3 = RGB(79, 148, 205)
+	STEELBLUE4 = RGB(54, 100, 139)
+	TAN = RGB(210, 180, 140)
+	TAN1 = RGB(255, 165, 79)
+	TAN2 = RGB(238, 154, 73)
+	TAN3 = RGB(205, 133, 63)
+	TAN4 = RGB(139, 90, 43)
+	TEAL = RGB(0, 128, 128)
+	THISTLE = RGB(216, 191, 216)
+	THISTLE1 = RGB(255, 225, 255)
+	THISTLE2 = RGB(238, 210, 238)
+	THISTLE3 = RGB(205, 181, 205)
+	THISTLE4 = RGB(139, 123, 139)
+	TOMATO1 = RGB(255, 99, 71)
+	TOMATO2 = RGB(238, 92, 66)
+	TOMATO3 = RGB(205, 79, 57)
+	TOMATO4 = RGB(139, 54, 38)
+	TURQUOISE = RGB(64, 224, 208)
+	TURQUOISE1 = RGB(0, 245, 255)
+	TURQUOISE2 = RGB(0, 229, 238)
+	TURQUOISE3 = RGB(0, 197, 205)
+	TURQUOISE4 = RGB(0, 134, 139)
+	TURQUOISEBLUE = RGB(0, 199, 140)
+	VIOLET = RGB(238, 130, 238)
+	VIOLETRED = RGB(208, 32, 144)
+	VIOLETRED1 = RGB(255, 62, 150)
+	VIOLETRED2 = RGB(238, 58, 140)
+	VIOLETRED3 = RGB(205, 50, 120)
+	VIOLETRED4 = RGB(139, 34, 82)
+	WARMGREY = RGB(128, 128, 105)
+	WHEAT = RGB(245, 222, 179)
+	WHEAT1 = RGB(255, 231, 186)
+	WHEAT2 = RGB(238, 216, 174)
+	WHEAT3 = RGB(205, 186, 150)
+	WHEAT4 = RGB(139, 126, 102)
+	WHITE = RGB(255, 255, 255)
+	WHITESMOKE = RGB(245, 245, 245)
+	WHITESMOKE = RGB(245, 245, 245)
+	YELLOW1 = RGB(255, 255, 0)
+	YELLOW2 = RGB(238, 238, 0)
+	YELLOW3 = RGB(205, 205, 0)
+	YELLOW4 = RGB(139, 139, 0)
+
+	#Add colors to colors dictionary
+	colors['aliceblue'] = ALICEBLUE
+	colors['antiquewhite'] = ANTIQUEWHITE
+	colors['antiquewhite1'] = ANTIQUEWHITE1
+	colors['antiquewhite2'] = ANTIQUEWHITE2
+	colors['antiquewhite3'] = ANTIQUEWHITE3
+	colors['antiquewhite4'] = ANTIQUEWHITE4
+	colors['aqua'] = AQUA
+	colors['aquamarine1'] = AQUAMARINE1
+	colors['aquamarine2'] = AQUAMARINE2
+	colors['aquamarine3'] = AQUAMARINE3
+	colors['aquamarine4'] = AQUAMARINE4
+	colors['azure1'] = AZURE1
+	colors['azure2'] = AZURE2
+	colors['azure3'] = AZURE3
+	colors['azure4'] = AZURE4
+	colors['banana'] = BANANA
+	colors['beige'] = BEIGE
+	colors['bisque1'] = BISQUE1
+	colors['bisque2'] = BISQUE2
+	colors['bisque3'] = BISQUE3
+	colors['bisque4'] = BISQUE4
+	colors['black'] = BLACK
+	colors['blanchedalmond'] = BLANCHEDALMOND
+	colors['blue'] = BLUE
+	colors['blue2'] = BLUE2
+	colors['blue3'] = BLUE3
+	colors['blue4'] = BLUE4
+	colors['blueviolet'] = BLUEVIOLET
+	colors['brick'] = BRICK
+	colors['brown'] = BROWN
+	colors['brown1'] = BROWN1
+	colors['brown2'] = BROWN2
+	colors['brown3'] = BROWN3
+	colors['brown4'] = BROWN4
+	colors['burlywood'] = BURLYWOOD
+	colors['burlywood1'] = BURLYWOOD1
+	colors['burlywood2'] = BURLYWOOD2
+	colors['burlywood3'] = BURLYWOOD3
+	colors['burlywood4'] = BURLYWOOD4
+	colors['burntsienna'] = BURNTSIENNA
+	colors['burntumber'] = BURNTUMBER
+	colors['cadetblue'] = CADETBLUE
+	colors['cadetblue1'] = CADETBLUE1
+	colors['cadetblue2'] = CADETBLUE2
+	colors['cadetblue3'] = CADETBLUE3
+	colors['cadetblue4'] = CADETBLUE4
+	colors['cadmiumorange'] = CADMIUMORANGE
+	colors['cadmiumyellow'] = CADMIUMYELLOW
+	colors['carrot'] = CARROT
+	colors['chartreuse1'] = CHARTREUSE1
+	colors['chartreuse2'] = CHARTREUSE2
+	colors['chartreuse3'] = CHARTREUSE3
+	colors['chartreuse4'] = CHARTREUSE4
+	colors['chocolate'] = CHOCOLATE
+	colors['chocolate1'] = CHOCOLATE1
+	colors['chocolate2'] = CHOCOLATE2
+	colors['chocolate3'] = CHOCOLATE3
+	colors['chocolate4'] = CHOCOLATE4
+	colors['cobalt'] = COBALT
+	colors['cobaltgreen'] = COBALTGREEN
+	colors['coldgrey'] = COLDGREY
+	colors['coral'] = CORAL
+	colors['coral1'] = CORAL1
+	colors['coral2'] = CORAL2
+	colors['coral3'] = CORAL3
+	colors['coral4'] = CORAL4
+	colors['cornflowerblue'] = CORNFLOWERBLUE
+	colors['cornsilk1'] = CORNSILK1
+	colors['cornsilk2'] = CORNSILK2
+	colors['cornsilk3'] = CORNSILK3
+	colors['cornsilk4'] = CORNSILK4
+	colors['crimson'] = CRIMSON
+	colors['cyan2'] = CYAN2
+	colors['cyan3'] = CYAN3
+	colors['cyan4'] = CYAN4
+	colors['darkgoldenrod'] = DARKGOLDENROD
+	colors['darkgoldenrod1'] = DARKGOLDENROD1
+	colors['darkgoldenrod2'] = DARKGOLDENROD2
+	colors['darkgoldenrod3'] = DARKGOLDENROD3
+	colors['darkgoldenrod4'] = DARKGOLDENROD4
+	colors['darkgray'] = DARKGRAY
+	colors['darkgreen'] = DARKGREEN
+	colors['darkkhaki'] = DARKKHAKI
+	colors['darkolivegreen'] = DARKOLIVEGREEN
+	colors['darkolivegreen1'] = DARKOLIVEGREEN1
+	colors['darkolivegreen2'] = DARKOLIVEGREEN2
+	colors['darkolivegreen3'] = DARKOLIVEGREEN3
+	colors['darkolivegreen4'] = DARKOLIVEGREEN4
+	colors['darkorange'] = DARKORANGE
+	colors['darkorange1'] = DARKORANGE1
+	colors['darkorange2'] = DARKORANGE2
+	colors['darkorange3'] = DARKORANGE3
+	colors['darkorange4'] = DARKORANGE4
+	colors['darkorchid'] = DARKORCHID
+	colors['darkorchid1'] = DARKORCHID1
+	colors['darkorchid2'] = DARKORCHID2
+	colors['darkorchid3'] = DARKORCHID3
+	colors['darkorchid4'] = DARKORCHID4
+	colors['darksalmon'] = DARKSALMON
+	colors['darkseagreen'] = DARKSEAGREEN
+	colors['darkseagreen1'] = DARKSEAGREEN1
+	colors['darkseagreen2'] = DARKSEAGREEN2
+	colors['darkseagreen3'] = DARKSEAGREEN3
+	colors['darkseagreen4'] = DARKSEAGREEN4
+	colors['darkslateblue'] = DARKSLATEBLUE
+	colors['darkslategray'] = DARKSLATEGRAY
+	colors['darkslategray1'] = DARKSLATEGRAY1
+	colors['darkslategray2'] = DARKSLATEGRAY2
+	colors['darkslategray3'] = DARKSLATEGRAY3
+	colors['darkslategray4'] = DARKSLATEGRAY4
+	colors['darkturquoise'] = DARKTURQUOISE
+	colors['darkviolet'] = DARKVIOLET
+	colors['deeppink1'] = DEEPPINK1
+	colors['deeppink2'] = DEEPPINK2
+	colors['deeppink3'] = DEEPPINK3
+	colors['deeppink4'] = DEEPPINK4
+	colors['deepskyblue1'] = DEEPSKYBLUE1
+	colors['deepskyblue2'] = DEEPSKYBLUE2
+	colors['deepskyblue3'] = DEEPSKYBLUE3
+	colors['deepskyblue4'] = DEEPSKYBLUE4
+	colors['dimgray'] = DIMGRAY
+	colors['dimgray'] = DIMGRAY
+	colors['dodgerblue1'] = DODGERBLUE1
+	colors['dodgerblue2'] = DODGERBLUE2
+	colors['dodgerblue3'] = DODGERBLUE3
+	colors['dodgerblue4'] = DODGERBLUE4
+	colors['eggshell'] = EGGSHELL
+	colors['emeraldgreen'] = EMERALDGREEN
+	colors['firebrick'] = FIREBRICK
+	colors['firebrick1'] = FIREBRICK1
+	colors['firebrick2'] = FIREBRICK2
+	colors['firebrick3'] = FIREBRICK3
+	colors['firebrick4'] = FIREBRICK4
+	colors['flesh'] = FLESH
+	colors['floralwhite'] = FLORALWHITE
+	colors['forestgreen'] = FORESTGREEN
+	colors['gainsboro'] = GAINSBORO
+	colors['ghostwhite'] = GHOSTWHITE
+	colors['gold1'] = GOLD1
+	colors['gold2'] = GOLD2
+	colors['gold3'] = GOLD3
+	colors['gold4'] = GOLD4
+	colors['goldenrod'] = GOLDENROD
+	colors['goldenrod1'] = GOLDENROD1
+	colors['goldenrod2'] = GOLDENROD2
+	colors['goldenrod3'] = GOLDENROD3
+	colors['goldenrod4'] = GOLDENROD4
+	colors['gray'] = GRAY
+	colors['gray1'] = GRAY1
+	colors['gray10'] = GRAY10
+	colors['gray11'] = GRAY11
+	colors['gray12'] = GRAY12
+	colors['gray13'] = GRAY13
+	colors['gray14'] = GRAY14
+	colors['gray15'] = GRAY15
+	colors['gray16'] = GRAY16
+	colors['gray17'] = GRAY17
+	colors['gray18'] = GRAY18
+	colors['gray19'] = GRAY19
+	colors['gray2'] = GRAY2
+	colors['gray20'] = GRAY20
+	colors['gray21'] = GRAY21
+	colors['gray22'] = GRAY22
+	colors['gray23'] = GRAY23
+	colors['gray24'] = GRAY24
+	colors['gray25'] = GRAY25
+	colors['gray26'] = GRAY26
+	colors['gray27'] = GRAY27
+	colors['gray28'] = GRAY28
+	colors['gray29'] = GRAY29
+	colors['gray3'] = GRAY3
+	colors['gray30'] = GRAY30
+	colors['gray31'] = GRAY31
+	colors['gray32'] = GRAY32
+	colors['gray33'] = GRAY33
+	colors['gray34'] = GRAY34
+	colors['gray35'] = GRAY35
+	colors['gray36'] = GRAY36
+	colors['gray37'] = GRAY37
+	colors['gray38'] = GRAY38
+	colors['gray39'] = GRAY39
+	colors['gray4'] = GRAY4
+	colors['gray40'] = GRAY40
+	colors['gray42'] = GRAY42
+	colors['gray43'] = GRAY43
+	colors['gray44'] = GRAY44
+	colors['gray45'] = GRAY45
+	colors['gray46'] = GRAY46
+	colors['gray47'] = GRAY47
+	colors['gray48'] = GRAY48
+	colors['gray49'] = GRAY49
+	colors['gray5'] = GRAY5
+	colors['gray50'] = GRAY50
+	colors['gray51'] = GRAY51
+	colors['gray52'] = GRAY52
+	colors['gray53'] = GRAY53
+	colors['gray54'] = GRAY54
+	colors['gray55'] = GRAY55
+	colors['gray56'] = GRAY56
+	colors['gray57'] = GRAY57
+	colors['gray58'] = GRAY58
+	colors['gray59'] = GRAY59
+	colors['gray6'] = GRAY6
+	colors['gray60'] = GRAY60
+	colors['gray61'] = GRAY61
+	colors['gray62'] = GRAY62
+	colors['gray63'] = GRAY63
+	colors['gray64'] = GRAY64
+	colors['gray65'] = GRAY65
+	colors['gray66'] = GRAY66
+	colors['gray67'] = GRAY67
+	colors['gray68'] = GRAY68
+	colors['gray69'] = GRAY69
+	colors['gray7'] = GRAY7
+	colors['gray70'] = GRAY70
+	colors['gray71'] = GRAY71
+	colors['gray72'] = GRAY72
+	colors['gray73'] = GRAY73
+	colors['gray74'] = GRAY74
+	colors['gray75'] = GRAY75
+	colors['gray76'] = GRAY76
+	colors['gray77'] = GRAY77
+	colors['gray78'] = GRAY78
+	colors['gray79'] = GRAY79
+	colors['gray8'] = GRAY8
+	colors['gray80'] = GRAY80
+	colors['gray81'] = GRAY81
+	colors['gray82'] = GRAY82
+	colors['gray83'] = GRAY83
+	colors['gray84'] = GRAY84
+	colors['gray85'] = GRAY85
+	colors['gray86'] = GRAY86
+	colors['gray87'] = GRAY87
+	colors['gray88'] = GRAY88
+	colors['gray89'] = GRAY89
+	colors['gray9'] = GRAY9
+	colors['gray90'] = GRAY90
+	colors['gray91'] = GRAY91
+	colors['gray92'] = GRAY92
+	colors['gray93'] = GRAY93
+	colors['gray94'] = GRAY94
+	colors['gray95'] = GRAY95
+	colors['gray97'] = GRAY97
+	colors['gray98'] = GRAY98
+	colors['gray99'] = GRAY99
+	colors['green'] = GREEN
+	colors['green1'] = GREEN1
+	colors['green2'] = GREEN2
+	colors['green3'] = GREEN3
+	colors['green4'] = GREEN4
+	colors['greenyellow'] = GREENYELLOW
+	colors['honeydew1'] = HONEYDEW1
+	colors['honeydew2'] = HONEYDEW2
+	colors['honeydew3'] = HONEYDEW3
+	colors['honeydew4'] = HONEYDEW4
+	colors['hotpink'] = HOTPINK
+	colors['hotpink1'] = HOTPINK1
+	colors['hotpink2'] = HOTPINK2
+	colors['hotpink3'] = HOTPINK3
+	colors['hotpink4'] = HOTPINK4
+	colors['indianred'] = INDIANRED
+	colors['indianred'] = INDIANRED
+	colors['indianred1'] = INDIANRED1
+	colors['indianred2'] = INDIANRED2
+	colors['indianred3'] = INDIANRED3
+	colors['indianred4'] = INDIANRED4
+	colors['indigo'] = INDIGO
+	colors['ivory1'] = IVORY1
+	colors['ivory2'] = IVORY2
+	colors['ivory3'] = IVORY3
+	colors['ivory4'] = IVORY4
+	colors['ivoryblack'] = IVORYBLACK
+	colors['khaki'] = KHAKI
+	colors['khaki1'] = KHAKI1
+	colors['khaki2'] = KHAKI2
+	colors['khaki3'] = KHAKI3
+	colors['khaki4'] = KHAKI4
+	colors['lavender'] = LAVENDER
+	colors['lavenderblush1'] = LAVENDERBLUSH1
+	colors['lavenderblush2'] = LAVENDERBLUSH2
+	colors['lavenderblush3'] = LAVENDERBLUSH3
+	colors['lavenderblush4'] = LAVENDERBLUSH4
+	colors['lawngreen'] = LAWNGREEN
+	colors['lemonchiffon1'] = LEMONCHIFFON1
+	colors['lemonchiffon2'] = LEMONCHIFFON2
+	colors['lemonchiffon3'] = LEMONCHIFFON3
+	colors['lemonchiffon4'] = LEMONCHIFFON4
+	colors['lightblue'] = LIGHTBLUE
+	colors['lightblue1'] = LIGHTBLUE1
+	colors['lightblue2'] = LIGHTBLUE2
+	colors['lightblue3'] = LIGHTBLUE3
+	colors['lightblue4'] = LIGHTBLUE4
+	colors['lightcoral'] = LIGHTCORAL
+	colors['lightcyan1'] = LIGHTCYAN1
+	colors['lightcyan2'] = LIGHTCYAN2
+	colors['lightcyan3'] = LIGHTCYAN3
+	colors['lightcyan4'] = LIGHTCYAN4
+	colors['lightgoldenrod1'] = LIGHTGOLDENROD1
+	colors['lightgoldenrod2'] = LIGHTGOLDENROD2
+	colors['lightgoldenrod3'] = LIGHTGOLDENROD3
+	colors['lightgoldenrod4'] = LIGHTGOLDENROD4
+	colors['lightgoldenrodyellow'] = LIGHTGOLDENRODYELLOW
+	colors['lightgrey'] = LIGHTGREY
+	colors['lightpink'] = LIGHTPINK
+	colors['lightpink1'] = LIGHTPINK1
+	colors['lightpink2'] = LIGHTPINK2
+	colors['lightpink3'] = LIGHTPINK3
+	colors['lightpink4'] = LIGHTPINK4
+	colors['lightsalmon1'] = LIGHTSALMON1
+	colors['lightsalmon2'] = LIGHTSALMON2
+	colors['lightsalmon3'] = LIGHTSALMON3
+	colors['lightsalmon4'] = LIGHTSALMON4
+	colors['lightseagreen'] = LIGHTSEAGREEN
+	colors['lightskyblue'] = LIGHTSKYBLUE
+	colors['lightskyblue1'] = LIGHTSKYBLUE1
+	colors['lightskyblue2'] = LIGHTSKYBLUE2
+	colors['lightskyblue3'] = LIGHTSKYBLUE3
+	colors['lightskyblue4'] = LIGHTSKYBLUE4
+	colors['lightslateblue'] = LIGHTSLATEBLUE
+	colors['lightslategray'] = LIGHTSLATEGRAY
+	colors['lightsteelblue'] = LIGHTSTEELBLUE
+	colors['lightsteelblue1'] = LIGHTSTEELBLUE1
+	colors['lightsteelblue2'] = LIGHTSTEELBLUE2
+	colors['lightsteelblue3'] = LIGHTSTEELBLUE3
+	colors['lightsteelblue4'] = LIGHTSTEELBLUE4
+	colors['lightyellow1'] = LIGHTYELLOW1
+	colors['lightyellow2'] = LIGHTYELLOW2
+	colors['lightyellow3'] = LIGHTYELLOW3
+	colors['lightyellow4'] = LIGHTYELLOW4
+	colors['limegreen'] = LIMEGREEN
+	colors['linen'] = LINEN
+	colors['magenta'] = MAGENTA
+	colors['magenta2'] = MAGENTA2
+	colors['magenta3'] = MAGENTA3
+	colors['magenta4'] = MAGENTA4
+	colors['manganeseblue'] = MANGANESEBLUE
+	colors['maroon'] = MAROON
+	colors['maroon1'] = MAROON1
+	colors['maroon2'] = MAROON2
+	colors['maroon3'] = MAROON3
+	colors['maroon4'] = MAROON4
+	colors['mediumorchid'] = MEDIUMORCHID
+	colors['mediumorchid1'] = MEDIUMORCHID1
+	colors['mediumorchid2'] = MEDIUMORCHID2
+	colors['mediumorchid3'] = MEDIUMORCHID3
+	colors['mediumorchid4'] = MEDIUMORCHID4
+	colors['mediumpurple'] = MEDIUMPURPLE
+	colors['mediumpurple1'] = MEDIUMPURPLE1
+	colors['mediumpurple2'] = MEDIUMPURPLE2
+	colors['mediumpurple3'] = MEDIUMPURPLE3
+	colors['mediumpurple4'] = MEDIUMPURPLE4
+	colors['mediumseagreen'] = MEDIUMSEAGREEN
+	colors['mediumslateblue'] = MEDIUMSLATEBLUE
+	colors['mediumspringgreen'] = MEDIUMSPRINGGREEN
+	colors['mediumturquoise'] = MEDIUMTURQUOISE
+	colors['mediumvioletred'] = MEDIUMVIOLETRED
+	colors['melon'] = MELON
+	colors['midnightblue'] = MIDNIGHTBLUE
+	colors['mint'] = MINT
+	colors['mintcream'] = MINTCREAM
+	colors['mistyrose1'] = MISTYROSE1
+	colors['mistyrose2'] = MISTYROSE2
+	colors['mistyrose3'] = MISTYROSE3
+	colors['mistyrose4'] = MISTYROSE4
+	colors['moccasin'] = MOCCASIN
+	colors['navajowhite1'] = NAVAJOWHITE1
+	colors['navajowhite2'] = NAVAJOWHITE2
+	colors['navajowhite3'] = NAVAJOWHITE3
+	colors['navajowhite4'] = NAVAJOWHITE4
+	colors['navy'] = NAVY
+	colors['oldlace'] = OLDLACE
+	colors['olive'] = OLIVE
+	colors['olivedrab'] = OLIVEDRAB
+	colors['olivedrab1'] = OLIVEDRAB1
+	colors['olivedrab2'] = OLIVEDRAB2
+	colors['olivedrab3'] = OLIVEDRAB3
+	colors['olivedrab4'] = OLIVEDRAB4
+	colors['orange'] = ORANGE
+	colors['orange1'] = ORANGE1
+	colors['orange2'] = ORANGE2
+	colors['orange3'] = ORANGE3
+	colors['orange4'] = ORANGE4
+	colors['orangered1'] = ORANGERED1
+	colors['orangered2'] = ORANGERED2
+	colors['orangered3'] = ORANGERED3
+	colors['orangered4'] = ORANGERED4
+	colors['orchid'] = ORCHID
+	colors['orchid1'] = ORCHID1
+	colors['orchid2'] = ORCHID2
+	colors['orchid3'] = ORCHID3
+	colors['orchid4'] = ORCHID4
+	colors['palegoldenrod'] = PALEGOLDENROD
+	colors['palegreen'] = PALEGREEN
+	colors['palegreen1'] = PALEGREEN1
+	colors['palegreen2'] = PALEGREEN2
+	colors['palegreen3'] = PALEGREEN3
+	colors['palegreen4'] = PALEGREEN4
+	colors['paleturquoise1'] = PALETURQUOISE1
+	colors['paleturquoise2'] = PALETURQUOISE2
+	colors['paleturquoise3'] = PALETURQUOISE3
+	colors['paleturquoise4'] = PALETURQUOISE4
+	colors['palevioletred'] = PALEVIOLETRED
+	colors['palevioletred1'] = PALEVIOLETRED1
+	colors['palevioletred2'] = PALEVIOLETRED2
+	colors['palevioletred3'] = PALEVIOLETRED3
+	colors['palevioletred4'] = PALEVIOLETRED4
+	colors['papayawhip'] = PAPAYAWHIP
+	colors['peachpuff1'] = PEACHPUFF1
+	colors['peachpuff2'] = PEACHPUFF2
+	colors['peachpuff3'] = PEACHPUFF3
+	colors['peachpuff4'] = PEACHPUFF4
+	colors['peacock'] = PEACOCK
+	colors['pink'] = PINK
+	colors['pink1'] = PINK1
+	colors['pink2'] = PINK2
+	colors['pink3'] = PINK3
+	colors['pink4'] = PINK4
+	colors['plum'] = PLUM
+	colors['plum1'] = PLUM1
+	colors['plum2'] = PLUM2
+	colors['plum3'] = PLUM3
+	colors['plum4'] = PLUM4
+	colors['powderblue'] = POWDERBLUE
+	colors['purple'] = PURPLE
+	colors['purple1'] = PURPLE1
+	colors['purple2'] = PURPLE2
+	colors['purple3'] = PURPLE3
+	colors['purple4'] = PURPLE4
+	colors['raspberry'] = RASPBERRY
+	colors['rawsienna'] = RAWSIENNA
+	colors['red1'] = RED1
+	colors['red2'] = RED2
+	colors['red3'] = RED3
+	colors['red4'] = RED4
+	colors['rosybrown'] = ROSYBROWN
+	colors['rosybrown1'] = ROSYBROWN1
+	colors['rosybrown2'] = ROSYBROWN2
+	colors['rosybrown3'] = ROSYBROWN3
+	colors['rosybrown4'] = ROSYBROWN4
+	colors['royalblue'] = ROYALBLUE
+	colors['royalblue1'] = ROYALBLUE1
+	colors['royalblue2'] = ROYALBLUE2
+	colors['royalblue3'] = ROYALBLUE3
+	colors['royalblue4'] = ROYALBLUE4
+	colors['salmon'] = SALMON
+	colors['salmon1'] = SALMON1
+	colors['salmon2'] = SALMON2
+	colors['salmon3'] = SALMON3
+	colors['salmon4'] = SALMON4
+	colors['sandybrown'] = SANDYBROWN
+	colors['sapgreen'] = SAPGREEN
+	colors['seagreen1'] = SEAGREEN1
+	colors['seagreen2'] = SEAGREEN2
+	colors['seagreen3'] = SEAGREEN3
+	colors['seagreen4'] = SEAGREEN4
+	colors['seashell1'] = SEASHELL1
+	colors['seashell2'] = SEASHELL2
+	colors['seashell3'] = SEASHELL3
+	colors['seashell4'] = SEASHELL4
+	colors['sepia'] = SEPIA
+	colors['sgibeet'] = SGIBEET
+	colors['sgibrightgray'] = SGIBRIGHTGRAY
+	colors['sgichartreuse'] = SGICHARTREUSE
+	colors['sgidarkgray'] = SGIDARKGRAY
+	colors['sgigray12'] = SGIGRAY12
+	colors['sgigray16'] = SGIGRAY16
+	colors['sgigray32'] = SGIGRAY32
+	colors['sgigray36'] = SGIGRAY36
+	colors['sgigray52'] = SGIGRAY52
+	colors['sgigray56'] = SGIGRAY56
+	colors['sgigray72'] = SGIGRAY72
+	colors['sgigray76'] = SGIGRAY76
+	colors['sgigray92'] = SGIGRAY92
+	colors['sgigray96'] = SGIGRAY96
+	colors['sgilightblue'] = SGILIGHTBLUE
+	colors['sgilightgray'] = SGILIGHTGRAY
+	colors['sgiolivedrab'] = SGIOLIVEDRAB
+	colors['sgisalmon'] = SGISALMON
+	colors['sgislateblue'] = SGISLATEBLUE
+	colors['sgiteal'] = SGITEAL
+	colors['sienna'] = SIENNA
+	colors['sienna1'] = SIENNA1
+	colors['sienna2'] = SIENNA2
+	colors['sienna3'] = SIENNA3
+	colors['sienna4'] = SIENNA4
+	colors['silver'] = SILVER
+	colors['skyblue'] = SKYBLUE
+	colors['skyblue1'] = SKYBLUE1
+	colors['skyblue2'] = SKYBLUE2
+	colors['skyblue3'] = SKYBLUE3
+	colors['skyblue4'] = SKYBLUE4
+	colors['slateblue'] = SLATEBLUE
+	colors['slateblue1'] = SLATEBLUE1
+	colors['slateblue2'] = SLATEBLUE2
+	colors['slateblue3'] = SLATEBLUE3
+	colors['slateblue4'] = SLATEBLUE4
+	colors['slategray'] = SLATEGRAY
+	colors['slategray1'] = SLATEGRAY1
+	colors['slategray2'] = SLATEGRAY2
+	colors['slategray3'] = SLATEGRAY3
+	colors['slategray4'] = SLATEGRAY4
+	colors['snow1'] = SNOW1
+	colors['snow2'] = SNOW2
+	colors['snow3'] = SNOW3
+	colors['snow4'] = SNOW4
+	colors['springgreen'] = SPRINGGREEN
+	colors['springgreen1'] = SPRINGGREEN1
+	colors['springgreen2'] = SPRINGGREEN2
+	colors['springgreen3'] = SPRINGGREEN3
+	colors['steelblue'] = STEELBLUE
+	colors['steelblue1'] = STEELBLUE1
+	colors['steelblue2'] = STEELBLUE2
+	colors['steelblue3'] = STEELBLUE3
+	colors['steelblue4'] = STEELBLUE4
+	colors['tan'] = TAN
+	colors['tan1'] = TAN1
+	colors['tan2'] = TAN2
+	colors['tan3'] = TAN3
+	colors['tan4'] = TAN4
+	colors['teal'] = TEAL
+	colors['thistle'] = THISTLE
+	colors['thistle1'] = THISTLE1
+	colors['thistle2'] = THISTLE2
+	colors['thistle3'] = THISTLE3
+	colors['thistle4'] = THISTLE4
+	colors['tomato1'] = TOMATO1
+	colors['tomato2'] = TOMATO2
+	colors['tomato3'] = TOMATO3
+	colors['tomato4'] = TOMATO4
+	colors['turquoise'] = TURQUOISE
+	colors['turquoise1'] = TURQUOISE1
+	colors['turquoise2'] = TURQUOISE2
+	colors['turquoise3'] = TURQUOISE3
+	colors['turquoise4'] = TURQUOISE4
+	colors['turquoiseblue'] = TURQUOISEBLUE
+	colors['violet'] = VIOLET
+	colors['violetred'] = VIOLETRED
+	colors['violetred1'] = VIOLETRED1
+	colors['violetred2'] = VIOLETRED2
+	colors['violetred3'] = VIOLETRED3
+	colors['violetred4'] = VIOLETRED4
+	colors['warmgrey'] = WARMGREY
+	colors['wheat'] = WHEAT
+	colors['wheat1'] = WHEAT1
+	colors['wheat2'] = WHEAT2
+	colors['wheat3'] = WHEAT3
+	colors['wheat4'] = WHEAT4
+	colors['white'] = WHITE
+	colors['whitesmoke'] = WHITESMOKE
+	colors['whitesmoke'] = WHITESMOKE
+	colors['yellow1'] = YELLOW1
+	colors['yellow2'] = YELLOW2
+	colors['yellow3'] = YELLOW3
+	colors['yellow4'] = YELLOW4
+
+	colors = OrderedDict(sorted(colors.items(), key=lambda t: t[0]))</pre>
+<p>*Thanks to <a href="http://cloford.com/resources/colours/500col.htm">cloford.com</a> for all the color names.</p>
+<p>Related Training: <a href="https://www.webucator.com/programming/python.cfm">Python</a></p>
+
+								<div class="top30 bg_light_blue bottom30 padding_sides20 padding_top10 padding_bottom30 block">
+										<div class="f-18 bottom15 top15">About Webucator</div>
+										<p>Webucator provides instructor-led training to students throughout the US and Canada. We have trained over 90,000 students from over 16,000 organizations on technologies such as Microsoft ASP.NET, Microsoft Office, Azure, Windows, Java, Adobe, Python, SQL, JavaScript, Angular and much more. Check out our complete <a style="text-decoration:underline;" href="https://www.webucator.com/course/catalog.cfm">course catalog</a>.</p>
+								</div>
+
+							</div>
+
+							<div class="col-xl-3 col-lg-3 sidebar">
+									<sidebar>
+											<div class="bottom25 font14 semibold uppercase spacing15 opacity7 title">Webucator Delivers Instructor-led and Self-paced Training</div>
+                      <div class="f-14">
+                        <a href="/course/catalog.cfm" class="btn btn-secondary btn-large radius-full">Browse Course Catalog</a>
+                      </div>
+
+											</div>
+									</sidebar>
+							</div>
+	</div>
+  <div class="container">
+
+  
+	<div class="categories row">
+		<div class="col-lg-12">
+			<ul class="nav nav-pills"><li><a href="https://www.webucator.com/blog/category/python/" alt="View all posts in Python">Python</a></li></ul>		</div>
+	</div>
+
+	<div class="author-info row">
+		<div class="author-avatar col-md-1">
+			<img alt='' src='https://secure.gravatar.com/avatar/d0d38c8c6b912ba9b4ef015ab56cae44?s=56&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/d0d38c8c6b912ba9b4ef015ab56cae44?s=112&#038;d=mm&#038;r=g 2x' class='avatar avatar-56 photo' height='56' width='56'/>		</div><!-- .author-avatar -->
+
+		<div class="author-description col-md-11">
+
+			<p class="author-bio">
+				<a class="author-link" href="https://www.webucator.com/blog/author/ndunn/" rel="author">
+					<span class="vcard author post-author"><span class="fn">
+						Nat Dunn					</span></span>
+				</a>
+			</p><!-- .author-bio -->
+
+		</div><!-- .author-description -->
+	</div><!-- .author-info -->
+  </div>
+	<hr>
+
+	</div>
+</div>
+
+
+
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <h4>Training Options</h4>
+                <ul>
+                    <li><a href="/live-online-training/index.cfm" title="Live Online">Live Online</a></li>
+                    <li><a href="/self-paced-training/index.cfm" title="Self-Paced Courses">Self-Paced Courses</a></li>
+                    <li><a href="/customized-private-training/index.cfm" title="Customized Onsite">Customized Onsite</a></li>
+                    <li><a href="/enterprise-training/index.cfm" title="Enterprise Solutions">Enterprise Solutions</a></li>
+                    <li><a href="/about-us/training-options.cfm" title="All Training Options">All Training Options</a></li>
+                </ul>
+                <h4>Course Catalog</h4>
+                <ul>
+                    <li><a href="/course/catalog.cfm" title="Full Catalog">Full Catalog</a></li>
+                    <li><a href="/about-us/pricing.cfm" title="Pricing and Savings">Pricing &amp; Savings</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="/about-us/company.cfm" title="About Webucator">About Webucator</a></li>
+                    <li><a href="/about-us/testimonials.cfm" title="Testimonials">Client Testimonials</a></li>
+                    <li><a href="/about-us/client-list.cfm" title="Client List">Client List</a>
+                        <li><a href="/about-us/privacy-policy.cfm" title="Privacy Policy">Privacy Policy</a></li>
+                        <li><a href="/about-us/community.cfm" title="In The Community">In The Community</a></li>
+                        <li><a href="/jobs/trainers.cfm" title="Train for Us">Train for Us</a></li>
+                        <li><a href="/live-online-training/cancelation.cfm" title="Cancelation Policy">Cancelation Policy</a></li>
+                        <li><a href="/resources/make-payment.cfm" title="Make a Payment">Make a Payment</a></li>
+                </ul>
+            </div>
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-lg-3 col-md-6">
+                <h4>Microsoft</h4>
+                <ul>
+                    <li><a href="/microsoft-training/certified-courses.cfm" title="Certified Microsoft Courses">Certified Microsoft Courses</a></li>
+                    <li><a href="/microsoft-training/software-assurance-training-vouchers.cfm" title="Software Assurance Training">Software Assurance Training</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/resources/newsletter.cfm" title="Newsletter">Newsletter</a></li>
+                    <li><a href="/blog/" title="Webucator Blog">Webucator Blog</a></li>
+                    <li><a href="/how-to/" title="How-To Articles">How-To Articles</a></li>
+                </ul>
+                <h4>Courseware</h4>
+                <ul>
+                    <li><a href="/courseware/index.cfm" title="Purchase Courseware">Purchase Courseware</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-11 social"><a href="https://www.facebook.com/webucator" class="facebook"><i class="fa fa-facebook"></i></a><a href="https://www.linkedin.com/companies/webucator" class="linkedin"><i class="fa fa-linkedin"></i></a><a href="https://twitter.com/webucator" class="twitter"><i class="fa fa-twitter"></i></a><a href="mailto:sales@webucator.com" class="email"><i class="fa fa-envelope"></i></a></div>
+        </div>
+    </div>
+    <div class="top65 f-16 white opacity5 text-center text">&copy; 2004-2020 Webucator, Inc. All Rights Reserved.</div>
+</footer>
+  <script>document.addEventListener("DOMContentLoaded",function(event){setupNavigation();});function setupNavigation(){jQuery(window).resize(function(){showMenuBtn();});jQuery(window).trigger("resize");function showMenuBtn(){if(jQuery(window).width()<992.00){jQuery(".open_menu").addClass("d-block");jQuery(".open_search").addClass("d-block");jQuery("header nav").addClass("d-none");jQuery(".navigation_mobile").removeClass("opened");}else{jQuery(".open_menu").removeClass("d-block");jQuery(".open_search").removeClass("d-block");jQuery("header nav").removeClass("d-none");jQuery(".navigation_mobile").removeClass("opened");}}jQuery(".open_search").click(function(event){event.preventDefault();if(jQuery(".mobile-search").hasClass("d-none")){jQuery(".mobile-search").removeClass("d-none");jQuery(".mobile-search").addClass("d-block");}else{jQuery(".mobile-search").removeClass("d-block");jQuery(".mobile-search").addClass("d-none");}});jQuery(".open_menu").click(function(event){event.preventDefault();jQuery(".navigation_mobile").addClass("opened");});jQuery(".close_menu, header, section, footer, .navigation_mobile .inner a").click(function(event){jQuery(".navigation_mobile").removeClass("opened");});function SF_dropdown_parent(dropdown){var section=dropdown;var noBreak=true;while(noBreak){if(section[0].tagName=="NAV"||section[0].tagName=="HEADER"||section[0].tagName=="SECTION"||section[0].tagName=="FOOTER"||section[0].tagName=="BODY"){noBreak=false;break;}else{section=section.parent();}}return section;}function SF_highest_zIndex(){var zIndex=1;var currentzIndex;var section;jQuery("nav, header, section, footer").each(function(){currentzIndex=parseInt(jQuery(this).css("z-index"));if(zIndex<currentzIndex){zIndex=currentzIndex;section=jQuery(this);}});return[zIndex,section];}jQuery(".dropdown").on("show.bs.dropdown",function(){var section=SF_dropdown_parent(jQuery(this));section.css("z-index",SF_highest_zIndex()[0]+1);});jQuery(".dropdown").on("hidden.bs.dropdown",function(){var section=SF_dropdown_parent(jQuery(this));section.css("z-index","auto");})
+if(jQuery(".js-nav-dropdowns").length>0){jQuery("body").click(function(event){if(jQuery(event.target).closest(".navigation_popup").length==0&&jQuery(event.target).closest(".js-open-nav-dropdown").length==0){jQuery(".navigation_popup.opened").removeClass("opened");jQuery(".js-open-nav-dropdown i.fa-flip-vertical").removeClass("fa-flip-vertical");}});jQuery(".js-nav-dropdowns .js-open-nav-dropdown").click(function(event){event.preventDefault();var id=jQuery(".js-nav-dropdowns .js-open-nav-dropdown").index(jQuery(this));if(jQuery(".navigation_popup").eq(id).hasClass("opened")){jQuery(this).find("i").removeClass("fa-flip-vertical");jQuery(".navigation_popup").eq(id).removeClass("opened");}else{jQuery(".navigation_popup.opened").removeClass("opened");jQuery(".js-open-nav-dropdown i.fa-flip-vertical").removeClass("fa-flip-vertical");jQuery(".navigation_popup").eq(id).addClass("opened");jQuery(this).find("i").addClass("fa-flip-vertical");var section=SF_dropdown_parent(jQuery(this));section.css("z-index",SF_highest_zIndex()[0]+1);}});}jQuery(".mobile-search").on("click",".courses-link-nav-dropdown",function(event){event.preventDefault();if(jQuery(".navigation_popup_mobile").hasClass("opened")){jQuery(this).find("i").removeClass("fa-flip-vertical");jQuery(".navigation_popup_mobile").removeClass("opened");}else{jQuery(".navigation_popup_mobile.opened").removeClass("opened");jQuery(".navigation_popup_mobile i.fa-flip-vertical").removeClass("fa-flip-vertical");jQuery(".navigation_popup_mobile").addClass("opened");jQuery(this).find("i").addClass("fa-flip-vertical");var section=SF_dropdown_parent(jQuery(this));section.css("z-index",SF_highest_zIndex()[0]+1);}});jQuery('.category-group-nav-selector').on('click mouseover',function(e){var categoryGroupId=jQuery(this).attr("data-categorygroupid");console.log(categoryGroupId);jQuery('.toggle-content-nav').removeClass('is-visible');jQuery('#nav-'+categoryGroupId).addClass('is-visible');});}</script>
+
+
+<script src="https://unpkg.com/@popperjs/core@2" defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" defer integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/510738a29f.js" defer crossorigin="anonymous"></script>
+
+	<div class="device-xs visible-xs"></div>
+	<div class="device-sm visible-sm"></div>
+	<div class="device-md visible-md"></div>
+	<div class="device-lg visible-lg"></div>
+
+  <script type='text/javascript'>var countVars={"disqusShortname":"webucatorblog"};</script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/plugins/disqus-comment-system/public/js/comment_count.js?ver=3.0.17'></script>
+<script type='text/javascript'>var leadin_wordpress={"userRole":"visitor","pageType":"post","leadinPluginVersion":"7.36.1"};</script>
+<script async defer id="hs-script-loader" type='text/javascript' src='//js.hs-scripts.com/4760317.js?integration=WordPress'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-content/plugins/youtube-embed-plus/scripts/fitvids.min.js?ver=13.4'></script>
+<script type='text/javascript' src='https://www.webucator.com/blog/wp-includes/js/wp-embed.min.js?ver=5.4.2'></script>
+
+</body>
+</html>
