@@ -1,0 +1,49 @@
+div{
+    clear : both;
+    margin-bottom: 40px ;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+ul{
+    list-style: none;
+    padding: 40px 40px 40px 40px;
+    margin-bottom: 70px;
+}
+a{
+    text-decoration: none;
+}
+#one{
+    background-color: lightskyblue;
+}
+#one li{
+    padding: 20px 20px 20px 20px;  
+    float: left;
+}
+#one li :hover{
+    background-color: wheat;
+}
+#one li:hover a{
+
+    color: lightslategray;
+}
+#one a{
+    color: wheat;
+    padding: 30px 30px 30px 30px;
+}
+#one .l{
+    background-color: wheat;
+    width: 100%;
+  padding: 0px;
+  display: none;
+}
+#one .links li{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    float: none;
+    color: #4484CE;
+}
+#one #links:hover .l {
+    display: block;
+}
